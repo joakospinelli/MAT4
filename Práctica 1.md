@@ -496,3 +496,181 @@ Se encontró que el límite de $f(0,0)$ existe y su valor es $0$. Por lo tanto, 
 
 * $f(x,y) = {\dfrac {xy^2} {x^2+y^2}}$ si $(x,y) \neq (0,0)$
 * $f(x,y) = 0$ si $(x,y) = (0,0)$
+
+# 5. Encontrar las derivadas parciales primeras de las siguientes funciones, indicando sus dominios
+
+## a. $3x^2y+y^3$
+
+*// no sé a qué se refiere con "primeras" así que voy a hacer lo que dice la teoría*
+
+$Dom(f) = R^2$
+
+### Derivada respecto a $x$
+
+1. $\dfrac {df(x,y)} {dx} = \dfrac {d(3x^2y+y^3)} {dx}$
+
+2. $3.2x.y+y^3$
+
+3. $6xy+y^3$
+
+$Dom(\dfrac {df(x,y)} {dx}) = R^2$
+
+### Derivada respecto a $y$
+
+1. $\dfrac {df(x,y)} {dy} = \dfrac {d(3x^2y+y^3)} {dy}$
+
+2. $3x^2.1.y^0+3y^2$
+
+3. $3x^2+3y^2$
+
+$Dom(\dfrac {df(x,y)} {dy}) = R^2$
+
+## b. $f(x,y,z) = x^2y+y^2z+z^2x$
+
+$Dom(f) = R^3$
+
+### Derivada respecto a $x$
+
+1. $\dfrac {df(x,y,z)} {dx} = \dfrac {d(x^2y+y^2z+z^2x)} {dx}$
+
+2. $2xy+0+z^2(x^0)$
+
+3. $2xy+z^2$
+
+$Dom(\dfrac {df(x,y,z)} {dx}) = R^3$
+
+### Derivada respecto a $y$
+
+1. $\dfrac {df(x,y,z)} {dy} = \dfrac {d(x^2y+y^2z+z^2x)} {dy}$
+
+2. $x^2(y^0) + 2yz + 0$
+
+3. $x^2+2yz$
+
+$Dom(\dfrac {df(x,y,z)} {dy}) = R^3$
+
+### Derivada respecto a $z$
+
+1. $\dfrac {df(x,y,z)} {dz} = \dfrac {d(x^2y+y^2z+z^2x)} {dz}$
+
+2. $0+y^2(z^0)+2zx$
+
+3. $y^2+2zx$
+
+$Dom(\dfrac {df(x,y,z)} {dz}) = R^3$
+
+## c. $f(x,y) = e^{xy} + \sin(x^2+y)$
+
+$Dom(f) = R^2$
+
+### Derivada respecto a $x$
+
+*// lo voy a hacer paso x paso porque no me acuerdo las derivadas compuestas*
+
+1. $\dfrac {df(x,y)} {dx} = \dfrac {d(e^{xy}+\sin(x^2+y))} {dx}$
+
+2. $\dfrac {d(e^{xy})} {dx} + \dfrac {d(sin(x^2+y))} {dx}$
+
+3. $\dfrac {d(e^{xy})} {dx}.\dfrac {d(xy)} {dx} + \dfrac {d(\sin(x^2+y))} {dx}.\dfrac {d(x^2+y)} {dx}$
+
+4. $e^{xy}.(y(x^0)) + cos(x^2+y). (\dfrac{d(x^2)} {dx} + \dfrac {y} {dx})$
+
+5. $e^{xy}(y) + cos(x^2+y).(2x+0)$
+
+6. $ye^{xy} + 2x.cos(x^2+y)$
+
+$Dom(f) = R^2$
+
+### Derivada respecto a $y$
+
+1. $\dfrac {df(x,y)} {dy} = \dfrac {d(e^{xy}+\sin(x^2+y))} {dy}$
+
+2. $\dfrac {d(e^{xy})} {dy} + \dfrac {sin(x^2+y)} {dy}$
+
+3. $e^{xy}.(x(y^0)) + cos(x^2+y)(1)$
+
+4. $xe^{xy} + cos(x^2+y)$
+
+$Dom(f) = R^2$
+
+## d. $\dfrac {xy} {x^2+y^2}$
+
+$Dom(f) = R^2 - \{ (0,0) \}$
+
+### Derivada respecto a $x$
+
+1. $\dfrac {df(x,y)} {dx} = \dfrac {d(\dfrac {xy} {x^2+y^2})} {dx}$
+
+2. $\dfrac {(x^2+y^2)(\dfrac {d} {dx}xy)- (xy)(\dfrac {d} {dx}(x^2+y^2))} {(x^2+y^2)^2}$
+
+3. $\dfrac {(x^2+y^2)(x^0y) - (xy)(2x + \dfrac {d} {dx}y^2)} {(x^2+y^2)^2}$
+
+4. $\dfrac {(x^2+y^2)(y) - (xy)(2x)} {(x^2+y^2)^2}$
+
+5. $\dfrac {(x^2y+y^3) - (2x^2y)} {(x^2+y^2)^2}$
+
+6. $\dfrac {x^2y+y^3 - 2x^2y} {(x^2+y^2)^2}$
+
+7. $\dfrac {y(x^2-2x^2+y^2)} {(x^2+y^2)^2}$
+
+8. $\dfrac {y(y^2-x^2)} {(x^2+y^2)^2}$
+
+$Dom(f) = R^2 - \{ (0,0) \}$
+
+### Derivada respecto a $y$
+
+1. $\dfrac {df(x,y)} {dy} = \dfrac {d(\dfrac {xy} {x^2+y^2})} {dy}$
+
+2. $\dfrac {(x^2+y^2)(\dfrac {d} {dy}xy)- (xy)(\dfrac {d} {dy}(x^2+y^2))} {(x^2+y^2)^2}$
+
+3. $\dfrac {(x^2+y^2)(x(y^0))-(xy)(0+2y)} {(x^2+y^2)^2}$
+
+4. $\dfrac {(x^2+y^2)x-xy(2y)} {(x^2+y^2)^2}$
+
+5. $\dfrac {x^3+xy^2-2xy^2} {(x^2+y^2)^2}$
+
+6. $\dfrac {x^3 + (xy^2)(1-2)} {(x^2+y^2)^2}$
+
+7. $\dfrac {x^3 + (xy^2)(-1)} {(x^2+y^2)^2}$
+
+8. $\dfrac {x^3 - xy^2} {(x^2+y^2)^2}$
+
+$Dom(f) = R^2 - \{ (0,0) \}$
+
+## e. $f(x,y) = x^2log(x+y)$
+
+$Dom(f) = (x,y) ∈ R^2 : (x+y) \gt 0$
+
+### Derivada respecto a $x$
+
+*// de nuevo no sé en qué base son los logaritmos así que supongo base 10*
+
+1. $\dfrac {df(x,y)} {dx} = \dfrac {d(x^2log(x+y))} {dx}$
+
+2. $\dfrac {d(x^2)} {dx}.log(x+y) + \dfrac {log(x+y)} {dx}.x^2$
+
+3. $2x.log(x+y) + \dfrac {1} {(x+y).ln(10)}.\dfrac{d(x+y)} {dx}.x^2$
+
+3. $2x.log(x+y) + \dfrac {1} {(x+y).ln(10)}.x^2$
+
+4. $2x.log(x+y) + \dfrac {2x} {(x+y).ln(10)}$
+
+$Dom(f) = (x,y) ∈ R^2 : (x+y) /gt 0$
+
+### Derivada respecto a $y$
+
+1. $\dfrac {df(x,y)} {dy} = \dfrac {d(x^2log(x+y))} {dy}$
+
+2. $\dfrac {d(x^2)} {dy}.log(x+y) + \dfrac {log(x+y)} {dy}.x^2$
+
+3. $0.log(x+y) + \dfrac {1} {(x+y).ln(10)}.\dfrac {d(x+y)} {dy}.x^2$
+
+3. $0 + \dfrac {1} {(x+y).ln(10)}.1.x^2$
+
+3. $\dfrac {x^2} {(x+y).ln(10)}$
+
+$Dom(f) = (x,y) ∈ R^2 : (x+y) \gt 0$
+
+## f. $f(x,y) = \sum {(y_i - (x+y_i))^2}$
+
+*// este no lo voy a hacer*

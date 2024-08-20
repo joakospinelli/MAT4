@@ -325,7 +325,7 @@ Como ambos límites tienden a 0, se puede usar la correspondencia con las coorde
 
 2. $\lim _{r \to 0} \dfrac {r^2.\cos(\theta).\sin(\theta)} {\sqrt {r^2(\cos(\theta)^2 + r^2.\sin(\theta)^2)}}$
 
-3. $\lim _{r \to 0} \dfrac {r^2.\cos(\theta).\sin(\theta)} {\sqrt {r^2(1) }}$ *// acá usé una propiedad que dice que $\cos(\theta)^2 + \sin(\theta)^2 = 0$*
+3. $\lim _{r \to 0} \dfrac {r^2.\cos(\theta).\sin(\theta)} {\sqrt {r^2(1) }}$ *// acá usé una propiedad que dice que $\cos(\theta)^2 + \sin(\theta)^2 = 1$*
 
 4. $\lim _{r \to 0} \dfrac {r^2.\cos(\theta).\sin(\theta)} {\sqrt {r^2 }}$
 
@@ -674,3 +674,412 @@ $Dom(f) = (x,y) ∈ R^2 : (x+y) \gt 0$
 ## f. $f(x,y) = \sum {(y_i - (x+y_i))^2}$
 
 *// este no lo voy a hacer*
+
+# 6. Calcular las derivadas parciales primeras de las siguientes funciones en los puntos indicados
+
+## a. $f(x,y) = x.e^{x^2y}$ en $(1,log(2))$
+
+$Dom(f) = R^2$
+
+### Derivada respecto a $x$
+
+1. $\dfrac {df(x,y)} {dx} = \dfrac {d(x.e^{x^2y})} {dx}$
+
+2. $\dfrac{d(x)} {dx}.e^{x^2y} + \dfrac {d(e^{x^2y})} {dx}.x$
+
+3. $(x^0)e^{x^2y}+e^{x^2y}.\dfrac{d(x^2y)} {dx}.x$
+
+4. $e^{x^2y}+e^{x^2y}.2xy.x$
+
+4. $e^{x^2y} + 2x^2ye^{x^2y}$
+
+$Dom(f) = R^2$
+
+### Derivada respecto a $y$
+
+1. $\dfrac {df(x,y)} {dy} = \dfrac {d(x.e^{x^2y})} {dy}$
+
+2. $\dfrac{d(x)} {dy}.e^{x^2y} + \dfrac {d(e^{x^2y})} {dy}.x$
+
+3. $0.e^{x^2y} + e^{x^2y}.\dfrac {d(x^2y)} {dy}.x$
+
+4. $0 + e^{x^2y}.(y^0x^2).x$
+
+5. $e^{x^2y}.x^2.x
+
+6. $x^3e^{x^2y}$
+
+$Dom(f) = R^2$
+
+### Cálculo en $(1,log(2))$
+
+*// a partir de acá empecé a sospechar que el $log$ es base $e$ así que voy a usar ese*
+
+1. $f_x(1,log(2)) = e^{1^2.log(2)} + 2.1^2(log(2))e^{1^2.log(2)}$
+
+2. $f_x(1,log(2)) = e^{log(2)} + 2(log(2)).e^{log(2)}$
+
+3. $f_x(1,log(2)) = 2  + 2(log(2))2$
+
+3. $f_x(1,log(2)) = 2  + 4(0,693)$
+
+5. $f_x(1,log(2)) = 4,772$
+
+---
+
+1. $f_y(1,log(2)) = 1^3.e^{1^2log(2)}$
+
+2. $f_y(1,log(2)) = e^{log(2)}$
+
+3. $f_y(1,log(2)) = 2$
+
+
+## b. $f(x,y) = \sqrt {x^2+y^2}$ en $(-4,3)$
+
+$Dom(f) = (x,y) ∈ R^2 : (x^2+y^2) \ge 0$
+
+$Dom(f) = R^2$ porque la suma de 2 números positivos siempre es positiva ☝🤓
+
+### Derivada respecto a $x$
+
+1. $\dfrac {df(x,y)} {dx} = \dfrac {d(\sqrt {x^2 + y^2})} {dx}$
+
+2. $\dfrac {1} {2 \sqrt {x^2+y^2}}.\dfrac {d(x^2+y^2)} {dx}$ *por regla de derivación de raíces*
+
+3. $\dfrac {1} {2\sqrt{x^2+y^2}}.2x$
+
+4. $\dfrac {2x} {2\sqrt{x^2+y^2}}$
+
+5. $\dfrac {x} {\sqrt {x^2+y^2}}$
+
+$Dom(f) = (x,y) ∈ R^2 : (x,y) \neq (0,0)$
+
+### Derivada respecto a $y$
+
+1. $\dfrac {df(x,y)} {dy} = \dfrac {d(\sqrt {x^2 + y^2})} {dy}$
+
+2. $\dfrac {1} {2 \sqrt {x^2+y^2}}.\dfrac {d(x^2+y^2)} {dy}$
+
+3. $\dfrac {1} {2 \sqrt {x^2+y^2}}.2y$
+
+4. $\dfrac {2y} {2 \sqrt{x^2+y^2}}$
+
+5. $\dfrac {y} {\sqrt{x^2+y^2}}$
+
+$Dom(f) = (x,y) ∈ R^2 : (x,y) \neq (0,0)$
+
+## Cálculo en $(-4,3)$
+
+1. $f_x(-4,3) = \dfrac {-4} {\sqrt {(-4)^2+3^2}}$
+
+2. $f_x(-4,3) = \dfrac {-4} {\sqrt {16+9}}$
+
+2. $f_x(-4,3) = \dfrac {-4} {5}$
+
+4. $f_x(-4,3) = -0,8$
+
+---
+
+1. $f_y(-4,3) = \dfrac {3} {\sqrt {(-4)^2+3^2}}$
+
+2. $f_y(-4,3) = \dfrac {3} {\sqrt {16+9}}$
+
+3. $f_y(-4,3) = \dfrac {3} {5}$
+
+4. $f_y(-4,3) = 0,6$
+
+# 7. Analizar la diferenciabilidad en $R^2$ de las siguientes funciones
+
+## a. $f(x,y) = \sin(x^2+y^2)$
+
+$Dom(f) = R^2$
+
+Como $f$ es continua en todo $R^2$, para demostrar que es diferenciable sus derivadas parciales deben existir y ser continuas en $R^2$.
+
+### Derivada respecto a $x$
+
+1. $\dfrac {df(x,y)} {dx} = \dfrac {d(sin(x^2+y^2))} {dx}$
+
+2. $cos(x^2+y^2).\dfrac {d(x^2+y^2)} {dx}$
+
+3. $cos(x^2+y^2).2x$
+
+$Dom(f) = R^2$
+
+### Derivada respecto a $y$
+
+1. $\dfrac {df(x,y)} {dy} = \dfrac {d(sin(x^2+y^2))} {dy}$
+
+2. $cos(x^2+y^2).\dfrac {d(x^2+y^2)} {dy}$
+
+3. $cos(x^2+y^2).2y$
+
+$Dom(f) = R^2$
+
+Ambas derivadas parciales son continuas sobre $R^2$, por lo que $f$ es diferenciable.
+
+## b. $f(x,y) = \sqrt {x^2+y^2}$
+
+$Dom(f) = (x,y) ∈ R^2 : (x^2+y^2) \ge 0$
+
+$Dom(f) = R^2$ ya que al sumar potencias de 2 $(x^2+y^2)$ siempre será un número positivo.
+
+Como $f$ es continua en todo $R^2$, para demostrar que es diferenciable es necesario encontrar sus derivadas parciales y que éstas sean continuas en $R^2$.
+
+### Derivada respecto a $x$
+
+1. $\dfrac {df(x,y)} {dx} = \dfrac {d(\sqrt {x^2+y^2})} {dx}$
+
+2. $\dfrac {1} {2\sqrt{x^2+y^2}}. \dfrac {d(x^2+y^2)} {dx}$
+
+3. $\dfrac {1} {2\sqrt{x^2+y^2}}.2x$
+
+4. $\dfrac {2x} {2\sqrt {x^2+y^2}}$
+
+5. $\dfrac {x} {\sqrt {x^2+y^2}}$
+
+$Dom(f) = R^2 - \{ (0,0) \}$
+
+Se encontró una derivada parcial de $f$ la cual no es continua para un punto dentro de $R^2$, por lo que $f$ no es diferenciable para todo el dominio.
+
+*// con una alcanza para la demostración, pero igual voy a hacer la otra*
+
+### Derivada respecto a $y$
+
+1. $\dfrac {df(x,y)} {dy} = \dfrac {d(\sqrt {x^2+y^2})} {dy}$
+
+2. $\dfrac {1} {2\sqrt{x^2+y^2}}. \dfrac {d(x^2+y^2)} {dy}$
+
+3. $\dfrac {1} {2\sqrt{x^2+y^2}}.2y$
+
+4. $\dfrac {2y} {2\sqrt {x^2+y^2}}$
+
+5. $\dfrac {y} {\sqrt {x^2+y^2}}$
+
+$Dom(f) = R^2 - \{ (0,0) \}$
+
+Las derivadas parciales de $f$ no existen para el punto $(0,0)$, por lo tanto la función no es diferenciable para todo $R^2$.
+
+## c.
+
+$f(x,y) = \dfrac {xy} {x^2+y^2}$ si $(x,y) \neq (0,0)$
+
+$f(x,y) = 0$ si $(x,y) = (0,0)$
+
+$Dom(f) = R^2$
+
+A partir de la definición de $f$ podemos ver que, si bien su dominio es $R^2$, el punto que podría presentar conflictos es $(0,0)$. Para esto se analizarán las derivadas parciales en dicho punto.
+
+Al tratarse de una función por trozos, las derivadas parciales deben resolverse mediante la definición.
+
+### Derivada respecto a $x$
+
+1. $f_x(0,0) = \lim _{h \to 0} \dfrac {f(0+h,0) - f(0,0)} {h}$
+
+2. $\lim_{h \to 0} \dfrac {f(h,0) - 0} {h}$
+
+3. $\lim _{h \to 0} {\dfrac {h^2.0} {h^2+0^2}}.\dfrac 1 h$ *// saqué el $h$ para el costado porque me costaba entender la fracción*
+
+4. $\lim _{h \to 0} {\dfrac {0} {h^2}} .\dfrac {1} {h}$
+
+5. $\dfrac {0} {h^3}$
+
+6. $\lim _{h \to 0} = 0$
+
+### Derivada respecto a $y$
+
+1. $f_y(0,0) = \lim _{k \to 0} \dfrac {f(0, 0+k) - f(0,0)} {k}$
+
+2. $\lim _{h \to 0} \dfrac {f(0,k) - 0} {k}$
+
+3. $\lim _{h \to 0} \dfrac {0(k^2)} {0^2+k^2}. \dfrac 1 k$
+
+4. $\dfrac {0} {k^2} . \dfrac 1 k$
+
+5. $\dfrac 0 {k^3}$
+
+6. $\lim _{k \to 0} \dfrac 0 {k^3} = 0$
+
+### Diferenciabilidad en $(0,0)$
+
+Se demostró que ambas derivadas parciales existen para  $(0,0)$, por lo que se probará su diferenciabilidad en el punto.
+
+Siguiendo la definición de diferenciabilidad:
+
+$ \lim _{(x,y) \to (x_0,y_0)}\dfrac {f(x,y) - [\dfrac {df(x_0, y_0)} {dx}(x-x_0) + \dfrac {d(x_0, y_0)} {dy}(y-y_0)+f(x_0,y_0)]} {\sqrt{(x-x_0)^2+(y-y_0)^2}} = 0$
+
+Se demostrará la diferenciabilidad en $(0,0)$.
+
+1. $\lim _{(x,y) \to (0,0)} \dfrac {f(x,y)-[0(x-0)+0(y-0)+f(0,0)]} {\sqrt {(x-0)^2+(y-0)^2}}$
+
+2. $\lim _{(x,y) \to (0,0)} \dfrac {\dfrac {xy} {x^2+y^2}-[0+0+0]} {\sqrt {(x-0)^2+(y-0)^2}}$
+
+3. $\lim _{(x,y) \to (0,0)} \dfrac { \dfrac {xy} {x^2+y^2}} {\sqrt {x^2+y^2}}$
+
+4. $\lim _{(x,y) \to (0,0) \dfrac {xy} {(x^2+y^2) \sqrt {x^2+y^2}}}$
+
+5. $\lim _{(x,y) \to (0,0) \dfrac {xy} {(x^2+y^2)(x^2+y^2)^{1/2}}}$
+
+6. $\lim _{(x,y) \to (0,0) \dfrac {xy} {(x^2+y^2)^{3/2}}}$
+
+A partir de este punto se usará la relación con coordenadas polares para simplificar el resultado del límite.
+
+7. $\lim _{r \to 0} \dfrac {r.\cos(\theta).r.\sin(\theta)} {((r.\cos(\theta)^2)+(r.\sin(\theta))^2)^{3/2}}$
+
+8. $\lim _{r \to 0} \dfrac {r.^2\cos(\theta).\sin(\theta)} {(r^2.\cos(\theta)^2+r^2.\sin(\theta)^2)^{3/2}}$
+
+9. $\lim _{r \to 0} \dfrac {r.^2\cos(\theta).\sin(\theta)} {(r^2(\cos(\theta)^2+\sin(\theta)^2))^{3/2}}$
+
+10. $\lim _{r \to 0} \dfrac {r.^2\cos(\theta).\sin(\theta)} {(r^2)^{3/2}}$
+
+11. $\lim _{r \to 0} \dfrac {r.^2\cos(\theta).\sin(\theta)} {r^2}.\dfrac 1 r$
+
+12. $\lim _{r \to 0} \cos(\theta).\sin(\theta).\dfrac 1 r$
+
+13. $\lim _{r \to 0} \dfrac {\cos(\theta).\sin(\theta)} {r}$
+
+14. $\dfrac {\cos(\theta).\sin(\theta)} {0}$
+
+Se llegó a la conclusión de que el resultado del límite es indeterminado, por lo tanto no existe y $f$ no es diferenciable en $(0,0)$.
+
+## d.
+
+$f(x,y) = \dfrac {xy^2} {x^2+y^2}$ si $(x,y) \neq (0,0)$
+
+$f(x,y) = 0$ si $(x,y) = (0,0)$
+
+A partir de la definición de $f$ podemos ver que, si bien su dominio es $R^2$, el punto que podría presentar conflictos es $(0,0)$. Para esto se analizarán las derivadas parciales en dicho punto.
+
+Al tratarse de una función por trozos, las derivadas parciales deben resolverse mediante la definición.
+
+### Derivada respecto a $x$
+
+1. $f_x(0,0) = \lim _{h \to 0} \dfrac {f(0+h,0) - f(0,0)} {h}$
+
+2. $f_x(0,0) = \lim _{h \to 0} \dfrac {f(h,0) - 0} {h}$
+
+3. $f_x(0,0) = \lim _{h\to 0} \dfrac {\dfrac {h.0^2} {h^2+0^2}} {h}$
+
+4. $f_x(0,0) = \lim _{h \to 0} \dfrac {h.0^2} {h^2+0^2}. \dfrac {1} {h}$
+
+5. $f_x(0,0) = \lim _{h \to 0} \dfrac {0} {h^3}$
+
+6. $f_x(0,0) = 0$
+
+### Derivada respecto a $y$
+
+1. $f_y(0,0) = \lim _{k \to 0} \dfrac {f(0,0+k) - f(0,0)} {k}$
+
+2. $f_y(0,0) = \lim _{k \to 0} \dfrac {f(0,k)-0} {k}$
+
+3. $f_y(0,0) = \lim _{k \to 0} \dfrac {\dfrac {0.k^2} {0^2+k^2}} {k}$
+
+4. $f_y(0,0) = \lim _{k \to 0} \dfrac {0.k^2} {0^2+k^2} . \dfrac {1} {k}$
+
+5. $f_y(0,0) = \lim _{k \to 0} \dfrac {0} {k^3}$
+
+6. $f_y(0,0) = 0$
+
+### Diferenciabilidad en $(0,0)$
+
+Se demostró que ambas derivadas parciales existen para  $(0,0)$, por lo que se probará su diferenciabilidad en el punto:
+
+1. $\lim _{(x,y) \to (x_0,y_0)}\dfrac {f(x,y) - [\dfrac {df(x_0, y_0)} {dx}(x-x_0) + \dfrac {d(x_0, y_0)} {dy}(y-y_0)+f(x_0,y_0)]} {\sqrt{(x-x_0)^2+(y-y_0)^2}}$
+
+2. $\lim _{(x,y) \to (0,0)} \dfrac {f(x,y)-[0(x-0)+0(y-0)+f(0,0)]} {\sqrt {(x-0)^2+(y-0)^2}}$
+
+3. $\lim _{(x,y) \to (0,0)} \dfrac {f(x,y)-0+0+0} {\sqrt {(x-0)^2+(y-0)^2}}$
+
+4. $\lim _{(x,y) \to (0,0)} \dfrac {\dfrac {xy^2} {x^2+y^2}} {\sqrt {x^2+y^2}}$
+
+5. $\lim _{(x,y) \to (0,0)} \dfrac {xy^2} {x^2+y^2}.\dfrac {1} {\sqrt {x^2+y^2}}$
+
+6. $\lim _{(x,y) \to (0,0)} \dfrac {xy^2} {(x^2+y^2)(\sqrt {x^2+y^2})}$
+
+7. $\lim _{(x,y) \to (0,0)} \dfrac {xy^2} {(x^2+y^2)(x^2+y^2)^{1/2}}$
+
+8. $\lim _{(x,y) \to (0,0)} \dfrac {xy^2} {(x^2+y^2)^{3/2}}$
+
+Dado el término $(x^2+y^2)^{3/2}$, puede realizarse la conversión a coordenadas polares:
+
+9. $\lim _{r \to 0} \dfrac {(r.\cos(\theta))(r.\sin(\theta))^2} {((r.\cos(\theta))^2+(r.\sin(\theta))^2)^{3/2}}$
+
+10. $\lim _{r \to 0} \dfrac {r.\cos(\theta).r^2.\sin(\theta)^2} {(r^2(\cos(\theta)^2+\sin(\theta)^2))^{3/2}}$
+
+11. $\lim _{r \to 0} \dfrac {r.\cos(\theta).r^2.\sin(\theta)^2} {(r^2(1))^{3/2}}$
+
+12. $\lim _{r \to 0} \dfrac {r^3.\cos(\theta).\sin(\theta)^2} {r^3}$
+
+13. $\lim _{r \to 0} \cos(\theta)\sin(\theta)^2$
+
+14. $\cos(\theta)\sin(\theta)^2$
+
+Si bien se encontró el límite, éste depende del valor de $\theta$, por lo que varía según la dirección de aproximación al origen. Por lo tanto, $f$ no es diferenciable.
+
+*// ☝🤓 una cosa en este ej: siempre me olvido de que existe la conversión $r = \sqrt {x^2+y^2}$, así que los pasos 10 a 12 me los podría haber salteado*
+
+## e.
+
+$f(x,y) = \dfrac {xy} {\sqrt {x^2+y^2}}$ si $(x,y) \neq (0,0)$
+
+$f(x,y) = 0$ si $(x,y) = (0,0)$
+
+A partir de la definición de $f$ se puede ver que podría haber un conflicto a la diferenciabilidad en el punto $(0,0)$. Como se trata de una función a trozos, primero se calcularán las derivadas en ese punto.
+
+### Derivada respecto a $x$
+
+1. $f_x(0,0) = \lim _{h \to 0} \dfrac {f(0+h,0) - f(0,0)} {h}$
+
+2. $f_x(0,0) = \lim _{h \to 0} \dfrac {f(h,0) - 0} {h}$
+
+3. $f_x(0,0) = \lim _{h \to 0} \dfrac {\dfrac {h.0} {\sqrt {h^2+0^2}} - 0} {h}$
+
+4. $f_x(0,0) = \lim _{h \to 0} \dfrac {0} {\sqrt {h^2+0}}.\dfrac 1 h$
+
+5. $f_x(0,0) = \lim _{h \to 0} \dfrac {0} {h\sqrt {h^2}}$
+
+6. $f_x(0,0) = \lim _{h \to 0} \dfrac {0} {h^2}$
+
+8. $f_x(0,0) = 0$
+
+### Derivada respecto a $y$
+
+1. $f_y(0,0) = \lim _{k \to 0} \dfrac {f(0,0+k) - f(0,0)} {k}$
+
+2. $f_y(0,0) = \lim _{k \to 0} \dfrac {f(0,k) - 0} {k}$
+
+3. $f_y(0,0) = \lim _{k \to 0} \dfrac {\dfrac {0k} {\sqrt {0^2 + k^2}}} {k}$
+
+4. $f_y(0,0) = \lim _{k \to 0} \dfrac {0} {\sqrt {0^2+k^2}}.\dfrac 1 k$
+
+5. $f_y(0,0) = \lim _{k \to 0} \dfrac {0} {k\sqrt{k^2}}$
+
+6. $f_y(0,0) = \lim _{k \to 0} \dfrac 0 {k^2}$
+
+7. $f_y(0,0) = 0$
+
+### Diferenciabilidad en $(0,0)$
+
+Ambas derivadas existen en el punto, por lo que se procederá a calcular su diferenciabilidad en $(0,0)$:
+
+1. $\lim _{(x,y) \to (x_0,y_0)}\dfrac {f(x,y) - [\dfrac {df(x_0, y_0)} {dx}(x-x_0) + \dfrac {d(x_0, y_0)} {dy}(y-y_0)+f(x_0,y_0)]} {\sqrt{(x-x_0)^2+(y-y_0)^2}}$
+
+2. $\lim _{(x,y) \to (0,0)} \dfrac {f(x,y) -[0(x-0)+0(y-0)+0]} {\sqrt {(x-0)^2 + (y-0)^2}}$
+
+3. $\lim _{(x,y) \to (0,0)} \dfrac {f(x,y)-0} {\sqrt {x^2+y^2}}$
+
+4. $\lim _{(x,y) \to (0,0)} \dfrac {\dfrac {xy} {\sqrt {x^2+y^2}}} {\sqrt {x^2+y^2}}$
+
+5. $\lim _{(x,y) \to (0,0)} \dfrac {xy} {\sqrt {x^2+y^2}} . \dfrac 1 {\sqrt{x^2+y^2}}$
+
+6. $\lim_{(x,y) \to (0,0)} \dfrac {xy} {x^2+y^2}$
+
+A partir de ahora se aprovechará la conversión a coordenadas polares para simplificar el cálculo del límite:
+
+7. $\lim _{r \to 0} \dfrac {(r.\cos(\theta).r.\sin(\theta))} {r^2}$
+
+8. $\lim _{r \to 0} \dfrac {r^2\cos(\theta)\sin(\theta)} {r^2}$
+
+9. $\lim _{r \to 0} \cos(\theta)\sin(\theta)$
+
+Si bien se encontró el límite, éste depende del valor de $\theta$, por lo que varía según la dirección de aproximación al origen. Por lo tanto, $f$ no es diferenciable.

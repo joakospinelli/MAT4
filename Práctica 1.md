@@ -1083,3 +1083,55 @@ A partir de ahora se aprovechará la conversión a coordenadas polares para simp
 9. $\lim _{r \to 0} \cos(\theta)\sin(\theta)$
 
 Si bien se encontró el límite, éste depende del valor de $\theta$, por lo que varía según la dirección de aproximación al origen. Por lo tanto, $f$ no es diferenciable.
+
+# 8. Hallar, si es que existe, el plano tangente a la gráfica de $f(x,y) = e^{x^2+y^2}$ en el punto $(-1,1,f(-1,1))$.
+
+$Dom(f) = R^2$ (continua en todo $R^2$ ya que es una función exponencial)
+
+Primero se deben obtener las derivadas parciales de $f(x,y)$ en el punto $(-1,1)$.
+
+### Derivada respecto a $x$
+
+$\dfrac {df(x,y)} {dx} = \dfrac {d(e^{x^2+y^2})} {dx}$
+
+1. $e^{x^2+y^2}.\dfrac {d(x^2+y^2)} {dx}$
+
+2. $e^{x^2+y^2}.2x$
+
+$Dom(f_x) = R^2$ (continua en todo $R^2$ ya que es una función compuesta por una función exponencial y una polinomial)
+
+$f_x(-1,1) = e^{(-1)^2+1^2}.2(-1) = -2e^2$
+
+### Derivada respecto a $y$
+
+$\dfrac {df(x,y)} {dy} = \dfrac {d(e^{x^2+y^2})} {dy}$
+
+1. $e^{x^2+y^2}.\dfrac {d(x^2+y^2)} {dy}$
+
+2. $e^{x^2+y^2}.2y$
+
+$Dom(f_y) = R^2$ (continua en todo $R^2$ ya que es una función compuesta por una función exponencial y una polinomial)
+
+$f_y(-1,1) = e^{(-1)^2+1^2}.2.1 = 2e^2$
+
+### Cálculo del plano tangente
+
+Como las derivadas parciales existen y son continuas en $(-1,1)$, la función es diferenciable y por lo tanto puede calcularse su plano tangente:
+
+$Π_T:z=\dfrac {df(x_0,y_0)} {dx}(x-x_0)+\dfrac {df(x_0,y_0)}{dy}(y-y_0)+f(x_0,y_0)$
+
+1. $z=\dfrac {df(-1,1)} {dx}(x-(-1))+\dfrac {df(-1,1)} {dy}(y-1)+f(-1,1)$
+
+2. $z=(-2e^2)(x+1) + (2e^2)(y-1) + e^{(-1)^2+1^2}$
+
+3. $z=(-2e^2)(x+1) +(2e^2)(y-1) + e^2$
+
+4. $z=-2e^2x-2e^2 + 2e^2y-2e^2+e^2$
+
+5. $z=-3e^2-2e^2x+2e^2y$
+
+### Gráfico
+
+<img src="./gráficos/p1ej8.png">
+
+*//en naranja la función y en azul el plano tangente*

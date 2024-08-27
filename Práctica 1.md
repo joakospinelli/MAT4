@@ -906,7 +906,7 @@ Se demostró que ambas derivadas parciales existen para  $(0,0)$, por lo que se 
 
 Siguiendo la definición de diferenciabilidad:
 
-$ \lim _{(x,y) \to (x_0,y_0)}\dfrac {f(x,y) - [\dfrac {df(x_0, y_0)} {dx}(x-x_0) + \dfrac {d(x_0, y_0)} {dy}(y-y_0)+f(x_0,y_0)]} {\sqrt{(x-x_0)^2+(y-y_0)^2}} = 0$
+$ \lim _{(x,y) \to (1,y_0)}\dfrac {f(x,y) - [\dfrac {df(x_0, y_0)} {dx}(x-x_0) + \dfrac {d(x_0, y_0)} {dy}(y-y_0)+f(x_0,y_0)]} {\sqrt{(x-x_0)^2+(y-y_0)^2}} = 0$
 
 Se demostrará la diferenciabilidad en $(0,0)$.
 
@@ -1135,3 +1135,187 @@ $Π_T:z=\dfrac {df(x_0,y_0)} {dx}(x-x_0)+\dfrac {df(x_0,y_0)}{dy}(y-y_0)+f(x_0,y
 <img src="./gráficos/p1ej8.png">
 
 *//en naranja la función y en azul el plano tangente*
+
+# 9. Encontrar la aproximación lineal de la función $f(x,y) = x^2+y^4+e^{xy}$ en $(1,0)$ y utilizarla para estimar aproximadamente $f(0.98,0.05)$.
+
+## Preliminares
+
+### $f(1,0)$
+
+$f(1,0) = 1^2+ 0^4 + e^{1.0}$
+
+$f(1,0) = 1 + 1 = 2$
+
+### Derivada respecto a $x$
+
+$f_x(x,y) = \dfrac {d(x^2+y^4+e^{xy})} {dx}$
+
+$f_x(x,y) = \dfrac{d(x^2)} {dx} + 0 + \dfrac{d(e^{xy})} {dx}.\dfrac {d(xy)} {dx}$
+
+$f_x(x,y) = 2x+e^{xy}.y$
+
+$f_x(1,0) = 2.1 + e^{1.0}.0 = 2$ 
+
+### Derivada respecto a $y$
+
+$f_y(x,y) = \dfrac {d(x^2+y^4+e^{xy})} {dy}$
+
+$f_y(x,y) = 0 + \dfrac {f(y^4)} {dy} + \dfrac {e^{xy}} {dy}$
+
+$f_y(x,y) = 4y^3 + e^{xy}. \dfrac {d(xy)} {dy}$
+
+$f_y(x,y) = 4y^3+e^{xy}.x$
+
+$f_y(1,0) = 4.0^3 + e^{1.0}.1 = 1$
+
+## Linealidad
+
+$L(x,y) = f(1,0) + f_x(1, 0)(x-1) + f_y(1,0)(y-0)$
+
+$L(x,y) = 2 + 2(x-1) + 1(y-0)$
+
+$L(x,y) = 2 + 2x - 2 + y$
+
+$L(x,y) = 2x+y$
+
+## Aproximación lineal
+
+$L(0.98, 0.05) = 2(0.98) + (0.05)$
+
+$L(0.98, 0.05) = 1.96 + 0.05 = 2.01$
+
+# 10. Calcular los vectores gradientes de las siguientes funciones
+
+## a. $f(x,y) = e^{(x^2 + y^2)}$
+
+$Dom(f) = R^2$ (deducible ya que es una función exponencial)
+
+$f$ es continua en todo $R^2$, por lo que si sus derivadas parciales existen puede obtenerse su vector gradiente.
+
+### Derivada respecto a $x$
+
+$f_x(x,y) = \dfrac {d(e^{(x^2+y^2)})} {dx}$
+
+$f_x(x,y) = e^{(x^2+y^2)}.\dfrac {d(x^2+y^2)} {dx}$
+
+$f_x(x,y) = 2x.e^{(x^2+y^2)}$
+
+$Dom(f_x) = R^2$ (deducible ya que es una función compuesta por un polinomio y un exponente)
+
+### Derivada respecto a $y$
+
+$f_y(x,y) = \dfrac {d(e^{(x^2+y^2)})} {dy}$
+
+$f_y(x,y) = e^{(x^2+y^2)}.\dfrac {d(x^2+y^2)} {dy}$
+
+$f_y(x,y) = e^{(x^2+y^2)}.2y$
+
+$Dom(f_y) = R^2$ (deducible ya que es una función compuesta por un polinomio y un exponente)
+
+### Vector gradiente
+
+Las derivadas parciales de $f$ existen y son continuas en todo $R^2$, por lo tanto puede obtenerse el vector gradiente.
+
+$∇f(x,y) = (2x.e^{(x^2+y^2)},2y.e^{(x^2+y^2)})$
+
+## b. $f(x,y,z) = x.y.z$
+
+$Dom(f) = R^3$ (deducible ya que es una función compuesta por polinomios).
+
+$f$ es continua en todo $R^3$, por lo que si sus derivadas parciales existen puede obtenerse su vector gradiente.
+
+### Derivada respecto a $x$
+
+$f_x(x,y,z) = \dfrac {d(x.y.z)} {dx}$
+
+$f_x(x,y,z) = 1.x^0.y.z$
+
+$f_x(x,y,z) = y.z$
+
+$Dom(f_x) = R^3$ (deducible ya que es una función compuesta por un polinomio y un exponente)
+
+### Derivada respecto a $y$
+
+$f_y(x,y,z) = \dfrac {d(x.y.z)} {dy}$
+
+$f_y(x,y,z) = x.1.y^0.z$
+
+$f_y(x,y,z) = x.z$
+
+$Dom(f) = R^3$ (deducible ya que es una función compuesta por un polinomio y un exponente)
+
+### Derivada respecto a $z$
+
+$f_z(x,y,z) = \dfrac {d(x.y.z)} {dz}$
+
+$f_z(x,y,z) = x.y.1.z^0$
+
+$f_z(x,y,z) = x.y$
+
+$Dom(f) = R^3$ (deducible ya que es una función compuesta por un polinomio y un exponente)
+
+### Vector gradiente
+
+Las derivadas parciales de $f$ existen y son continuas en todo $R^2$, por lo tanto puede obtenerse el vector gradiente.
+
+$∇f(x,y,z) = (y.z, x.z, x.y)$
+
+# 11. Calcular la derivada direccional de las siguientes funciones en los puntos y dirección de los vectores:
+
+## a. $f(x,y) = x^2 + 3xy^2$ en $p = (1,2)$ y $v^→ (-1, -2)$
+
+$Dom(f) = R^2$ (deducible ya que es una función compuesta por dos polinomios).
+
+Como $f$ es una función continua, se calcularán sus derivadas parciales para ver si es diferenciable.
+
+### Derivada respecto a $x$
+
+$f_x(x,y) = \dfrac{d(x^2 + 3xy^2)} {dx}$
+
+$f_x(x,y) = \dfrac {d(x^2)} {dx} + \dfrac {3xy^2} {dx}$
+
+$f_x(x,y) = 2x + 3.1.y^2$
+
+$f_x(x,y) = 2x + 3y^2$
+
+$Dom(f) = R^2$ (deducible ya que es una función compuesta por dos polinomios).
+
+### Derivada respecto a $y$
+
+$f_y(x,y) = \dfrac {d(x^2+3xy^2)} {dy}$
+
+$f_y(x,y) = \dfrac {d(x^2)} {dy} + \dfrac {d(3xy^2)} {dy}$
+
+$f_y(x,y) = 0 + 3x(2y)$
+
+$f_y(x,y) = 6xy$
+
+$Dom(f) = R^2$ (deducible ya que es un polinomio).
+
+### Vector gradiente
+
+Como las derivadas parciales de $f$ existen, puede obtenerse su vector gradiente:
+
+$∇f(x,y) = (2x+3y^2, 6xy)$
+
+$∇f(1,2) = (2.1+3.(2^2), 6.1.2)$
+
+$∇f(1,2) = (2+3.4, 6.2) = (14, 12)$
+
+### Derivada direccional
+
+$f$ es diferenciable en todo $R^2$, ya que es continua y sus derivadas parciales también. Por lo tanto, puede utilizarse el teorema para calcular su derivada direccional.
+
+$D f(x) = ∇f(1,0). v^→$
+
+$Df(x) = (14,12).(-1, -2)$
+
+$Df(x) = (14.(-1)) + (12. (-2))$
+
+$Df(x) = (-14) + (-24)$
+
+$Df(x) = -14 - 24 = -38$
+
+*// esto creo que está mal porque hay que calcular el vector unitario a partir de $v^→$ ??? pero no sé cómo se hace je*
+
+## b. $f(x,y) = xy^2$ en $p = (1,1)$ y $v^→ (\dfrac {1} {2}, -1)$

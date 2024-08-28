@@ -1306,7 +1306,7 @@ $∇f(1,2) = (2+3.4, 6.2) = (14, 12)$
 
 $f$ es diferenciable en todo $R^2$, ya que es continua y sus derivadas parciales también. Por lo tanto, puede utilizarse el teorema para calcular su derivada direccional.
 
-$D f(x) = ∇f(1,0). v^→$
+$Df(x) = ∇f(1,0). v^→$
 
 $Df(x) = (14,12).(-1, -2)$
 
@@ -1318,4 +1318,52 @@ $Df(x) = -14 - 24 = -38$
 
 *// esto creo que está mal porque hay que calcular el vector unitario a partir de $v^→$ ??? pero no sé cómo se hace je*
 
+*// ☝ creo que no hace falta salvo que haya que calcular la tasa de cambio o te pida el enunciado que sí o sí sea unitario*
+
 ## b. $f(x,y) = xy^2$ en $p = (1,1)$ y $v^→ (\dfrac {1} {2}, -1)$
+
+$Dom(f) = xy^2$ (deducible ya que es un polinomio)
+
+Como $f$ es una función continua, se calcularán sus derivadas parciales para ver si es diferenciable.
+
+### Derivada respecto a $x$
+
+$f_x(x,y) = \dfrac {d(xy^2)} {dx}$
+
+$f_x(x,y) = 1.x^0.y^2$
+
+$f_x(x,y) = y^2$
+
+$Dom(f) = R^2$ (deducible ya que es un polinomio)
+
+$f_x(1,1) = (1^2) = 1$
+
+### Derivada respecto a $y$
+
+$f_y(x,y) = \dfrac {d(xy^2)} {dy}$
+
+$f_y(x,y) = 2xy$
+
+$Dom(f) = R^2$ (deducible ya que es un polinomio)
+
+$f_y(1,1) = 2.1.1 = 2$
+
+### Vector gradiente
+
+Como las derivadas parciales de $f$ existen, puede obtenerse su vector gradiente:
+
+$∇f(x,y) = (y^2, 2xy)$
+
+$∇f(1,1) = (1, 2)$
+
+### Derivada direccional
+
+$f$ es diferenciable en todo $R^2$, ya que es continua y sus derivadas parciales también. Por lo tanto, puede utilizarse el teorema para calcular su derivada direccional.
+
+$Df(x) = ∇f(1,1). v^→$
+
+$Df(x) = (1,2).(\dfrac 1 2, -1)$
+
+$Df(x) = (1.\dfrac 1 2) + (2(-1))$
+
+$Df(x) = \dfrac 1 2 - 2 = - \dfrac 3 2$

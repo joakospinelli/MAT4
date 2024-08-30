@@ -1302,23 +1302,31 @@ $∇f(1,2) = (2.1+3.(2^2), 6.1.2)$
 
 $∇f(1,2) = (2+3.4, 6.2) = (14, 12)$
 
+### Vector unitario
+
+Para obtener la derivada direccional a partir del vector $v^→ (-1, -2)$ debe obtenerse su vector unitario:
+
+$||(x,y)|| = \sqrt {x^2 + y^2}$
+
+$|| (-1, -2)|| = \sqrt {(-1^2 + (-2)^2)} = \sqrt {1 + 4} = \sqrt 5$
+
+$u(-1, -2) = \dfrac 1 {||(-1, -2)||} . (-1, -2)$
+
+$u(-1, -2) = \dfrac 1 {\sqrt 5}. (-1, -2)$
+
+$u(-1, -2) = (\dfrac {-1} {\sqrt 5}, \dfrac {-2} {\sqrt 5})$
+
 ### Derivada direccional
 
 $f$ es diferenciable en todo $R^2$, ya que es continua y sus derivadas parciales también. Por lo tanto, puede utilizarse el teorema para calcular su derivada direccional.
 
-$Df(x) = ∇f(1,0). v^→$
+$Df(1,2) = ∇f(1,0). v^→$
 
-$Df(x) = (14,12).(-1, -2)$
+$Df(1,2) = (14,12).(\dfrac {-1} {\sqrt 5}, \dfrac {-2} {\sqrt 5})$
 
-$Df(x) = (14.(-1)) + (12. (-2))$
+$Df(1,2) = (14.\dfrac {-1} {\sqrt 5}) + (12.\dfrac {-2} {\sqrt 5})$
 
-$Df(x) = (-14) + (-24)$
-
-$Df(x) = -14 - 24 = -38$
-
-*// esto creo que está mal porque hay que calcular el vector unitario a partir de $v^→$ ??? pero no sé cómo se hace je*
-
-*// ☝ creo que no hace falta salvo que haya que calcular la tasa de cambio o te pida el enunciado que sí o sí sea unitario*
+$Df(1,2) = (\dfrac {-14} {\sqrt 5} + \dfrac {-24} {\sqrt 5}) = \dfrac {-38} {\sqrt 5}$
 
 ## b. $f(x,y) = xy^2$ en $p = (1,1)$ y $v^→ (\dfrac {1} {2}, -1)$
 
@@ -1356,14 +1364,33 @@ $∇f(x,y) = (y^2, 2xy)$
 
 $∇f(1,1) = (1, 2)$
 
+### Vector unitario
+
+Para obtener la derivada direccional a partir del vector $v^→ (\dfrac 1 2, -1)$ debe obtenerse su vector unitario:
+
+$||(\dfrac 1 2, -1)|| = \sqrt {(\dfrac 1 2)^2 + -1^2}$
+
+$||(\dfrac 1 2, -1)|| = \sqrt {\dfrac 1 4 + 1} = \sqrt {\dfrac 5 4}$
+
+$u(\dfrac 1 2, -1) = \dfrac 1 {||(\dfrac 1 2, -1)}.(\dfrac 1 2, -1)$
+
+$u(\dfrac 1 2, -1) = \dfrac 1 {\sqrt {\dfrac 5 4}}.(\dfrac 1 2, -1)$
+
+$u(\dfrac 1 2, -1) = (\dfrac 1 {\sqrt {\dfrac 5 4}.2}, \dfrac {-1} {\sqrt \dfrac 5 4})$
+
+
 ### Derivada direccional
 
 $f$ es diferenciable en todo $R^2$, ya que es continua y sus derivadas parciales también. Por lo tanto, puede utilizarse el teorema para calcular su derivada direccional.
 
-$Df(x) = ∇f(1,1). v^→$
+$Df(1,1) = ∇f(1,1). v^→$
 
-$Df(x) = (1,2).(\dfrac 1 2, -1)$
+$Df(1,1) = (1,2).(\dfrac 1 {\sqrt {\dfrac 5 4}.2}, \dfrac {-1} {\sqrt {\dfrac 5 4}})$
 
-$Df(x) = (1.\dfrac 1 2) + (2(-1))$
+$Df(1,1) = \dfrac 1 {\sqrt {\dfrac 5 4}.2} + 2.(\dfrac {-1} {\sqrt {\dfrac 5 4}})$
 
-$Df(x) = \dfrac 1 2 - 2 = - \dfrac 3 2$
+$Df(1,1) = \dfrac 1 {\sqrt {\dfrac 5 4}.2} + \dfrac {-2} {\sqrt {\dfrac 5 4}}$
+
+$Df(1,1) = \dfrac 1 {\sqrt {\dfrac 5 4}.2} + \dfrac {-2(2)} {\sqrt {\dfrac 5 4}.2}$
+
+$Df(1,1) = \dfrac 1 {\sqrt {\dfrac 5 4}.2} - \dfrac {4} {\sqrt {\dfrac 5 4}.2} = -\dfrac {3} {\sqrt {\dfrac 5 4}.2}$

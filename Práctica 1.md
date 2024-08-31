@@ -1394,3 +1394,146 @@ $Df(1,1) = \dfrac 1 {\sqrt {\dfrac 5 4}.2} + \dfrac {-2} {\sqrt {\dfrac 5 4}}$
 $Df(1,1) = \dfrac 1 {\sqrt {\dfrac 5 4}.2} + \dfrac {-2(2)} {\sqrt {\dfrac 5 4}.2}$
 
 $Df(1,1) = \dfrac 1 {\sqrt {\dfrac 5 4}.2} - \dfrac {4} {\sqrt {\dfrac 5 4}.2} = -\dfrac {3} {\sqrt {\dfrac 5 4}.2}$
+
+# 12. Encontrar las direcciones en las cuales la derivada direccional en el punto $(1,0)$ de $f(x,y) = x^2 + \sin(xy)$ tiene el valor 1.
+
+$Dom(f) = R^2$ (deducible ya que es una función compuesta por un polinomio y un seno, los cuales tienen como dominio $R^2$).
+
+$f$ es continua en $(0,1)$, por lo que se buscarán sus derivadas parciales para saber si es diferenciable.
+
+## Derivada respecto a $x$
+
+$f_x(x,y) = \dfrac {d(x^2+\sin(xy))} {dx}$
+
+$f_x(x,y) = \dfrac {d(x^2)} {dx} + \dfrac {d(\sin(xy))} {dx}$
+
+$f_x(x,y) = 2x + \cos(xy). \dfrac {d(xy)} {dx}$
+
+$f_x(x,y) = 2x + y.\cos(xy)$
+
+$Dom(f_x) = R^2$
+
+$f_x(1,0) = 2.1 + 0.\cos(1.0) = 2$
+
+## Derivada respecto a $y$
+
+$f_y(x,y) = \dfrac {d(x^2+\sin(xy))} {dy}$
+
+$f_y(x,y) = \dfrac {d(x^2)} {dy} + \dfrac {d(\sin(xy))} {dy}$
+
+$f_y(x,y) = 0 + \cos(xy).\dfrac {d(xy)} {dy}$
+
+$f_y(x,y) = x.\cos(xy)$
+
+$Dom(f_y) = R^2$
+
+$f_y(1,0) = 1.cos(0) = 1$
+
+## Vector gradiente
+
+Como las derivadas parciales de $f$ existen, puede obtenerse su vector gradiente:
+
+$∇f(x,y) = (2x + y.\cos(xy), x.\cos(xy))$
+
+$∇f(1,0) = (2,1)$
+
+*// me quedé trabado acá je*
+
+# 13. Encontrar la dirección de máximo crecimiento de las siguientes funciones en los puntos dados:
+
+## a. $f(x,y) = xe^y + 3y$ en $p = (1,0)$.
+
+$Dom(f) = R^2$ (deducible ya que es una función compuesta por dos polinomios).
+
+$f$ es continua en $(1,0)$, por lo que se calculará su vector gradiente a partir de sus derivadas parciales.
+
+### Derivada respecto a $x$
+
+$f_x(x,y) = \dfrac {d(xe^y+3y)} {dx}$
+
+$f_x(x,y) = \dfrac {d(xe^y)} {dx} + 0$
+
+$f_x(x,y) = x^0e^y = e^y$
+
+$Dom(f_x) = R^2$ (función exponencial)
+
+$f_x(1,0) = e^0 = 1$
+
+### Derivada respecto a $y$
+
+$f_y(x,y) = \dfrac {d(xe^y + 3y)} {dy}$
+
+$f_y(x,y) = \dfrac {d(xe^y)} {dy} + \dfrac {d(3y)} {dy}$
+
+$f_y(x,y) = xe^y + 3.y^0 = xe^y + 3$
+
+$Dom(f_y) = R^2$ (función compuesta por un polinomio y una constante)
+
+$f_y(1,0) = 1.e^0 + 3 = 1 + 3 = 4$
+
+### Vector gradiente
+
+Las derivadas parciales existen y son continuas en $(1,0)$, por lo que $f$ es diferenciable y puede calcularse su vector gradiente en el punto:
+
+$∇f(x,y) = (f_x(x,y), f_y(x,y))$
+
+### Dirección de máximo crecimiento
+
+A partir del vector gradiente se puede obtener la dirección de máximo crecimiento como:
+
+$D_{u^→} f(x,y) = ∇f(x,y)$
+
+$D_{u^→} f(1,0) = (1, 4)$
+
+*// no dice nada de la razón de cambio así que supongo que el ej termina ahí*
+
+## b. $f(x,y,z) = 4x^2yz^3$ en $p = (1,2,1)$.
+
+
+$Dom(f) = R^3$ (deducible ya que es una función compuesta por polinomios).
+
+$f$ es continua en $(1,2,1)$, por lo que se calculará su vector gradiente a partir de sus derivadas parciales.
+
+### Derivada respecto a $x$
+
+$f_x(x,y,z) = \dfrac {d(4x^2yz^3)} {dx}$
+
+$f_x(x,y,z) = 4.2xyz^3 = 8xyz^3$
+
+$Dom(f_x) = R^3$ (por definición de polinomios).
+
+$f_x(1,2,1) = 8.1.2.(1^3) = 16$
+
+### Derivada respecto a $y$
+
+$f_y(x,y,z) = \dfrac {d(4x^2yz^3)} {dy}$
+
+$f_y(x,y,z) = 4x^2(y^0)z^3 = 4x^2z^3$
+
+$Dom(f_y) = R^3$ (por definición de polinomios).
+
+$f_y(1,2,1) = 4(1^2)(1^3) = 4$
+
+### Derivada respecto a $z$
+
+$f_z(x,y,z) = \dfrac {d(4x^2yz^3)} {dz}$
+
+$f_z(x,y,z) = 4x^2y3z^2 = 12x^2yz^2$
+
+$Dom(f_z) = R^3$ (por definición de polinomios).
+
+$f_z(1,2,1) = 12.(1^2).2(1^2) = 24$
+
+### Vector gradiente
+
+Las derivadas parciales existen y son continuas en $(1,2,1)$, por lo que $f$ es diferenciable y puede calcularse su vector gradiente en el punto:
+
+$∇f(x,y,z) = (f_x(x,y,z), f_y(x,y,z), f_z(x,y,z))$
+
+### Dirección de máximo crecimiento
+
+A partir del vector gradiente se puede obtener la dirección de máximo crecimiento como:
+
+$D_{u^→} f(x,y) = ∇f(x,y,z)$
+
+$D_{u^→} f(1,2,1) = (16, 4, 24)$

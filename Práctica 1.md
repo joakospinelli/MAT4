@@ -1537,3 +1537,376 @@ A partir del vector gradiente se puede obtener la dirección de máximo crecimie
 $D_{u^→} f(x,y) = ∇f(x,y,z)$
 
 $D_{u^→} f(1,2,1) = (16, 4, 24)$
+
+# 14. Hallar máximos, mínimos y puntos silla de las siguientes funciones. Además, calcular el valor de la misma en cada uno esos puntos.
+
+## a. $f(x,y) = 9-2x+4y-x^2-4y^2$
+
+$Dom(f) = R^2$ (Deducible por definición; función compuesta por polinomios).
+
+Para encontrar los extremos de $f$ se calcularán sus derivadas parciales y se buscarán los valores en los que éstas se anulen (es decir, sean 0).
+
+### Derivada respecto a $x$
+
+$f_x(x,y) = \dfrac {d(9-2x+4y-x^2-4y^2)} {dx}$
+
+$f_x(x,y) = \dfrac {d(9)} {dx} - \dfrac {d(2x)} {dx} + \dfrac {d(4y)} {dx} - \dfrac {d(x^2)} {dx} - \dfrac {d(4y^2)} {dx}$
+
+$f_x(x,y) = 0 - 2.x^0 + 0 - 2x - 0$
+
+$f_x(x,y) = 0-2-2x = -2 - 2x$
+
+$Dom(f_x) = R^2$
+
+### Derivada respecto a $y$
+
+$f_y(x,y) = \dfrac {d(9-2x+4y-x^2-4y^2)} {dy}$
+
+$f_y(x,y) = \dfrac {d(9)} {dy} - \dfrac {d(2x)} {dy} + \dfrac {d(4y)} {dy} - \dfrac {d(x^2)} {dy} - \dfrac {d(4y^2)} {dy}$
+
+$f_y(x,y) = 0 - 0 + 4.y^0 - 0 - 4.2y$
+
+$f_y(x,y) = 4 - 8y$
+
+$Dom(f_y) = R^2$
+
+### Cálculo de extremos
+
+Para encontrar un extremo es necesario encontrar el punto en el que las derivadas parciales sean 0.
+
+$f_x(x,y) = 0$
+
+$-2-2x = 0$
+
+$-2 = 2x$
+
+$x = -1$
+
+
+$f_y(x,y) = 0$
+
+$4-8y = 0$
+
+$-8y = -4$
+
+$y = \dfrac 1 2$
+
+Se encontró un extremo en el punto $(-1, \dfrac 1 2)$.
+
+$f(-1, \dfrac 1 2) = 9-2(-1)+4(\dfrac 1 2)-(-1)^2-4(\dfrac 1 2)^2$
+
+$f(-1, \dfrac 1 2) = 9+2+2-1-1 = 11$
+
+### Cálculo de máximos-mínimos
+
+A partir del valor en el extremo encontrado se demostrará si se trata de un máximo, mínimo o punto silla, analizándo sus derivadas segundas.
+
+$\dfrac {d^2f(x,y)} {dx.dx} = \dfrac {d(-2 -2x)} {dx.dx}$
+
+$\dfrac {d^2f(x,y)} {dx.dx} = \dfrac {d(-2)} {dx.dx} - \dfrac {d(2x)} {dx.dx}$
+
+$\dfrac {d^2f(x,y)} {dx.dx} = 0 - 2 = -2$
+
+$Dom(\dfrac {d^2f(x,y)} {dx.dx}) = R^2$
+
+---
+
+$\dfrac {d^2f(x,y)} {dx.dy} = \dfrac {d(-2 -2x)} {dx.dy}$
+
+$\dfrac {d^2f(x,y)} {dx.dy} = \dfrac {d(-2)} {dx.dy} - \dfrac {d(2x)} {dx.dy}$
+
+$\dfrac {d^2f(x,y)} {dx.dy} = 0-0 = 0$
+
+$Dom(\dfrac {d^2f(x,y)} {dx.dy}) = R^2$
+
+---
+
+$\dfrac {d^2f(x,y)} {dy.dy} = \dfrac {d(4-8y)} {dy.dy}$
+
+$\dfrac {d^2f(x,y)} {dy.dy} = \dfrac {d(4)} {dy.dy} - \dfrac {d(8y)} {dy.dy}$
+
+$\dfrac {d^2f(x,y)} {dy.dy} = 0 - y = -8$
+
+$Dom(\dfrac {d^2f(x,y)} {dy.dy}) = R^2$
+
+---
+
+$\dfrac {d^2f(x,y)} {dy.dx} = \dfrac {d(4-8y)} {dy.dx}$
+
+$\dfrac {d^2f(x,y)} {dy.dx} = \dfrac {d(4)} {dy.dx} - \dfrac {d(8y)} {dy.dx}$
+
+$\dfrac {d^2f(x,y)} {dy.dx} = 0 - 0 = 0$
+
+$Dom(\dfrac {d^2f(x,y)} {dy.dx}) = R^2$
+
+*// creo que esta no sería necesaria hacerla? por el teorema de Clairaut se supone que si las derivadas parciales son continuas, las derivadas segundas cruzadas siempre van a ser iguales*
+
+---
+
+A partir de estos valores se utilizará el criterio de las derivadas segundas en el punto $(-1, \dfrac 1 2)$:
+
+$H = (-2)(-8) - (0)^2 = 16$
+
+Siguiendo los criterios:
+* $H > 0$ y $\dfrac {d^2f} {dx.dx} < 0$ en $(-1, \dfrac 1 2)$, por lo tanto existe un **máximo local** en dicho punto.
+
+## b. $f(x,y) = xy-2x-y$
+
+$Dom(f) = R^2$ (por definición: función compuesta de polinomios).
+
+Para encontrar los extremos de $f$ se calcularán sus derivadas parciales y se buscarán los valores en los que éstas se anulen (es decir, sean 0).
+
+### Derivada respecto a $x$
+
+$f_x(x,y) = \dfrac {d(xy-2x-y)} {dx}$
+
+$f_x(x,y) = \dfrac {d(xy)} {dx} - \dfrac {d(2x)} {dx} - 0$
+
+$f_x(x,y) = y - 2$
+
+$Dom(f_x) = R^2$
+
+### Derivada respecto a $y$
+
+$f_y(x,y) = \dfrac {d(xy-2x-y)} {dy}$
+
+$f_y(x,y) = \dfrac {d(xy)} {dy} - 0 - \dfrac {d(y)} {dy}$
+
+$f_y(x,y) = x - 1$
+
+$Dom(f_y) = R^2$
+
+### Cálculo de extremos
+
+Para calcular un extremo, hay que encontrar un punto en el que las derivadas parciales sean 0.
+
+$f_x(x,y) = 0$
+
+$y - 2 = $
+
+$y = 2$
+
+$f_y(x,y) = 0$
+
+$x-1 = 0$
+
+$x = 1$
+
+Se encontró un extremo en el punto $(1,2)$.
+
+$f(1,2) = 1.2-2.1-2 = 2 - 2 - 2 = -2$
+
+### Cálculo de máximos-mínimos
+
+A partir del valor en el extremo encontrado se demostrará si se trata de un máximo, mínimo o punto silla, analizándo sus derivadas segundas.
+
+$f_{xx}(x,y) = \dfrac {d(y-2)} {dx}$
+
+$f_{xx}(x,y) = 0$
+
+$Dom(f_{xx}) = R^2$ (por definición de constantes)
+
+---
+
+$f_{xy} (x,y) = \dfrac {d(y-2)} {dy}$
+
+$f_{xy} (x,y) = 1$
+
+$Dom(f_{xy}) = R^2$
+
+---
+
+$f_{yx} (x,y) = \dfrac {d(x-1)} {dx}$
+
+$f_{yx}(x,y) = 1$
+
+$Dom(f_{yx}) = R^2$
+
+---
+
+$f_{yy} (x,y) = \dfrac {d(x-1)} {dy}$
+
+$f_{yy} (x,y) = 0$
+
+$Dom(f_{yy}) = R^2$
+
+---
+
+A partir de estos valores se utilizará el criterio de las derivadas segundas en el punto $(1,2)$:
+
+$H = 0.0 - 1^2 = -1$
+
+Siguiendo los criterios:
+
+* $H < 0$, por lo tanto existe un **punto silla** en $(1,2)$.
+
+## c. $f(x,y) = x.\sin(y)$
+
+$Dom(f) = R^2$ (por definición; función compuesta por un polinomio y el seno de un polinomio).
+
+Para encontrar los extremos de $f$ se calcularán sus derivadas parciales y se buscarán los valores en los que éstas se anulen (es decir, sean 0).
+
+### Derivada respecto a $x$
+
+$f_x(x,y) = \dfrac {d(x.\sin(y))} {dx}$
+
+$f_x(x,y) = 1.x^0.\sin(y)$
+
+$f_x(x,y) = \sin(y)$
+
+$Dom(f_x) = R^2$ (por definición de seno y coseno).
+
+### Derivada respecto a $y$
+
+$f_y(x,y) = \dfrac {d(x.\sin(y))} {dy}$
+
+$f_y(x,y) = x.\cos(y)$
+
+$Dom(f_y) = R^2$ (por definición de seno y coseno).
+
+### Cálculo del extremo
+
+Para calcular un extremo, hay que encontrar un punto en el que las derivadas parciales sean 0.
+
+$f_x(x,y) = 0$
+
+$\sin(y) = 0$
+
+$f_x = 0$ para cualquier entero múltiplo de $\pi$, para los valores del conjunto $Y = \{ y ∈ R: y = n\pi ;n ∈ Z\}$
+
+$f_y(x,y) = 0$
+
+$f_y = 0$ cuando $x = 0$, independientemente del valor de $y$.
+
+Se encontró un extremo en el punto $(0,Y)$, tal que $Y = \{ y ∈ R: y = n\pi ;n ∈ Z\}$.
+
+### Cálculo de máximos-mínimos
+
+A partir del valor en el extremo encontrado se demostrará si se trata de un máximo, mínimo o punto silla, analizándo sus derivadas segundas.
+
+$f_{xx}(x,y) = \dfrac {d(\sin(y))} {dx}$
+
+$f_{xx}(x,y) = 0$
+
+$Dom(f_{xx}) = R^2$ (por definición de constantes).
+
+---
+
+$f_{xy} (x,y) = \dfrac {d(\sin(y))} {dy}$
+
+$f_{xy} (x,y) = \cos(y)$
+
+$Dom(f_{xy}) = R^2$
+
+---
+
+$f_{yy} (x,y) = \dfrac {d(x.\cos(y))} {dy}$
+
+$f_{yy} (x,y) = x(-\sin(y))$
+
+$Dom(f_{yy}) = R^2$
+
+---
+
+$f_{yx} (x,y) = \dfrac {d(x.\cos(y))} {dx}$
+
+$f_{yx} (x,y) = \cos(y)$
+
+$Dom(f_{yx}) = R^2$
+
+---
+
+A partir de estos valores se utilizará el criterio de las derivadas segundas en el punto $(0,Y)$:
+
+$H = 0.(x(-\sin(y))) - (\cos(y))^2$
+
+$H = -(\pm 1)^2$
+*// en realidad acá se deduce que $(\cos = \pm 1)$ a partir de la definición del conjunto $Y$ para los valores de $y$*
+
+$H = -1$
+
+Siguiendo los criterios:
+* $H < 0$, por lo que existe un **punto silla** en $(0,Y)$
+
+# 15. El criterio de las derivadas segundas permite clasificar los puntos estacionarios de $f(x,y) = x^2y$? En caso afirmativo, hallarlos y analizarlos.
+
+$Dom(f) = R^2$ (por definición de polinomios).
+
+Como $f$ es continua en todo su dominio, sus derivadas parciales existen, por lo que deben calcularse para definir sus extremos.
+
+### Derivada respecto a $x$
+
+$f_x(x,y) = \dfrac {d(x^2y)} {dx}$
+
+$f_x(x,y) = 2xy$
+
+$Dom(f_x) = R^2$
+
+### Derivada respecto a $y$
+
+$f_y(x,y) = \dfrac {d(x^2y)} {dy}$
+
+$f_y(x,y) = x^2$
+
+$Dom(f_y) = R^2$
+
+### Cálculo del extremo
+
+Para calcular un extremo, hay que encontrar un punto en el que las derivadas parciales sean 0.
+
+$f_x(x,y) = 0$
+
+$2xy = 0$
+
+$xy = 0$
+
+$f_x = 0$ tanto para $x=0$ como $y=0$.
+
+$f_y(x,y) = 0$
+
+$x^2 = 0$
+
+$x = 0$
+
+Para que ambas derivadas se anulen al mismo tiempo, debe cumplirse $x=0$. Por lo tanto, el extremo se encuentra en los puntos $(0,y)$.
+
+### Cálculo de máximos-mínimos
+
+A partir del valor en el extremo encontrado se demostrará si se trata de un máximo, mínimo o punto silla, analizándo sus derivadas segundas.
+
+$f_{xx} (x,y) = \dfrac {d(2xy)} {dx}$
+
+$f_{xx} (x,y) = 2y$
+
+---
+
+$f_{xy} (x,y) = \dfrac {d(2xy)} {dy}$
+
+$f_{xy} (x,y) = 2x$
+
+---
+
+$f_{yy} (x,y) = \dfrac {d(x^2)} {dy}$
+
+$f_{yy} (x,y) = 0$
+
+---
+
+$f_{yx} (x,y) = \dfrac {d(x^2)} {dx}$
+
+$f_{yx} (x,y) = 2x$
+
+---
+
+A partir de estos valores se utilizará el criterio de las derivadas segundas en los extremos definidos por $(0,y)$:
+
+$H = 2y.0 - (2x)^2$
+
+$H = 4x^2$
+
+$H = 4.0^2$ *// a partir del conjunto de extremos*
+
+$H = 0$
+
+Siguiendo los criterios:
+* $H = 0$, por lo tanto **no se puede decidir**.

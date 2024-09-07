@@ -104,3 +104,28 @@ $n.b_0 = \sum_{i=1}^ny_i - b_1\sum_{i=1}^nx_i - n.b_1.c$
 $\hat\beta_0 = \dfrac {\sum_{i=1}^ny_i - b_1\sum_{i=1}^nx_i - n.b_1.c} {n}$
 
 $\hat\beta_0 = \dfrac 1 n \sum_{i=1}^n y_i - \dfrac {b_1} n \sum_{i=1}^nx_i - b_1.c$
+
+# 2.  Una cadena de supermercados financia un estudio sobre los gastos mensuales en alimentos, de familias de 4 miembros. La investigación se limitó a familias con ingresos netos entre \$688.000 y \$820.000, con lo cual se obtuvo la siguiente recta de estimación $\hat y = 0,85𝑥 − 18.000$.
+
+## a. Estime los gastos en alimentos en un mes para una familia de 4 miembros con un ingreso de $700.000
+
+* $y =$ gastos.
+* $x =$ ingresos.
+
+La recta dada para realizar la estimación de los gastos es $\hat y = 0.85x - 18000$.
+
+Como en este caso se sabe que $x = 700000$, puede calcularse la estimación simplemente reemplazando dicha variable:
+
+$\hat y = 0.85(700000) - 18000$
+
+$\hat y = 595000 - 18000 = 577000$
+
+## b. Uno de los directivos de la compañía se preocupa por el hecho de que la ecuación aparentemente indica que para una familia que tiene un ingreso de $12.000 no gastaría nada en alimentos ¿Cuál sería su respuesta?
+
+Nuevamente, se sabe que $x = 12000$, por lo que puede obtenerse una estimación de los gastos alimenticios de la familia:
+
+$\hat y = 0.85(12000) - 18000$
+
+$\hat y = 10200 - 18000 = -7800$
+
+Mi respuesta para el directivo sería que lamentablemente una familia con ese ingreso tendría que endeudarse para comer. Sin embargo, sabiendo que el análisis se realizó a partir de familias con ingresos entre \$688.000 - \$820.000, no sería coherente utilizar la misma estimación para una familia con un salario fuera de dicho rango, especialmente ya que se trata de un valor significativamente menor.

@@ -279,3 +279,107 @@ Volviendo a la recta $\hat y = \hat\beta_0 + \hat\beta_1 x$, asumiendo la mejora
 $\hat y = 0.27763 + 0.9114*x$
 
 *// es la manera más correcta calcular todos los estimadores de nuevo?*
+
+# 5. En la tabla siguiente se muestra la variable $y$ (el rendimiento de un sistema informático) respecto a la variable $x$ (número de buffers). Se quiere asjutar la variable $y$ como función de $x$:
+
+| $x$ | 5 | 10 | 15 | 20 | 25 | 5 | 10 | 15 | 20 | 25 | 5 | 10 | 15 | 20 | 25 |
+| --- | - | -- | -- | -- | -- | - | -- | -- | -- | -- | - | -- | -- | -- | -- |
+| $y$ | 9.6 | 20.1 | 29.9 | 39.1 | 50.0 | 9.6 | 19.4 | 29.7 | 40.3 | 49.9 | 10.7 | 21.3 | 30.7 | 41.8 | 51.2 |
+
+## a. Realizar el análisis de regresión de datos (estimación de recta, test de hipótesis, indicadores).
+
+$n = 15$
+
+$x =$ cantidad de buffers.
+
+$y =$ rendimiento de un sistema informático.
+
+*// no termino de entender a qué se refiere con "rendimiento". es tiempo de ejecución? uso de memoria? de cpu?*
+
+### Estimación de la recta
+
+$\hat y = \hat\beta_0 + \hat\beta_1 x$
+
+$\hat\beta_1 = \dfrac {S_{xy}} {S_{xx}}$
+
+$S_{xy} = \sum_{i=1}^n x_iy_i - \dfrac {\sum x_i \sum y_i} n$
+
+$S_{xy} = 8313.5 - \dfrac {225*453.3} {15}$
+
+$S_{xy} = 8313.5 - 6799.5 = 1514$
+
+$S_{xx} = \sum_{i=1}^n x_i^2 - \dfrac {(\sum x_i)^2} n$
+
+$S_{xx} = 4125 - \dfrac {225^2} {15}$
+
+$S_{xx} = 4125 - 3375 = 750$
+
+$\hat\beta_1 = \dfrac {1514} {750} = 2.0186$
+
+$\hat\beta_0 = \overline y - \hat\beta_1 \overline x$
+
+$\hat\beta_0 = 30.219 - 2.0186 * 15 = -0.06$
+
+$\hat y = -0.06 + 2.0186*x$
+
+*// no le tenía nada de fe pero la recta quedó bastante bien*
+
+```py
+import matplotlib.pyplot as pyplot
+
+x = [ 5, 10, 15, 20, 25, 5, 10, 15, 20, 25, 5, 10, 15, 20, 25 ]
+y = [ 9.6, 20.1, 29.9, 39.1, 50.0, 9.6, 19.4, 29.7, 40.3, 49.9, 10.7, 21.3, 30.7, 41.8, 51.2 ]
+
+x_recta = [i for i in range(0,30)]
+y_recta = [-0.06 + 2.0186*el for el in x_recta]
+
+pyplot.scatter(x, y)
+pyplot.xlabel("Cantidad de buffers")
+pyplot.ylabel("Rendimiento del SI")
+
+pyplot.plot(x_recta, y_recta, label="Recta de ajuste", color="red")
+
+pyplot.show()
+```
+
+*// no entiendo cómo tendría que hacer los test de hipótesis 👽 cuál sería la constante para hacer las hipótesis?*
+
+## b. Comentar los siguientes resultados:
+
+### Recta de regresión del rendimiento del SI frente al número de buffers e interpretación de los coeficientes.
+
+La recta de regresión $\hat y = -0.06 + 2.0186*x$ está muy buena porque tiene muy poca variación. Esto puede calcularse con el estimador de variabilidad:
+
+$\hat\sigma^2 = \dfrac {SCE} {n-2}$
+
+$SCE = S_{yy} - \dfrac {(S_{xy})^2} {S_{xx}}$ 
+
+$SCE = 3064.324 - \dfrac {(1514^2)} {750}$
+
+$\hat\sigma^2 = \dfrac {8.0626} {13}$
+
+$\hat\sigma^2 = 0.6202$
+
+### Contraste de hipótesis sobre la pendiente de la pendiente de la recta.
+
+*// ni hice hipótesis je*
+
+### Coeficiente de determinación y correlación lineal.
+
+$R^2 = 1 - \dfrac {SCE} {STC}$
+
+$STC = S_{yy} = 3064.324$
+
+$R^2 = 1 - \dfrac {8.0626} {3064.324}$
+
+$R^2 = 1 - 0.00263$
+
+$R^2 = 0.99736$
+
+El coeficiente de determinación es muy cercano a 1, por lo que es muy preciso para explicar la variación de la variable $y$.
+
+$r = \sqrt {R^2}$
+
+$r = \sqrt {0.99736} =  \pm 0.99868$
+
+$\hat\beta_1$ es un valor positivo, por lo que $r = 0.99868$. Esto implica que hay una relación directa entre $x$ e $y$, en la que $y$ aumenta con el valor de $x$.

@@ -66,3 +66,103 @@ Si multiplicamos $y*z$, siendo ambos múltiplos de $x$ obtendremos otro entero q
 # 3. Si a un número se lo divide por 5 con resto 3, y se lo divide por 7 con resto 4, ¿Cuál es el resto si se lo divide por 35?
 
 *// este no sé cómo resolverlo je*
+
+# 4. Sean $a$ y $b$ dos números enteros que al dividirlos por 11 tienen restos 4 y 7 respectivamente, hallar el resto de la división por 11 de $(a+b^2)$.
+
+$a = 11.c_1 + 4$
+
+$b = 11.c_2 + 7$
+
+$b^2 = (11.c_2 + 7)^2 = 121.c_2^2 + 154.c_2 + 49$
+
+$b^2 = 11(11.c^2 + 14.c_2) + 49$
+
+$\dfrac {b^2} {11} = 11.c^2_2 + 14.c_2 + \dfrac {49} {11}$
+
+Como $49$ es el único término no divisible por 11, el resto de $b^2$ será el resto de 49, el cual es $5$.
+
+$(a+b^2) = (11.c_1+4) + (11.c_3 + 5)$ *// definiendo $c_3 = 11.c_2^2+14.c_2$*
+
+$(a+b^2) = 11.c_1 + 11.c_3 + 9 = 11(c_1+c_3) + 9$
+
+Por lo tanto, la división $\dfrac {(a+b^2)} {11}$ tendrá resto 9.
+
+# 5. Convertir los siguientes números de base 10 a base 8
+
+## a. 98
+
+$98 = 12.8 + 2$
+
+$12 = 8.1 + 4$
+
+$1 = 8.0 + 1$
+
+$98 = 142_8$
+
+## b. 44
+
+$44 = 5.8 + 4$
+
+$5 = 0.8 + 5$
+
+$44 = 54_8$
+
+## c. 20
+
+$20 = 2.8 + 4$
+
+$2 = 0.8 + 2$
+
+$20 = 24_8$
+
+# 6. Calcular el máximo común divisor entre
+
+*// los voy a hacer utilizando descomposición en primos*
+
+## a. $(16,24)$
+
+$16 = 8.2 = 4.2.2 = 2.2.2.2 = 2^4$
+
+$24 = 8.3 = 4.2.3 = 2.2.2.3 = 2^3.3$
+
+$MCD(16,24) = 8$
+
+## b. $(70,50)$
+
+$70 = 35.2 = 7.5.2$
+
+$50 = 25.2 = 5.5.2 = 5^2.2$
+
+$MCD(70,50) = 5.2 = 10$
+
+*// era más rápido hacerlo así:*
+
+$70 = 7.10 = 7.5.2$
+
+$50 = 5.10 = 5.2.2$
+
+$MCD(70,50)=10$
+
+## c. $(121,88)$
+
+$121 = 11.11 = 11^2$
+
+$88 = 11.8 = 11.4.2 = 11.2.2.2 = 11.2^3$
+
+$MCD(121,88) = 11$
+
+## d. $(-90,90)$
+
+$-90 = 30(-3) = 3.10(-3) = 3.5.2(-3) = 3.5.2.3(-1) = (3^2.5.2)(-1)$
+
+$90 = 30.3 = 3.10.3 = 3.5.2.3 = 3^2.5.2$
+
+$MCD(-90,90) = 3^2.5.2 = 90$
+
+## e. $(980,224)$
+
+$980 = 140.7 = 14.5.2.7 = 7.2.5.2.7 = 7^2.2^2.5$
+
+$224 = 112.2 = 56.2.2 = 7.8.2.2 = 7.4.2.2.2 = 7.2.2.2.2.2 = 7.2^5 = 7.2^2.2^3$
+
+$MCD(980, 224) = 7.2^2 = 28$

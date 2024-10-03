@@ -166,3 +166,69 @@ $980 = 140.7 = 14.5.2.7 = 7.2.5.2.7 = 7^2.2^2.5$
 $224 = 112.2 = 56.2.2 = 7.8.2.2 = 7.4.2.2.2 = 7.2.2.2.2.2 = 7.2^5 = 7.2^2.2^3$
 
 $MCD(980, 224) = 7.2^2 = 28$
+
+# 7. Probar que si $a,b$ son enteros:
+
+## a. $a+b$ es coprimo con $a$.
+
+Dos números son coprimos si su MCD es igual a 1.
+
+Por lo tanto, el enunciado plantea que $(a, a+b) = 1$. Se intentará demostrar con un entrejemplo, a partir de un número $d > 1$ con el cual:
+* $d|a+b$, por lo tanto $a+b = d.c_1$
+* $d|a$, por lo tanto $a = d.c_2$
+
+Esto también implica que $d|b$, siguiendo el razonamiento:
+
+$$b = (a+b) - a = d.c_1 - d.c_2 = d(c_1 - c_2)$$
+
+siendo $(c_1 - c_2)$ un número entero.
+
+Por propiedades del MCD podemos deducir que
+
+$$MCD(a, a+b) = MCD(a,(a+b)-a) = MCD(a,b)$$
+
+Ya que restar un múltiplo de un término no afecta a la operación.
+
+Por lo tanto, $(a,a+b)$ será coprimo cuando $(a,b)$ también lo sea.
+
+## b. Si $a$ no es nulo, $(a,0) = |a|$.
+
+Conociendo que $a \ne 0$, se quiere encontrar el $MCD(a,0)$.
+
+* Se sabe que si se cumple $x|y$, entonces $MCD(x,y) = y$ para todo par de números enteros $x,y$.
+* $0$ es divisible por todos los números enteros, por lo tanto se cumple $a|0$ y, por lo tanto, $MCD(a,0) = a$.
+* En el caso de que $a$ sea negativo, aún puede ser divisible por su opuesto (que es mayor que él), por lo tanto $MCD(a,0) = |a|$.
+
+## c. Si $(a,b) = 1$ entonces $ma+nb=k$ con $m$, $n$, y $k$ enteros.
+
+Este enunciado es una interpretación de la Identidad de Bézout, la cual dice que dado un par de números $a,b$ y su MCD $d$, existen dos enteros tales que $d = ma+nb$. En este caso, $d$ toma el valor de $1$.
+
+# 8. Hallar $MCD(5k + 3; 3k+2)$ para cualquier $k$ entero.
+
+$a = 5k+3$
+
+$b = 3k+2$
+
+Mediante el algoritmo de Euclides:
+
+1. $r_1 = 5k+3 - c_1(3k+2) = 2k + 1 \to (a,b) = (b,r_1)$ *// asumiendo $c_1=1$ ya que $a > b$*
+2. $r_2 = 3k+2 - c_2(2k+1) = k+1 \to (b,r_1) = (r_1,r_2)$ *// asumiendo $c_2=1$*
+3. $r_3 = 2k+1 - c_2(k+1) = 0-1 \to (r_1,r_2) = (r_2, -1)$ *// asumiendo $c_2=2$ ya que $k \times 2 = 2k$*
+
+Para todo entero se cumple $MCD(x,-1) = |1|$, por lo tanto:
+
+$$(5k+3;3k+2) = (3k+2,r_1) = (r_1,r_2) = (r_2, -1) = (-1,0) = 1$$
+
+# 9. Sean $a,b \in Z$ y $p$ primo, demostrar que si $p|ab$ entonces $p|a$ ó $p|b$. Mostrar que no se cumple cuando $p$ no es primo.
+
+Dado $p|ab$ con $p$ primo, se da que $p=c_1 \times ab$ con resto 0. Se quiere demostrar que, al cumplirse esto, necesariamente debe cumplirse $p|a$ o $p|b$.
+
+Si $p$ es primo, quiere decir que no puede descomponerse en factores de números más pequeños a él, por lo tanto si $p|ab$ se cumple es porque necesariamente alguno de los dos factores es divisible por $p$.
+
+Por otro lado, cuando $p$ no es primo, existen factores que dan como resultado $p$, los cuales podrían dividir a $a$ ó $b$ individualmente sin necesidad de que $p$ pueda hacerlo; el caso más común de esto es cuando algunos de los factores que descomponen a $p$ se encuentra en $a$ ó $b$.
+
+Cuando $p$ no es primo, la demostración puede realizarse simplemente con un contraejemplo:
+
+$a = 5 \\ b=2 \\ p=10$
+
+Se cumple $10|2 \times 5$. Sin embargo no se cumplen $10|2$ ni $10|5$ ya que 2 y 5 se obtienen de descomponer a $p$, por lo que son menores a él y no pueden ser divididos.

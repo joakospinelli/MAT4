@@ -400,7 +400,23 @@ $z = -4 + 3i$
 
 $\overline z = -4 - 3i$
 
-# 15. Hallar, si existe, un número $x$ real tal que $Re(z) = Im(z)$, siendo $z = \dfrac {x+2i} {4-3i}$
+# 15. Encuentre $x$ e $y$ tales que:
+
+## a. $x-15i = 9+5yi$
+
+$z = x-15i = 9+5yi$
+
+* $Re(z): x= 9$
+* $Im(z): -15 = 5y \to -\dfrac {15} 5 = y = -3$
+
+## b. $2x+3yi=6+yi$
+
+$z = 2x+3yi = 6+yi$
+
+* $Re(z): 2x = 6 \to x = \dfrac 6 2 = 3$
+* $Im(z): 3y=y \to 2y = 0 = 0$ 
+
+# 16. Hallar, si existe, un número $x$ real tal que $Re(z) = Im(z)$, siendo $z = \dfrac {x+2i} {4-3i}$
 
 Primero se intentará resolver $z$:
 
@@ -435,3 +451,161 @@ Por lo tanto, existe un número complejo $z = \dfrac {14 + 2i} {4-3i}$ tal que:
 * $Im(z) = \dfrac {3\times14 + 8} {25} = \dfrac {42+8} {25} = \dfrac {50} {25} = 2$
 
 Cumpliendo con la hipótesis inicial $Re(z) = Im(z)$.
+
+# 17. Hallar, si existe, un valor $k$ real tal que el número complejo $\dfrac {2-(1+k)i} {1-ki}$ sea un número real.
+
+* $a_1 = 2 \qquad b_1 = (1+k)$
+* $b_2 = 1 \qquad b_2 = -k$
+
+$\dfrac {2-(1+k)i} {1-ki} = \dfrac {(2\times1 + (1+k)(-k) + i(-2\times k+ 1 \times (1+k) ))} { 1^2 + (-k)^2} = \dfrac {(2-k-k^2) + i(-2k+1+k)} {1+k^2}$
+
+$\dfrac {(2-k-k^2) + i(-2k+1+k)} {1+k^2} = \dfrac {2-k-k^2 + (-k+1)i} {1+k^2}$
+
+* $Re(z) = \dfrac {2-k-k^2} {1+k^2}$
+
+* $Im(z) = -k+1$
+
+Se quiere encontrar  un valor de $k$ tal que el número complejo $z$ sea un número real, es decir, su parte imaginaria sea 0:
+
+$Im(z) = -k + 1 = 0$
+
+$k=1$
+
+Con el valor $k=1$ se cumple que $z$ sea un número real sin parte imaginaria.
+
+# 18. Calcular las siguientes potencias:
+
+## a. $i^{489}$
+
+$i^{489} = i^{489 \mod 4} = i^1 = i$
+
+## b. $-i^{1026}$
+
+$-i^{1026} = -i^{1026 \mod 4} = -i^2 = -(-1) = 1$
+
+## c. $(3i)^{168}$
+
+$(3i)^{168} = $3^{168} \times i^{168}$
+
+$3^{168} \times i^{168 \mod 4} = 3^{168} \times i^0 = 3^{168} \times 1$
+
+# 19. Dados los siguientes números complejos, encontrar la forma más adecuada para realizar las operaciones pedidas:
+
+* $z_1 = 3+3i$
+* $z_2 = -1+i$
+* $z_3 = 5+4i$
+* $z_4 = 9$
+* $z_5 = 5i$
+* $z_6 = -7$
+* $z_7 = -4-4i$
+* $z_8 = -8i$
+* $z_9 = 2-2i$
+* $z_10 = 3-4i$
+
+## a. $z_1 + z_7$
+
+$z_1 + z_7 = (3+3i) + (-4-4i)$
+
+Esto puede resolverse simplemente con la forma binómica:
+
+$3+3i - 4- 4i = 3-4 + 3i-4i = -1 - i$
+
+## b. $z_5 - z_3$
+
+$z_5 - z_3 = 5i - (5+4i)$
+
+Nuevamente conviene resolverlo con la forma binómica:
+
+$5i -4i - 5 = i-5$
+
+## c. $z_9 \times z_6$
+
+$z_9 \times z_6 = (2-2i) \times (-7)$
+
+Al tratarse de una multiplicación entre un número complejo y otro exclusivamente real, nuevamente es más sencillo usar la forma binómica:
+
+$(2-2i) \times (-7) = -14 + 14i$
+
+## d. $z_8 / z_{10}$
+
+$z_8 / z_{10} = \dfrac {-8i} {3-4i}$
+
+Binómica de nuevo:
+
+$z_{10}^{-1}= \dfrac {1. \overline z} {z.\overline z} = \dfrac {(3+4i)} {(3-4i)(3+4i)}$
+
+$z_8 / z_{10} = z_8.z_{10}^{-1} = \dfrac {(-8i)(3+4i)} {(3-4i) (3+4i)} = \dfrac {-24i-32i^2} {(3-4i) (3+4i)} = \dfrac {-24i + 32} {(3-4i) (3+4i)}$
+
+$\dfrac {-24i + 32} {(3-4i) (3+4i)} = \dfrac {-24i + 32} {9 + 12i -12i - 16i^2} = \dfrac {-24i + 32} {9 + 16}$
+
+$\dfrac {-24i + 32} {25} = \dfrac {-24i+32} {25} = \dfrac {32} {25} - \dfrac {24} {25}i$ *// el último paso es sólo para dejarlo de nuevo en la forma binómica*
+
+## e. $z_3 + z_6$
+
+$z_3 + z_6 = (5+4i) + (-7)$
+
+Adivinen la forma:
+
+$5+4i-7 = -2+4i$
+
+## f. $z_2 - z_6$
+
+$z_2 - z_6 = (-1 + i) - (-7)$
+
+b
+
+$-1 + i + 7 = 6+i$
+
+## g. $z_3 \times z_{10}$
+
+$z_3 \times z_{10} = (5+4i) \times (3-4i)$
+
+binomio
+
+$(15-20i + 12i - 16i^2) = 15 -8i+16 = 31 - 8i$
+
+## h. $z_1^3$
+
+$z_1^3 = (3+3i)^3$
+
+A partir de las potencias y raíces conviene empezar a utilizar la forma exponencial.
+
+$|z| = \sqrt {a^2 + b^2} = \sqrt {9 + 9} = \sqrt {18} = 4.24264$
+
+$\theta = \arctan (b/a) = \arctan (\dfrac 3 3) = 45° = \dfrac \pi 4$
+
+$z_1 = 4.24264 \times e^{i\theta}$
+
+$z_1^3 = (4.24264 \times e^{i\theta})^3 = 4.24264^3 \times e^{i(\pi / 4) 3} = 76.3675 \times e^{\frac 3 4 \pi i}$
+
+## i. $z_9^9$
+
+$z_9^9 = (2-2i)^9$
+
+$|z| = \sqrt {a^2 + b^2} = \sqrt {4+4} = \sqrt 8 = 2.8284$
+
+$\theta = \arctan(\dfrac b a) = \arctan (\dfrac 2 2) = 45° = \dfrac \pi 4$
+
+$z_9 = 2.8284e^{i\theta}$
+
+$z_9^9 = (2.8284e^{i\theta})^9 = 2.8284^9 \times e^{i(\pi/4)9} = 11585.2375\times e^{\frac 9 4 \pi i}$
+
+## j. $z_5^{15}$
+
+$z_5^{15} = (5i)^{15}$
+
+Esto es un bait porque se puede resolver tranquilamente con la tabla de valores para $i$:
+
+$(5i)^{15} = 5^{15} \times i^{15} = 5^{15} \times i^{15 \mod 4} = 5^{15}  \times i^3 = 5^{15} (-i) = -5^{15}i$
+
+## k. $z_{10}^3$
+
+$z_{10}^3 = (3-4i)^3$
+
+$|z_{10}| = \sqrt {3^2 + (-4)^2} = \sqrt {9 + 16} = \sqrt {25} = 5$
+
+$\theta = \arctan(\dfrac {-4} 3) = -53.1301° = -0.9273$
+
+$z_{10} = |z|e^{i\theta}$
+
+$z_{10}^3 (|z|e^{i\theta})^3 = -0.9273^3\times e^{i(-0.9273)3} = -0.7973 \times e^{-27.819i}$ 

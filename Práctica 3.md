@@ -232,3 +232,206 @@ Cuando $p$ no es primo, la demostración puede realizarse simplemente con un con
 $a = 5 \\ b=2 \\ p=10$
 
 Se cumple $10|2 \times 5$. Sin embargo no se cumplen $10|2$ ni $10|5$ ya que 2 y 5 se obtienen de descomponer a $p$, por lo que son menores a él y no pueden ser divididos.
+
+# 10. Hallar, si existe, un número entero $q$ tal que $7290q$ es el cubo de un entero.
+
+*// no sé de dónde pretendían quue saque esto sin mi amigazo gpt*
+
+Se busca encontrar un número tal que $x^3 = 7290q$. Esto puede realizarse descomponiendo 7290 en números primos, tal que:
+
+* $7290 = 3645 \times 2$
+* $3645 = 1215 \times 3$
+* $1215 = 405 \times 3$
+* $405 = 135 \times 3$
+* $135 = 45 \times 3$
+* $45 = 15 \times 3$
+* $15 = 5 \times 3$
+* $5 = 5 \times 1$
+
+Por lo que 7290 puede descomponerse en $2 \times 3^6 \times 5$.
+
+Para obtener un cubo perfecto, los primos que componen a 7290 deberían tener exponente 3 o un múltiplo de este. Esto puede realizarse multiplicándo por los factores restantes, obteniendo así el valor de $q$:
+
+$$ q = 2^2 \times 3^0 \times 5^2 = 4 \times 1\times 25 = 100 $$
+
+A partir del cual podemos deducir también el valor de $x$:
+
+$ x^3 = 100 \times 7290$
+
+$x = \sqrt[3] {729000 }$
+
+$x = 90$
+
+# 11. Demostrar que, dados los números $a,b$ en $Q$ tales que $a < b$, existe otro número racional $x$ tal que $a < x < b$.
+
+Partiendo de $a < b$, se puede demostrar la existencia de $x$ tal que $a < x < b$ a través de los siguientes pasos:
+* $a < b$
+* $\exists x: x=a+b;a < x < b$
+* $a < b = a+a < x < y+y = 2a < x < 2y$
+* $\dfrac {2a} 2 < \dfrac {x} 2 < \dfrac {2b} 2$
+* $a < \dfrac {x} 2 < b$
+
+De esta manera, se demostró que para todo par de números $a,b \in Q$ tales que $a < b$, existe otro número $x$ que existe entre ambos, y siempre tomará el valor de $\dfrac {a+b} 2$.
+
+**Ejemplo:**
+$$a = 2, b = 4 \qquad x=\dfrac {2+4} 6 = 3$$
+
+# 12. Probar que no existe un número racional cuyo cubo sea igual a 2.
+
+Se quiere demostrar que no existe ningún número racional $r$ tal que $r^3 = 2$.
+
+Como ya sabemos, todo número racional está formado por el cociente de dos números enteros, por lo que $r = \dfrac a b$ y, por lo tanto, $r^3 = (\dfrac a b)^3$, siendo $\dfrac a b$ la forma irreducible de $r$.
+
+Haciendo una serie de pasos esto se puede traducir a:
+* $(\dfrac a b)^3 = \dfrac {a^3} {b^3} = 2$
+* $a^3 = 2(b^3)$
+
+Se sabe que $a$ es par, debido a que su cubo es también un número par. Por lo tanto:
+* $a = 2k$.
+* $(2k)^3 = 2(b^3)$
+* $8k^3 = 2(b^3)$
+* $\dfrac {8k^3} 2 = b^3$
+* $4k^3 = b^3$
+
+A partir de lo cual deducimos que $b$ también es par, ya que $b^3$ es divisible por 4. Esto implicaría que tanto $a$ como $b$ son pares, y por lo tanto la función aún puede reducirse al tener factor común 2. Esto entra en una contradicción con nuestra hipótesis, ya que se planteó que $\dfrac a b$ era irreducible.
+
+## 13. Indique la parte real $Re(z)$ y la parte imaginaria $Im(z)$ de los siguientes complejos:
+
+## a.
+
+$\sqrt {-49} = \sqrt {7^2 \times (-1)} = 7 \times \sqrt {-1} = 7i$
+
+* $Re(z) = 0$
+* $Im(z) = 7i$
+
+## b.
+
+$ \sqrt {-20} = \sqrt {20 \times (-1)} = \sqrt {20} \times \sqrt {-1} = 4.4721i$
+
+* $Re(z) = 0$
+* $Im(z) = 4.4721i$
+
+## c.
+
+$\sqrt {- \dfrac 9 {16}} = \sqrt {\dfrac 9 {16} \times (-1)}=\sqrt \dfrac 9 {16} \times \sqrt {-1} = \dfrac 3 4 i$
+
+* $Re(z) = 0$
+* $Im(z) = \dfrac 3 4$
+
+## d.
+
+$z = -8$
+
+* $Re(z) = -8$
+* $Im(z) = 0$
+
+## e.
+
+$z = 7i$
+
+* $Re(z) = 0$
+* $Im(z) = 7$
+
+## f.
+
+$z = (3+i) + (5-4i) = (3+5)+(i-4i)=8-3i$
+
+* $Re(z) = 8$
+* $Im(z) = -3$
+
+## g.
+
+$z = 3i-(5-2i) = 3i+2i-5=5i-5$
+
+* $Re(z) = -5$
+* $Im(z) = 5$
+
+## h.
+
+* $a_1 = 1 \qquad b_1=3$
+* $a_2 = 3 \qquad b_2=-1$
+
+$\dfrac {1+3i} {3-i} = \dfrac {(1\times3 + 3(-1)) + i(-1(-1)+3\times3)} {3^2 + (-1)^2} = \dfrac {0 + 10i} {10} = \dfrac {10i} {10} = i$
+
+* $Re(z) = 0$
+* $Im(z) = 1$
+
+## i.
+
+$\dfrac {1-i} {(1+i)^2} = \dfrac {1-i} {1 + 2i + i^2} = \dfrac {1-i} {2i}$
+
+* $a_1 = 1 \qquad b_1 = -1$
+* $a_2 = 0 \qquad b_2 = 2$
+
+$\dfrac {(1\times0 + (-1)\times2) + i(-1\times2 + 0\times(-1))} {0^2 + 2^2} = \dfrac {-2 +2i} 4 = \dfrac {-1+i} 2$
+
+* $Re(z) = -\dfrac 1 2$
+* $Im(z) = \dfrac 1 2$
+
+# 14. La suma de un número complejo y su conjugado es -8, y la suma de sus módulos es 10. De qué números complejos se trata?
+
+A partir de un número $z$, se sabe que:
+* $z + \overline z = -8$
+* $|z| + |\overline z| = 10$
+
+Sabiendo que $z = a + bi$, podemos despejar $a$ a partir de la operación $z + \overline z$, ya que la parte imaginaria se anula con el conjugado:
+
+* $z + \overline z = -8$
+* $a+bi + (a-bi) = -8$
+* $2a = -8$
+* $a = \dfrac {-8} 2 = -4$
+
+Con el valor de $a$ se puede buscar el valor de $b$ a partir de la segunda operación:
+* $|z| + |\overline z| = 10$
+* $\sqrt {a^2 + b^2} + \sqrt {a^2 + (-b)^2} = 10$
+* $\sqrt {a^2 + b^2} + \sqrt {a^2 + b^2} = 10$
+* $2 \sqrt {a^2 + b^2} = 10$
+* $\sqrt {a^2 + b^2} = 5$
+* $\sqrt {(-4)^2 + b^2} = 5$
+* $\sqrt {16 + b^2} = 5$
+* $16 + b^2 = 25$
+* $b^2 = 25-16$
+* $b^2 = 9$
+* $b = 3$
+
+El valor de $b$ es el mismo tanto para $z$ como $\overline z$, los cuales son:
+
+$z = -4 + 3i$
+
+$\overline z = -4 - 3i$
+
+# 15. Hallar, si existe, un número $x$ real tal que $Re(z) = Im(z)$, siendo $z = \dfrac {x+2i} {4-3i}$
+
+Primero se intentará resolver $z$:
+
+$z = \dfrac {x+2i} {4-3i} = \dfrac {(x+2i)(4+3i)} {(4-3i)(4+3i)} = \dfrac {(4x + 3xi +8i + 6i^2)} {16+12i-12i-9i^2}$
+
+$\dfrac {(4x + 3xi +8i + 6i^2)} {16+12i-12i+9i^2} = \dfrac {4x + 3xi + 8i +6(-1)} {16-9(-1)} = \dfrac {4x + 3xi + 8i -6} {25}$
+
+$\dfrac {4x + 3xi + 8i -6} {25} = \dfrac {4x - 6 + i(3x+8)} {25}$
+
+Con esta forma de $z$ podemos ver que:
+* $Re(z) = \dfrac {4x-6} {25}$
+* $Im(z) = \dfrac {3x+8} {25}$
+
+Se quiere encontrar un número $x$ tal que $Re(z) = Im(z)$, por lo que se usará esta igualdad para encontrar $x$:
+
+$Re(z) = Im(z)$
+
+$\dfrac {4x-6} {25} = \dfrac {3x+8} {25}$
+
+$4x-6 = 3x+8$
+
+$4x = 3x+8+6 = 3x+14$
+
+$4x - 3x = 14$
+
+$x = 14$
+
+Por lo tanto, existe un número complejo $z = \dfrac {14 + 2i} {4-3i}$ tal que:
+
+* $Re(z) = \dfrac {4\times14 - 6} {25} = \dfrac {56-6} {25} = \dfrac {50} {25} = 2$
+
+* $Im(z) = \dfrac {3\times14 + 8} {25} = \dfrac {42+8} {25} = \dfrac {50} {25} = 2$
+
+Cumpliendo con la hipótesis inicial $Re(z) = Im(z)$.

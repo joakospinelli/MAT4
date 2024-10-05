@@ -608,4 +608,66 @@ $\theta = \arctan(\dfrac {-4} 3) = -53.1301° = -0.9273$
 
 $z_{10} = |z|e^{i\theta}$
 
-$z_{10}^3 (|z|e^{i\theta})^3 = -0.9273^3\times e^{i(-0.9273)3} = -0.7973 \times e^{-27.819i}$ 
+$z_{10}^3 (|z|e^{i\theta})^3 = -0.9273^3\times e^{i(-0.9273)3} = -0.7973 \times e^{-27.819i}$
+
+## l. Hallar las raíces cuartas de $z_2$
+
+$\sqrt[4] {z_2} = \sqrt[4] {-1 + i}$
+
+$|z_2| = \sqrt {(-1)^2 + 1^2} = \sqrt {1+1} = \sqrt 2$
+
+$\theta = \arctan(\dfrac {1} {-1}) = \dfrac 7 4 \pi$
+
+$|w| = \sqrt[4] {|z|} = \sqrt[4] {\sqrt 2} = \sqrt[8] 2$
+
+$\phi_k = \dfrac {\frac 7 4 \pi + 2k\pi} {4} \qquad 0 \le k \le 3$
+
+* $\phi_0 = \dfrac {\frac 7 4 \pi + 2.0\pi} {4} = \dfrac {\frac 7 4 \pi} {4} = \dfrac {7} {16}\pi$
+
+* $\phi_1 = \dfrac {\frac 7 4 \pi + 2.1\pi} {4} = \dfrac {\frac 7 4 \pi + 2\pi} {4} = \dfrac {\frac {15} {4} \pi} {4} = \dfrac {15} {16} \pi$
+
+* $\phi_2 = \dfrac {\frac 7 4 \pi + 2.2\pi} {4} = \dfrac {\frac 7 4 \pi + 4\pi} {4} = \dfrac {\frac {23} 4 \pi} {4} = \dfrac {23} {16} \pi$
+
+* $\phi_3 = \dfrac {\frac 7 4 \pi + 2.3\pi} {4} = \dfrac {\frac 7 4 \pi + 6\pi} {4} = \dfrac {\frac {31} 4 \pi} {4} = \dfrac {31} {16} \pi$
+
+$w_k = |w| \times e^{i\phi_k}$
+
+A partir de lo que obtenemos las raíces cuartas de $z$:
+
+* $w_0 = \sqrt[8] 2\times e^{\frac 7 {16} \pi i}$
+
+* $w_1 = \sqrt[8] 2\times e^{\frac {15} {16} \pi i}$
+
+* $w_2 = \sqrt[8] 2\times e^{\frac {23} {16} \pi i}$
+
+* $w_3 = \sqrt[8] 2\times e^{\frac {31} {16} \pi i}$
+
+## m. Hallar las raíces cúbicas de $z_4$
+
+$\sqrt[3] {z_4} = \sqrt[3] {9}$
+
+*// esto será bait también? porque la raiz de 9 se puede calcular, pero dice "las raíces" así que lo calculo igual*
+
+$|z_4| = 9$
+
+$\theta = \arctan(\dfrac 0 9) = \arctan 0 = 0$
+
+$|w| = \sqrt[3] 9$
+
+$\phi_k = \dfrac {2k\pi} {3} \qquad 0 \le k \le 2$
+
+* $\phi_0 = \dfrac {2.0\pi} 3 = \dfrac 0 3 = 0$
+
+* $\phi_1 = \dfrac {2.1\pi} 3 = \dfrac {2\pi} 3 = \dfrac 2 3 \pi$
+
+* $\phi_2 = \dfrac {2.2\pi} 3 = \dfrac {4\pi} 3 = \dfrac 4 3 \pi$
+
+$w_k = |w|\times e^{\phi_k i}$
+
+A partir de lo que obtenemos las raíces cúbicas de $z_4$:
+
+* $w_0 = \sqrt[3] 9\times e^{0i} = \sqrt[3] 9$
+
+* $w_1 = \sqrt[3] 9\times e^{\frac 2 3\pi i}$
+
+* $w_2 = \sqrt[3] 9\times e^{\frac 4 3\pi i}$

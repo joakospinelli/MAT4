@@ -207,3 +207,314 @@ $R$ es transitiva, ya que $XRY$ y $YRZ$ implican $XRZ$.
 * $YRZ = \{ \{ 1,2 \}, \{ 1,2,3 \} \}: Y \subset Z$
 * $XRZ = \{ \{ 1\}, \{ 1,2,3 \} \}: X \subset Z$
 * La operación $\subset$ en conjuntos en transitiva, indicando que el subconjunto de un subconjunto también pertenece a un conjunto original (👈 trabalenguas). Por lo tanto, la relación $R$ definida por esta operación también será transitiva.
+
+# 6. Determinar si las siguientes relaciones definidas en $A = \{ a, b, c, d\}$ son reflexivas, simétricas, antisimétricas y transitivas:
+
+## a. $R_0 = \empty$
+
+* **Reflexiva:** no, ya que existen valores $x \in A$ tales que $xRx$ no pertenecen a $R_0$.
+    * $(a,a): a \in A; aRa \notin R_0$
+* **Simétrica:** sí, ya que $xR_0y$ implica $yR_0x$.
+    * Dados $x,y \in A$:
+        * $xRy \notin R_0$
+        * $yRx \notin R_0$
+        * $xRy \to yRx = F \to F = V$
+* **Antisimétrica:** sí, ya que como el conjunto vacío no tiene elementos, siempre se cumple $x=y$.
+* **Transitiva:** sí, ya que $xR_0y$ e $yR_0z$ implican $xR_0z$.
+    * Dados $x,y,z \in$:
+        * $xRy \notin R_0$
+        * $yRz \notin R_0$
+        * $xRz \notin R_0$
+        * $xR_0y \land yR_0z \to xR_0z = (F \land F) \to F = V$
+
+## b. $R_1 = \{ (a,a); (a,b); (d,c); (c,d) \}$
+
+* **Reflexiva:** no, ya que no se cumple $xRx$ para todo $x \in A$.
+    * $(a,a) \in R_1$
+    * $(b,b) \notin R_1$
+    * $(c,c) \notin R_1$
+    * $(d,d) \notin R_1$
+* **Simétrica:** no, ya que $xRy$ no siempre implica $yRx$ para todo $(x,y) \in R_1$.
+    * $(a,a) \to (a,a) = V \to V = V$
+    * $(a,b) \to (b,a) = V \to F = F$
+    * $(d,c) \to (c,d) = V \to V = V$
+* **Antisimétrica:** no, ya que $xRy \to yRx$ se cumple aunque $x \neq y$.
+    * $(d,c) \to (c,d) = V; c \neq d$
+* **Transitiva:** no, ya que $xRy$ e $yRz$ no implican $xRz$ para todo $x,y,z \in R_1$.
+    * $xRy = (d,c)$
+    * $yRz = (c,d)$
+    * $xRz = (d,d)$
+    * $xRy \land yRz \to xRz = V \land V \to F = F$
+
+## c. $R_2 = \{ (a,a); (b,b); (a,b); (b,a); (d,d); (c,c) \}$
+
+* **Reflexiva:** sí, ya que se cumple $xRx$ para todo $x \in A$.
+    * $(a,a) \in R_2$
+    * $(b,b) \in R_2$
+    * $(c,c) \in R_2$
+    * $(d,d) \in R_2$
+* **Simétrica:** sí, ya que todo $xRy$ implica $yRx$ para todo $x,y \in A$.
+    * $aR_2a \to aR_2a = V$
+    * $bR_2b \to bR_2b = V$
+    * $aR_2b \to bR_2a = V$
+    * $dR_2d \to dR_2d = V$
+    * $cR_2c \to cR_2c = V$
+* **Antisimétrica:** no, ya que existen implicaciones $xRy \to yRx$ en las que $x \neq y$.
+    * $(a,b) \to (b,a); b \neq a$
+* **Transitiva:** sí, ya que $xRy, yRz$ implican $xRz$ para todo $x,y,z \in A$.
+    * $xRy: (a,b)$
+    * $yRz: (b,a)$
+    * $xRz: (a,a)$
+    * $xRy \land yRz \to xRz = V \land V \to V = V$
+
+## c. $R_3 = \{ (a,a); (a,b); (b,a); (b,c); (c,b); (b,b) \}$
+
+* **Reflexiva:** no, ya que no se cumple $xRx$ para todo $x \in A$.
+    * $(a,a) \in R_3$
+    * $(b,b) \in R_3$
+    * $(c,c) \notin R_3$
+    * $(d,d) \notin R_3$
+* **Simétrica:** sí, ya que $xR_3y$ implica lógicamente a $yR_3x$ para todo $x,y \in A$.
+    * $aR_3a \to aR_3a = V$
+    * $aR_3b \to bR_3a = V$
+    * $bR_3c \to cR_3a = V$
+    * $bR_3b \to bR_3b = V$
+    * $cR_3c \to cR_3c = F \to F = V$
+* **Antisimétrica:** no, ya que existen implicaciones $xR_3y \to yR_3x$ tales que $x \neq y$.
+    * $aR_3b \to bR_3a = V; a \neq b$
+* **Transitiva:** no, ya que existen relaciones $xRy, yRz$ que no implican $xRz$.
+    * $xRy: aR_3b$
+    * $yRz: bR_3c$
+    * $xRz: aR_3c$
+    * $aR_3b \land bR_3c \to aR_3c = V \land V \to F = F$
+
+## d. $R_4 = A \times A$
+
+*// no lo voy a hacer pero creo que es reflexiva, simétrica, transitiva y no es antisimétrica*
+
+# 7. Escribir la matriz y los digrafos asociados a las relaciones anteriores
+
+*// no voy a hacer todos*
+
+## a. $R_1$
+
+| - | a | b | c | d |
+| - | - | - | - | - |
+| a | 1 | 0 | 0 | 0 |
+| b | 1 | 0 | 0 | 0 |
+| c | 0 | 0 | 0 | 1 |
+| d | 0 | 0 | 1 | 0 |
+
+<img src="./grafos/ej6r1.png">
+
+## b. $R_2$
+
+| - | a | b | c | d |
+| - | - | - | - | - |
+| a | 1 | 1 | 0 | 0 |
+| b | 1 | 1 | 0 | 0 |
+| c | 0 | 0 | 1 | 0 |
+| d | 0 | 0 | 0 | 1 |
+
+<img src="./grafos/ej6r2.png">
+
+# 8. Sea $A = \{ a,b,c,d \}$
+
+## a. Dar un ejemplo de una relación $R$ no reflexiva en $A$
+
+$R_a = \{ (a,b), (b,c), (b,a) \}$
+
+## b. Dar un ejemplo de una relación $R$ simétrica en $A$
+
+$R_b = \{ (a,b), (b,a), (b,b), (a,a) \}$
+
+## c. Dar un ejemplo de una relación $R$ no transitiva en $A$
+
+$R_c = \{ (a,b), (b,c) \}$
+
+## d. Dar un ejemplo de una relación $R$ no simétrica en $A$
+
+$R_d = \{ (a,b), (b,b) \}$
+
+## e. Dar un ejemplo de una relación $R$ antisimétrica en $A$
+
+$R_e = \{ (a,a), (a,b), (b,c) \}$
+
+# 9. Demostrar que si $R$ es simétrica y transitiva, y se cumple $aRb$ para ciertos $a,b$, entonces $aRa$ y $bRb$.
+
+* Si $R$ es simétrica, entonces toda relación $xRy$ implica que también existe $yRx \in R$.
+* Si $R$ es transitiva, entonces las relaciones $xRy, yRz$ implican $xRz$.
+* Como $R$ es simétrica, si se cumple $aRb$ también se cumple $bRa$.
+* Como se cumplen $aRb$ y $bRa$, por transitividad se puede demostrar que:
+    * $aRb \land bRa \to aRa$
+    * $bRa \land aRb \to bRb$
+
+# 10. Sea $A$ un conjunto arbitrario, y sea $R = \triangle_A$, analizar qué propiedades tiene $R$.
+
+*// la diagonal de una matriz está formada por aquellos elementos en las celdas $[i][i]$, supongo que se refiere a eso. En el caso de las relaciones, los elementos en esas celdas son iguales.*
+
+* $R$ es reflexiva, ya que está formada por los elementos tales que $xRx$.
+* $R$ es simétrica, ya que toda relación $xRy$ implica también $yRx$.
+    * Como los elementos de $R$ son iguales, podría decirse que sus relaciones se implican a sí mismas.
+* $R$ es antisimétrica, ya que todas sus relaciones $xRy \to yRx$ implican $x = y$.
+    * Nuevamente, como sus elementos están definidos por los valores $[i][i]$ de la matriz, los valores son iguales.
+* $R$ también es transitiva, ya que las relaciones $xRy, yRz$ implican $xRz$.
+    * Todas las relaciones de $R$ son de tipo $xRx$, por lo que siempre se cumple $xRx \land xRx \to xRx$.
+
+# 11. Proponer una relación en el conjunto de los números naturales. Mostrar qué propiedades tiene.
+
+$R : \{(x,y) : x \in N; y \in N; x^2=y \}$
+
+* No es reflexiva, ya que no se cumple $xRx$ para todos los valores.
+    * $x^2 > x$ para todo $x \gt 1$, por lo tanto $x \neq x^2$
+* No es simétrica, ya que $xRy$ no implica $yRx$
+    * Nuevamente, para todo $x \gt 1$ es imposible que el cuadrado de $x^2$ sea igual a $x$
+* Es antisimétrica, ya que $xRy \to yRx$ sólo se cumple bajo $x = y$
+    * El único caso que se cumple la simetría es con $x=1$, bajo la cual $y=x^2=1$, por lo que $x=y$
+    * Si consideramos al 0 como un número natural le pasa lo mismo que al 1
+* No es transitiva, ya que $xRy, yRz$ no implican $xRz$.
+    * $xRy$ implica que $x^2 = y$
+    * $yRz$ implica que $y^2 = z$
+    * Por lo tanto, $z = x^4$, entonces no se cumple $xRz$
+
+# 12. Proponer una relación en el conjunto de los alumnos de Informática. Mostrar qué propiedades tiene.
+
+*// no lo voy a hacer todo pero quiero pensar un conjunto que cumpla con todas las propiedades*
+
+$R = \{ (x,y): x \in informática; y \in informática; x.legajo = y.legajo\}$
+
+Considerando al legajo de un alumno como una clave unívoca.
+
+* Es reflexiva, ya que un alumno tiene su propio legajo, por lo tanto se cumple $xRx$.
+* Es simétrica, ya que todas las relaciones son del tipo $xRx$, por lo que se implican a sí mismas.
+* Es antisimétrica, ya que en todas las relaciones simétricas se da que $x = y$.
+* Es transitiva, ya que $xRy, yRz$ implican a $xRz$, porque nuevamente todas las relaciones se implican a sí mismas.
+
+# 13. Dada una relación binaria $R$ sobre un conjunto $A$, se define la relación "complemento de $R$" ($\overline R$) como: $a\overline Rb$ si y sólo si $a$ no está rleacionada con $b$ por $R$.
+
+## a. Dar un ejemplo de una relación $R$ y su complemento
+
+$A= \{ 1, 2, 3, 4 \}$
+
+$R = \{ (1,1), (1,4), (2,3) \}$
+
+$\overline R = \{ (1,2), (1,3), (2,2), (2,4), (3,4), (4,4) \}$
+
+## b. Probar que si $R \subset S$ entonces $\overline S \subset \overline R$
+
+$R = \{ (1,1), (1,4), (2,3) \}$
+
+$S = \{ (1,1), (1,4), (2,3), (4,4) \}$
+
+$\overline R = \{ (1,2), (1,3), (2,2), (2,4), (3,4), (4,4) \}$
+
+$\overline S = \{ (1,2), (1,3), (2,2), (2,4), (3,4) \}$
+
+$R \subset S \to \overline S \subset \overline R$
+
+* Si $R \subset S$, entonces se sabe que $S$ tiene más elementos relacionados que $R$.
+* Por contraposición, existirán más elementos no relacionados por $R$ que por $S$.
+* Por lo tanto, $\overline S$ tiene menos elementos no relacionados, ya que $S$ tiene más relaciones que $R$. Esto implica que hay más elementos en $\overline R$.
+* Como $R$ es un subconjunto de $S$, los elementos de $S - R$ no estarán en $\overline S$ pero sí en $\overline R$, mientras que ambos compartirán $S - R$.
+* Debido a esto, $\overline S$ es un subconjunto de $\overline R$.
+
+# 13. Dada una relación binaria $R$ sobre $A$, probar que:
+
+## a. $R$ es reflexiva si y sólo si $R^{-1}$ también lo es
+
+* $R$ sólo es reflexiva si $xRx$ para todo $x \in A$.
+* $R^{-1}$ está definida como $\{(y,x): (x,y) \in R \}$
+* Por lo tanto, $xRx$ y $xR^{-1}x$ son lo mismo.
+* Entonces si $R^{-1}$ no es reflexiva, $R$ tampoco (y viceversa).
+
+## b. $R$ es simétrica si y sólo si $R^{-1} = R$
+
+* $R$ sólo es simétrica si $xRy \to yRx$.
+* Esta definición se asemeja a la de $R^{-1}$, tal que contiene los elementos $(x,y)$ pero invertidos.
+* Si $R$ tiene los pares $(x,y)$ e $(y,x)$ a la vez (es decir, es simétrica), entonces $R^{-1}$ también los tiene.
+* Por lo tanto, cuando $R$ es simétrica se cumple que $R=R^{-1}$.
+
+## c. $R$ es simétrica si y sólo si $R^{-1}$ y $\overline R$ también lo son.
+
+* A partir del inciso anterior sabemos que $R$ es simétrica sólo si $R^{-1} = R$, por lo que cuando ambas son iguales entonces también son simétricas.
+
+*// la de $\overline R$ ni idea je*
+
+# 15. Se dice que una relación $R$ sobre un conjunto $A$ es asimétrica si cada vez que $a$ está relacionada con $b$, no se da que $b$ esté relacionada con $a$. Dar un ejemplo de una relación asimétrica.
+
+$A = \{ 1, 2, 3, 4, 5\}$
+
+$R= \{ (1,2), (2,3), (3,4), (4,5), (5,1) \}$
+
+# 16. Probar que dada una relación $R$ sobre un conjunto $A$, $R$ es asimétrica si y sólo si $R \cap R^{-1} = \empty$
+
+Como ya definimos antes, $R$ es simétrica cuando $R = R^{-1}$.
+
+Esto implica que $R \cap R^{-1} = R \cup R^{-1}$; es decir, comparten todos sus elementos.
+
+Una relación asimétrica implica que si $(x,y) \in R \to (y,x) \notin R$. Por otro lado, $R^{-1}$ está formado por todos los pares $(y,x)$ tales que $(x,y) \in R$.
+
+Como $R$ está formada por pares $(x,y)$ y $R^{-1}$ por sus respectivos pares $(y,x)$, si $R$ es asimétrica entonces no tiene ningún par $(x,y)$ y a la vez el $(y,x)$.
+
+Por lo tanto, la intersección entre $R$ y $R^{-1}$ es vacía cuando $R$ es asimétrica.
+
+## 17. Sean $R$ y $S$ dos relaciones en $A$, probar que:
+
+## a. Si $R \subset S$, entonces $R^{-1} \subset S^{-1}$
+
+* $R^{-1} = ((y,x) : (x,y) \in R)$
+* $R^{-1}$ tiene los mismos pares que $R$, pero cambiando el orden de $x$ e $y$.
+* Como $R \subset S$, $R^{-1}$ tiene un subconjunto de elementos tales que $(y,x) : (x,y) \in S$
+* Y esa es la definición de $S^{-1}$.
+
+## 18. Establecer las propiedades de las siguientes relaciones en $H$, el conjunto de los seres humanos:
+
+## a. Sea $R$ la relación en $H$ definida por: $xRy$ si y sólo si $x$ es hermano de $y$
+
+* **Reflexiva:** podría ser un debate filosófico: si definimos a un hermano como una persona nacida de nuestros mismos padres, entonces una persona sí es hermana de sí misma y se cumple $xRx$ para todo $x \in H$. Pero yo creo que no somos hermanos de nosotros mismos.
+* **Simétrica:** sí, ya que si $x,y \in H$ son hermanos, se cumple que $x$ es hermano de $y$ a la vez que $y$ es hermano de $x$, por lo tanto $xRy \to yRx$.
+* **Antisimétrica:** no, ya que existen relaciones $xRy \to yRx$ tales que $x \neq y$.
+* **Transitiva:** sí, ya que el hermano $z$ de mi hermano $y$ también es mi hermano, tales que $xRy \land yRz \to xRz$.
+
+## b. Sea $R$ la relación $H$ definida por $xRy$ si y sólo si $x$ es hijo de $y$.
+
+* **Reflexiva:** no, ya que una persona no puede ser hija de sí misma, por lo tanto no se cumple $xRx$ para ningún $x \in H$.
+* **Simétrica:** no, ya que una persona no puede ser padre de sus hijos, por lo tanto $xRy$ nunca implica $yRx$.
+* **Antisimétrica:** no, ya que la simetría no se cumple aún cuando $x = y$; de hecho $x\ne y$ para todos los pares de $H$.
+* **Transitiva:** no, ya que los hijos de una persona $x$ no son los hijos de su padre $y$, sino que son sus nietos $z$.
+
+## c. Sea $R$ la relación en $H$ definida por $xRy$ si y sólo si $x$ es descendiente de $y$.
+
+* **Reflexiva:** no, ya que una persona no es descendiente de sí misma.
+* **Simétrica:** no, ya que una persona $x$ siendo descendiente de $y$ nunca que implica que $y$ también descienda de $x$.
+* **Antisimétrica:** no, ya que $xRy \to yRx$ no se cumple aún cuando $x=y$; de hecho $x \neq y$ para todos los pares $\in H$.
+* **Transitiva:** sí, ya que una persona $x$ descendiente de otra $y$ también tiene sus mismos descendientes $z$, de manera que $xRy, yRz$ implican $xRz$.
+
+# 19. Establecer las propiedades de las siguientes relaciones:
+
+## a. Sea $N$ el conjunto de los naturales, sea $\le$ la relación dada por $x \le y$ si y sólo si $x$ es menor o igual a $y$.
+
+## b. Sea $N$ el conjunto de los naturales, sea $|$ la relación dada por $x|y$ si y sólo si $x$ divide a $y$.
+
+## c. La anterior pero con el conjunto de los enteros
+
+# 20. Dado un conjunto de números reales $A$, probar que la relación sobre $A \times A$ dada por $(a,b)R(c,d)$ si y sólo si $a \le c$ y $b \le d$ es un orden. ¿Es total?
+
+Una relación es un orden si es reflexiva, transitiva y antisimétrica.
+
+* $R$ es reflexiva, ya que se cumple $xRx$
+    * $(a,b)R(a,b): a \le a; b \le b \to (a,b) \in R$
+* $R$ es transitiva, ya que $xRy \land yRz$ implican $xRz$
+    * $xRy = (a,b)R(c,d); a \le c; b \le d$
+    * $yRz = (c,d)R(e,f); c \le e; d \le f$
+    * $xRz = (a,b)R(e,f); a \le c \le e; b \le d \le f$
+* Es antisimétrica, ya que $xRy \to yRx$ sólo cuando $x=y$
+    * Con $x \ne y$:
+        * $(a,b)R(c,d) = a \le c; b \le d$
+        * $(c,d)R(a,b) = c \le a; d \le d$
+        * Son contradictorias, por lo que si $xRy \in R; yRx \notin R$ y viceversa.
+    * Con $x = y$:
+        * $(a,b)R(a,b) = a \le a; b \le b$
+        * Cuando $x=y$, $xRy \to yRx$, por lo que $R$ es antisimétrica.
+
+Por lo tanto, $R$ es un orden. Al ser una operación válida para todos los números reales, también es un orden total.

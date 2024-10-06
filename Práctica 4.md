@@ -834,3 +834,81 @@ Por lo tanto, $3 \equiv_{\pm 1} -3, 3\equiv_{\pm 2} -3, 3 \equiv_{\pm 3} -3$
 
 # 38. Probar que todo número es congruente módulo $n$ con el resto de su división por $n$
 
+Se quiere demostrar que, dado $n$ y $x = k\times n + r$ para cualquier $x \in Z$, se cumple $x \equiv_n r$.
+
+* A partir de esa fórmula podemos obtener que $x-r = k \times n$
+* Esto implica que $x-r$ es divisible por $n$ con resto 0, tal que $x-r \equiv_n 0$
+* Sumando $r$ de ambos lados, obtenemos que $x-r + r \equiv_n 0 + r = x \equiv_n r$
+
+Por lo tanto, $x \equiv_n r$ cuando se da $x = k \times n + r$.
+
+# 39. Probar que dos enteros son congruentes módulo $m$ si y sólo si sus respectos restos de la divión por $m$ son iguales
+
+*// esta no es la definición de congruencia?*
+
+* Dos enteros son congruentes módulo $m$ si pertenecen a la misma clase de equivalencia de $m$.
+* Las clases de equivalencia de $m$ para la congruencia están determinadas por los valores enteros $0 < n$.
+* Un entero pertenece a $R(n)$ si su resto al dividirlo por $m$ es igual a $n$.
+* Por lo tanto, si $x,y \in Z$ pertenecen a la misma clase $R(n)$ es porque su resto con $m$ es el mismo.
+
+# 40. Probar las siguientes propiedades para todo $a,b,c \in Z$
+
+## a. $a \equiv_n a$
+
+La congruencia es una relación reflexiva.
+
+Sea $a$ un entero cualquiera, su resto al dividirlo por $n$ será siempre el mismo. Por lo tanto, siempre pertenecerá a la misma clase de equivalencia y será congruente módulo $n$ con sí mismo.
+
+$a-a = k \times n$
+
+$0 = k \times n$
+
+$n$ puede tomar cualquier valor y se cumplirá $a \equiv_n a$ si $k = 0$.
+
+## b. $a \equiv_n b \implies b\equiv_n a$
+
+La congruencia es una relación simétrica, por lo tanto $xRy$ implica $yRx$.
+
+$a-b = k \times n$
+
+$b-a = -(a-b) = - k\times n \implies a-b = k \times n$
+
+## c. $a \equiv_n b \land b \equiv_n c \implies a \equiv_n c$
+
+La congruencia es una relación transitiva, por lo que si se cumplen $xRy, yRz$ entonces también se cumple $xRz$.
+
+$a-b = k \times n$
+
+$b-c = j \times n$
+
+$a-c = a + (-b + b) - c = a -b + b - c = k\times n + j \times n \implies a-c = n(k \times j)$, siendo $(k \times j)$ un  número entero.
+
+## d. $a \equiv_n b \iff a + c \equiv_n b + c$
+
+$a + b \equiv_n b+c$
+
+$(a+c) - (b+c) = k\times n$
+
+$a + c - b - c = k\times n$
+
+$a + b = k \times n$
+
+## e. $a \equiv_n b \implies ac \equiv_n bc$
+
+$a - b = k \times n$
+
+$c(a-b) = c(k \times n)$
+
+$ac - bc = (c\times k)n$, siendo $c \times k$ un número entero.
+
+## f. $a \equiv_n b \implies (a,n) = (b,n)$
+
+## g. $a \equiv_n 0 \iff n|a$
+
+$n|a \implies a = k \times n + 0 = k \times n$
+
+$a-0 = k \times n$
+
+$a = k \times n$
+
+Esto implica que $n| a-0$, lo cual es lo mismo que decir $a \equiv_n 0$.

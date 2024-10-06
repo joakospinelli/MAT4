@@ -650,3 +650,187 @@ $P$ está formado por las clases de equivalencia:
 De tal manera que $R$ se define como:
 
 $R = \{ (a,a); (a,c); (b,b); (c,a); (c,c); (d,d); (d,e); (e,d); (e,e) \}$
+
+# 31. Sean $A = \{ 1, 2, 3, 4, 5, 6 \}$ y $R= \{ (1,1); (1,2); (2,1); (2,2); (3,3); (4,4); (4,5); (5,4); (5,5); (6,6) \}$, mostrar que $R$ es una relación de equivalencia y determinar las clases de equivalencia.
+
+$R$ es una relación de equivalencia ya que:
+* Es reflexiva, ya que $xRx$ para todo $x \in A$:
+    * $(1,1) \in R$
+    * $(2,2) \in R$
+    * $(3,3) \in R$
+    * $(4,4) \in R$
+    * $(5,5) \in R$
+    * $(5,6) \in R$
+* Es simétrica, ya que $xRy$ implica $yRx$ para todo $x,y \in A$.
+    * $(1,1) \to (1,1)$
+    * $(1,2) \to (2,1)$
+    * $(2,2) \to (2,2)$
+    * $(3,3) \to (3,3)$
+    * $(4,4) \to (4,4)$
+    * $(4,5) \to (5,4)$
+    * $(5,5) \to (5,5)$
+    * $(6,6) \to (6,6)$
+* Es transitiva, ya que $xRy, yRz$ implican lógicamente a $xRz$.
+    * $(1,1) \land (1,1) \to (1,1)$
+    * $(1,2) \land (2,1) \to (2,2)$
+    * $(4,5) \land (5,4) \to (4,4)$
+    * etc.
+
+Clases de equivalencia:
+* $R(1) = \{ 1, 2 \}$
+* $R(2) = \{ 1, 2 \}$
+* $R(3) = \{ 3 \}$
+* $R(4) = \{ 4, 5 \}$
+* $R(5) = \{ 4, 5 \}$
+* $R(6) = \{ 6 \}$
+
+## ¿Qué partición de $A$ induce $R$?
+
+$R$ induce la partición $P(A) = \{ \{ 1, 2 \}, \{ 3 \}, \{ 4, 5 \}, \{6 \} \}$
+
+# 32. Sea $\sim$ una relación definida en $Z \times (Z0)$ dada por: $(a,b) \sim (c,d)$ si y sólo si $ad = bc$:
+
+## a. Probar que es de equivalencia.
+
+* $\sim$ es reflexiva, ya que para todo par de números enteros se cumple $ad = ad$, por lo tanto $xRx$ es válida para todo $x \in $Z \times (Z0)$
+* $\sim$ es simétrica, ya que se cumple $(ad = bc) = (bd = ad)$, por lo tanto $xRy$ implica $yRx$.
+* $\sim$ es transitiva, ya que si se cumplen $ad=bc, bc=xy$ para los enteros $(a,d,b,c,x,y)$, entonces también se implica la igualdad $ad=xy$.
+
+Por lo tanto, $\sim$ es una relación de equivalencia.
+
+## b. Hallar la clase de equivalencia del elemento $(1,4)$
+
+$1 \times 4 = 4$
+
+$R((1,4)) = \{ \{ 1,4\}, \{ 2,2\} \}$
+
+## c. Mostrar que puede identificarse cada clase de equivalencia con un número racional
+
+*// no entendí*
+
+# 33. Hallar las clases de equivalencia módulo 3 y 5 de los números 387, 25 y 649.
+
+Las clases de equivalencia de los números corresponden con su resto al dividirlos por el módulo.
+
+## Módulo 3
+
+$\mod 3$ tiene 3 clases de equivalencia posibles: $R(0), R(1), R(2)$, siendo $0,1,2$ los posibles valores del resto.
+
+* $\dfrac {387} {3} = 129\times 3 + 0 \to 387 \equiv 0 \pmod 3$
+
+* $\dfrac {25} {3} = 8\times 3 + 1 \to 25 \equiv 1 \pmod 3$
+
+* $\dfrac {649} {3} 216 \times 3 +1 \to 649 \equiv 1 \pmod 3$
+
+$387 \in R(0)$
+
+$\{ 25, 649 \} \in R(1)$
+
+## Módulo 5
+
+$\mod 5$ tiene 5 clases de equivalencia posibles: $R(0), R(1), R(2), R(3), R(4)$.
+
+* $\dfrac {387} {5} = 77\times 5 + 2 \to 387 \equiv 2 \pmod 5$
+
+* $\dfrac {25} {5} = 5\times 5 + 0 \to 25 \equiv 0 \pmod 5$
+
+* $\dfrac {649} {5} = 129\times 5 + 4 \to 659 \equiv 4 \pmod 5$
+
+$387 \in R(2)$
+
+$25 \in R(0)$
+
+$649 \in R(4)$
+
+# 34. Hallar las respectivas clases de $13, 6, 11, -49 \pmod 4$
+
+$13 \equiv 1 \pmod 4$
+
+$6 \equiv 2 \pmod 4$
+
+$11 \equiv 3 \pmod 4$
+
+$-49 \equiv 3 \pmod 4$ *// 👈 el resto es negativo pero hay que pasarlo a positivo para la congruencia: $-1 + 4 = 3$*
+
+$13 \in R(1)$
+
+$6 \in R(2)$
+
+$11, -49 \in R(3)$
+
+# 35. Averiguar si son congruentes  módulo 3 entre sí los siguientes pares de números:
+
+Dos enteros son congruentes módulo $m$ entre sí si pertenecen a la misma clase.
+
+## a. $(2, 1024)$
+
+$\dfrac 2 3 = 0\times 3 + 2 \to 2 \equiv 2 \pmod 3$
+
+$\dfrac {1024} 3 = 341\times 3 + 1 \to 1024 \equiv 1 \pmod 3$
+
+$2 \in R(2), 1024 \in R(3)$, por lo que $2 \not\equiv_3 1024$
+
+## b. $(101, 512)$
+
+$\dfrac {101} 3 = 33\times 3 + 2 \to 101 \equiv 2 \pmod 3$
+
+$\dfrac {512} 3 = 512\times 3 + 2 \to 512 \equiv 2 \pmod 3$
+
+$101 \in R(2), 512 \in R(2)$, por lo tanto $101 \equiv_3 512$
+
+## c. $(1501, 1348)$
+
+$\dfrac {1501} 3 = 500\times 3 + 1 \to 1501 \equiv 1 \pmod 3$
+
+$\dfrac {1348} 3 = 449\times 3 + 1 \to 1348 \equiv 1\pmod 3$
+
+$1501 \in R(1), 1348 \in R(1)$, por lo tanto $1501 \equiv_3 1348$
+
+# 36. Analizar para qué valores de $m$ se hacen verdaderas las siguientes congruencias:
+
+## a. $5 \equiv_m 4$
+
+$5 \equiv_m 4: 5-4 = k\times m$
+
+$1 = k\times m$
+
+Los únicos valores de $k, m$ que cumplen la equivalencia son $k = m = \pm 1$. Por lo tanto, $5 \equiv_{\pm1} 4$
+
+## b. $1 \equiv_m 0$
+
+$1 \equiv_m 0: 1-0 = k \times m$
+
+$1 = k \times m$
+
+Los únicos valores de $k, m$ que cumplen la equivalencia son $k = m = \pm 1$. Por lo tanto, $1 \equiv_{\pm1} 0$
+
+## c. $1197 \equiv_m 286$
+
+$1197 \equiv_m 286: 1197 - 286 = k \times m$
+
+$911 = k \times m$
+
+911 es primo, por lo que los únicos valores que cumplen la equivalencia son:
+* $k = \pm 911, m = \pm 1$
+* $k = \pm 1, m = \pm 911$
+
+Por lo tanto, $1197 \equiv_{\pm 911} 286$ y $1197 \equiv_{\pm 1} 286$
+
+## c. $3 \equiv_m -3$
+
+$3 \equiv_m -3: 3-(-3) = k \times m$
+
+$6 = k \times m$
+
+Los valores de $k,m$ que cumplen la igualdad son:
+* $k = \pm 1, m = \pm 6$ y viceversa.
+* $k \pm 2, m = \pm 3$ y viceversa.
+
+Por lo tanto, $3 \equiv_{\pm 1} -3, 3\equiv_{\pm 2} -3, 3 \equiv_{\pm 3} -3$
+
+# 37. Probar que la relación de congruencia módulo $m$ es una relación de equivalencia
+
+*// esto está en la teoría así que no lo voy a explicar, pero la congruencia es reflexiva, simétrica y transitiva*
+
+# 38. Probar que todo número es congruente módulo $n$ con el resto de su división por $n$
+

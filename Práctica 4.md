@@ -305,7 +305,7 @@ $R$ es transitiva, ya que $XRY$ y $YRZ$ implican $XRZ$.
 | c | 0 | 0 | 0 | 1 |
 | d | 0 | 0 | 1 | 0 |
 
-<img src="./grafos/ej6r1.png">
+<img src="./gráficos/p4ej6r1.png">
 
 ## b. $R_2$
 
@@ -316,7 +316,7 @@ $R$ es transitiva, ya que $XRY$ y $YRZ$ implican $XRZ$.
 | c | 0 | 0 | 1 | 0 |
 | d | 0 | 0 | 0 | 1 |
 
-<img src="./grafos/ej6r2.png">
+<img src="./gráficos/p4ej6r2.png">
 
 # 8. Sea $A = \{ a,b,c,d \}$
 
@@ -518,3 +518,135 @@ Una relación es un orden si es reflexiva, transitiva y antisimétrica.
         * Cuando $x=y$, $xRy \to yRx$, por lo que $R$ es antisimétrica.
 
 Por lo tanto, $R$ es un orden. Al ser una operación válida para todos los números reales, también es un orden total.
+
+# 21. Analizar qué tipo de orden es usual en el conjunto de los números reales. ¿Qué pasa con los números complejos? ¿Están ordenados?
+
+Los números reales se ordenan mediante $\le$; es decir, si los objetos son menores o iguales entre sí. Este es un orden total, ya que:
+* Un elemento es menor o igual a sí mismo.
+* $x \le y$ implica $y \le x$ sólo cuando $x=y$.
+* Si $x \le y$ e $y \le z$, entonces $x \le z$.
+
+Los números ordenados no siguen el mismo orden que los números reales. Una manera de ordenarlos podría ser dividiendo su parte real e imaginaria.
+
+# 22. Probar que el orden lexicográfico es un orden total
+
+# 23. Sea $S = \{ a,b,c \}$ y sea $A = P(S)$ el conjunto de partes de $S$, mostrar que $A$ está parcialmente ordenado por la operación $\subset$. Hallar el diagrama de Hasse.
+
+$A = P(S) = \{ \empty, \{ a \}, \{ b \}, \{ c \}, \{ a, b\}, \{ a, c\}, \{ b,c \}, \{ a, b, c\} \}$
+
+$R = \subset$
+
+* $R$ **no** es reflexiva, ya que no se cumple $xRx$ para todo $x \in A$. La operación $\subset$ es estricta, por lo que no incluye la igualdad de conjuntos.
+
+Por lo tanto, $\subset$ no es un orden de $A$.
+
+# 24. Sea $D_{12} = \{ 1, 2, 3, 4, 6, 12 \} (conjunto de divisores de 12), hallar el diagrama de Hasse de $D_{12}$ con la relación "divide".
+
+<img src="./gráficos/p4ej24.png">
+
+# 25. Describa las parejas ordenadas por las relaciones de cada uno de los siguientes diagramas de Hasse. Determinar, si existen, los elementos máximos, mínimos, cotas inferiores y superiores.
+
+## a.
+
+* $a \ge b, c, d, e, f$
+* $b,c,d \ge g$
+* $d \ge h$
+* $d,e,f \ge i$
+* $g, h, i \ge j$
+
+**Máximo:** $a$.
+
+**Mínimo:** $j$.
+
+$a$ es la cota superior para todos los subconjuntos, y $j$ es la cota inferior.
+
+## b.
+
+* $1 \ge a,b,c,d$
+* $a,b,c,d \ge 0$
+
+**Máximo:** $1$.
+
+**Mínimo:** $0$.
+
+$1$ es la cota superior para todos los subconjuntos, y $0$ es la cota inferior.
+
+# 26. Sea $R$ una relación de equivalencia en un conjunto no vacío $A$, y sean $a.b \in A$, entonces $[a] = [b]$ si y sólo si $aRb$.
+
+*// esto es una afirmación o una pregunta? no quiero resolverlo a la 1AM*
+
+# 27. Determinar si cada una de las siguientes colecciones de conjuntos es una partición para el conjunto $A= \{ 1,2,3,4,5,6,7,8 \}$
+
+## a. $\{ \{ 4,5,6\}; \{ 1,8\}; \{ 2,3,7\} \}$
+
+Sí, ya que:
+* No hay partes vacías.
+* Los elementos aparecen en una y sólo una parte.
+* La unión de todas las partes es igual a $A$.
+
+## b. $\{ \{ 4,5 \}; \{ 1,3,4 \}; \{ 6,8 \}; \{ 2,7 \} \}$
+
+No, ya que no se cumplen todas las propiedades de las particiones.
+* El elemento $4$ se encuentra repetido en las partes $\{ 4, 5 \}; \{ 1,3,4 \}$, por lo que su intersección no es vacía.
+
+## c. \{ \{1,3,4 \} ; \{ 2,6\}; \{ 5,8\} }$
+
+No, ya que no se cumplen todas las propiedades de las particiones.
+* El elemento $7$ no se encuentra en ninguna parte, por lo que la unión entre ellas no será igual a $A$.
+
+# 28. Considerando el conjunto $A$ de los alumnos que cursan Matemática 4, indicar cuáles de las siguientes son particiones de $A$:
+
+## a. $P = \{$ {*alumnos que aprobaron CADP*}, {*alumnos que aprobaron OC*}, {*alumnos que no aprobaron ISO ni Redes*}$\}$
+
+No es una partición, ya que podría haber alumnos de Matemática 4 que hayan aprobado CADP y OC, además de no aprobar ISO ni Redes. Por lo tanto, las particiones compartirían elementos.
+
+## b. $P = \{$ {*alumnos cursando Programación Distribuida*}, {*alumnos cursando Sistemas y Organizaciones*}, {*alumnos cursando Lógica e Inteligencia Artificial*}$\}$
+
+No, ya que hay varios problemas:
+* Podría haber alumnos cursando las tres materias a la vez, por lo que habría elementos compartidos entre las partes.
+* Podría haber alumnos que no estén cursando ninguna de esas materias, por lo que la unión de las particiones no sería igual a todos los alumnos de Matemática.
+* Podría darse que ningún alumno de Matemática esté cursando una de esas materias en particular, por lo que sería una parte vacía.
+
+# 29. Sean $A=\{ 1,2,3,4\}$ y $R=\{ (1,1); (1,2); (2,1); (2,2); (3,3); (3,4); (4,3); (4,4)\}$, mostrar que $R$ es una relación de equivalencia y hallar las clases de equivalencia.
+
+Una relación $R$ es equivalente si es reflexiva, simétrica y transitiva.
+
+* $R$ es reflexiva, ya que para cada $x \in A$ se cumple $xRx$.
+    * $(1,1) \in R$
+    * $(2,2) \in R$
+    * $(3,3) \in R$
+    * $(4,4) \in R$
+* $R$ es simétrica, ya que $xRy$ implica lógicamente a $yRx$.
+    * Cuando $xRy \in R$, existe $yRx \in R$ tal que $xRy \to yRx = V \to V = V$.
+    * Cuando $xRy \notin R$, también se cumple $yRx \notin R$, tal que $xRy \to yRx = F \to F = V$
+* $R$ es transitiva, ya que dadas $xRy, yRz \in R$ se implica $xRz$.
+    * $(1,2) \land (2,1) \to (1,1) = V$
+    * $(3,4) \land (4,3) \to (3,3) = V$
+    * etc.
+
+## Clases de equivalencia
+
+* $R(1) = \{ 1, 2 \}$
+* $R(2) = \{ 1, 2 \}$
+* $R(3) = \{ 3,4 \}$
+* $R(4) = \{ 3,4 \}$
+
+## ¿Cuál es la partición que induce $R$ sobre $A$?
+
+$R$ genera la partición $P(A) = \{ \{ 1,2 \}; \{ 3,4 \} \}$
+* La intersección entre partes es vacía, por lo que no comparten elementos.
+* No hay partes vacías.
+* La unión de las partes es igual a $A$, por lo que no hay elementos sin asignar.
+
+# 30. Dados el conjunto $A = \{ a,b,c,d,e \}$ y una partición $P= \{ \{ a,c \}; \{ b\}; \{ d,e\} \}$, escribir por extensión la relación de equivalencia sobre $A$ inducida por $P$.
+
+$P$ está formado por las clases de equivalencia:
+* $R(a) = \{ a, c \}$
+* $R(b) = \{ b \}$
+* $R(c) = \{ a, c \}$
+* $R(d) = \{ d, e \}$
+* $R(e) = \{ d, e\}$
+
+De tal manera que $R$ se define como:
+
+$R = \{ (a,a); (a,c); (b,b); (c,a); (c,c); (d,d); (d,e); (e,d); (e,e) \}$

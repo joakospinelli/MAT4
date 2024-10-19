@@ -59,7 +59,7 @@ Para todo par $a,b \in Z$ no nulos, existe un MCD $d > 0$ tal que:
 * $d|a, d|b$
 * Si existe un número $D$ que cumple $D|a, D|b$, entonces también $D|d$. *👈 de esta manera se garantiza que $d$ sea el máximo, ya que $D$ puede dividirlo y, por lo tanto, $D < d$*
 
-Se dice que dos números $a,b \in Z$ son coprimos si $MCD(a,b) = 1$
+Se dice que dos números $a,b \in Z$ son coprimos si $MCD(a,b) = 1$. Otra característica de los coprimos es que ninguno es múltiplo del otro; por lo tanto, si se da $a|mb$ es porque $a|m$.
 
 ### Descomposición en primos
 

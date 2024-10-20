@@ -188,3 +188,84 @@ Por lo tanto, $(M_{2 \times 2}, +)$ tiene estructura de grupo.
 * No existe un inverso $B'$ para cada elemento $B \in A$ que cumple $B \cup B' = \empty$
 
 Por lo tanto, $(P(A), \cup)$ no tiene estructura de grupo. Es únicamente un monoide.
+
+# 6. Probar que en todo grupo el único elemento idempotente es el neutro.
+
+*// idempotencia es que, al realizar una acción N veces, se obtiene el mismo resultado que al realizarla una vez*
+
+Un elemento $e$ es neutro en su grupo $(A,*)$, ya que $a * e = a \quad \forall a \in A$.
+
+* Como $(A,*)$ es un grupo, entonces la operación $*$ está bien definida, es cerrada y el resultado de $a*b \in A \quad \forall a,b \in A$
+* Como $e \in A$, se cumple que $e * e = e$
+* Esto quiere decir que $e^n = e*e*...*e \in A : e^n = e$
+
+Por lo tanto, al operar sobre el elemento neutro $n$ veces el resultado va a seguir siendo el mismo, entonces $e$ es idempotente.
+
+Esto no se cumple para ningún otro elemento de $A$. Se demostrará con un contraejemplo:
+* $a * a = a \quad a \in A$
+* $a' * (a*a) = a'*a$
+* $(a'*a)*a = a'*a$ // Se sabe que $*$ es asociativa, ya que $(A,*)$ es un grupo.
+* $e*a = a'*a$
+* $e*a=e$
+* $e*a = e*e = e$
+* Por lo tanto, $e=a$
+
+Esto implica que el único caso en el que se cumple la idempotencia es cuando el elemento $a \in A$ es el neutro, el cual es único.
+
+# 7. Mostrar que en todo grupo vale la propiedad cancelativa.
+
+Un grupo $(A,*)$ tiene las siguientes propiedades:
+* $*$ es una operación binaria bien definida sobre $A$.
+* $*$ es asociativa.
+* Existe un elemento neutro $e$ para $*$ en $A$.
+* Existe un inverso $a'$ en la operación $*$ para cada elemento en $a \in A$.
+
+Se quiere demostrar que se cumple la propiedad cancelativa, definida como $a*b = a*c \implies b=c$
+
+* $a*b = a*c$
+* $a'*(a*b) = a'*(a*c)$
+* $(a'*a)*b = (a'*a)*c$
+* $e*b = e*c$
+* $\dfrac {e*b} e = \dfrac {e*c} e$
+* $b=c$
+
+# 8. Sea $(G,*)$ un grupo tal que todo elemento es su propio inverso, probar que $G$ es abeliano.
+
+Un grupo tiene un elemento neutro $e$ tal que $a*e = a \quad \forall a \in G$
+
+Un número tiene un inverso $a'$ tal que $a * a' = e$
+
+En este caso, se da que $a' = a \quad \forall a \in A$. Se quiere demostrar que, bajo estas condiciones, también se da que $G$ es abeliano, tal que $a*b = b*a \quad \forall a,b \in G$
+
+* $a*a = e$
+* $b*b = e$
+* $(a*b) * (a*b) = e \quad (a*b) \in G, (a*b)' = (a*b)$
+* $a * (b*a) * b = e$
+* $(a* (b*a) * b) *b= e*b$ // Multiplico por $b$ ambos lados
+* $a*(b*a)*(b*b)= b$
+* $a*(b*a)*e = b$
+* $a*(b*a) = b$ // Elimino el neutro ya que no influye en la operación
+* $a*(a*(b*a)) = a*b$ // Multiplico por $a$ ambos lados
+* $(a*a)*(b*a) = a*b$
+* $e*(b*a) = a*b$
+* $b*a = a*b$
+
+Por lo tanto, se demostró que se cumpla la conmutatividad $a*b = b*a \quad \forall a,b \in G$ bajo la condición de que $a' = a$
+
+# 9. Dado un grupo $(G,*)$, probar que $G$ es abeliano si y sólo si para cualquier $x,y$ en $G$ vale que $(x*y)^2 = x^2*y^2$
+
+$(G,*)$ es un grupo, por lo que:
+* $*$ es una operación binaria bien definida sobre $G$.
+* $*$ es asociativa.
+* Existe un elemento neutro $e$ para $*$ en $G$ tal que $a*e = a \quad \forall a \in G$
+* Existe un inverso $a'$ en la operación $*$ para cada elemento en $a \in G$ tal que $a*a'=e$
+
+Se quiere demostrar que, para que $(G,*)$ cumpla con la conmutatividad, necesariamente debe darse $(x*y)^2 = x^2 * y^2 \quad \forall x,y \in G$
+
+Asumiendo que $(G,*)$ es abeliano:
+* $(x*y)^2 = (y*x)^2$ // Por conmutatividad
+* $(x*y)*(x*y) = (y*x)*(y*x)$ // Como es abeliano puedo conmutar y asociar como quiera
+* $(x*x)*(y*y) = (x*x)*(y*y)$
+* $x^2*y^2 = x^2*y^2$
+
+Por lo tanto, cuando $*$ es conmutativa se cumple $(x*y)^2 = x^2*y^2$

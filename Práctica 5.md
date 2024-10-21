@@ -1,22 +1,22 @@
 # 1. Determinar cuáles de las siguientes operaciones están bien definidas sobre el conjunto A dado. Analizar las propiedades en los casos afirmativos.
 
-## a. $A = N, a*b = 3ab$
+## a. $A = N, a \ast b = 3ab$
 
-Está bien definida ya que, por definición, la multiplicación es cerrada dentro de los naturales, y $*$ es simplemente el producto de tres términos entre $a, b, 3 \in N$.
+Está bien definida ya que, por definición, la multiplicación es cerrada dentro de los naturales, y $\ast$ es simplemente el producto de tres términos entre $a, b, 3 \in N$.
 
 * Es conmutativa, ya que:
-    * $(a*b) = (b*a)$
+    * $(a\ast b) = (b\ast a)$
     * $3ab = 3ba$
 * Es asociativa, ya que:
-    * $(a*b)*c = a*(b*c)$
+    * $(a \ast b) \ast c = a \ast (b \ast c)$
     * $3(3ab)c = 3a(3bc)$
     * $9abc = 9abc$
 * No existe el elemento neutro, ya que:
-    * $a*e = 3ae = a$
+    * $a \ast e = 3ae = a$
     * $e = \frac 1 3$
     * $e \notin N$
 
-## b. $A = Z, a*b = \dfrac {a+b} {3+ab}$
+## b. $A = Z, a \ast b = \dfrac {a+b} {3+ab}$
 
 No es una operación válida, ya que no es cerrada en ciertos casos importantes:
 * Cuando la división de los términos $(a+b), (3+ab)$ **no** sea exacta, ya que el resultado de una división inexacta $\notin Z$
@@ -35,19 +35,19 @@ $$\dfrac {a+b} {3+ab} = \dfrac 2 {3-3} = \dfrac 2 0$$
 
 $$\dfrac 2 0 \notin Z$$
 
-## c. $A = R, x*y=x+y-xy$
+## c. $A = R, x \ast y=x+y-xy$
 
 Está bien definida, ya que tanto la suma, resta y multiplicación entre números reales da como resultado otro número real, por lo que la operación es cerrada.
 
 * Es conmutativa, ya que:
-    * $a*b = b*a$
+    * $a \ast b = b \ast a$
     * $x+y - xy = y+x - yx$
 * Es asociativa, ya que:
-    * $(a*b)*c = a*(b*c)$
+    * $(a \ast b) \ast c = a \ast (b \ast c)$
     * $(x+y-xy)+z - (x+y-xy)z = x+(y+z-yz)-x(y+z-yz)$
     * $x+y+z-xy-zx-zy+xyz = x+y+z-yz -xy -xz +xyz$
 * Tiene un elemento neutro, ya que:
-    * $a*e = a$
+    * $a \ast e = a$
     * $a+e-ae = a$
     * $a+(e-ae)=a$
     * $a+(0-a0) = a$
@@ -65,35 +65,35 @@ Está bien definida, ya que tanto la suma, resta y multiplicación entre número
 Está bien definida, ya que todos los resultados posibles están dentro de $A$, por lo que es una operación cerrada.
 
 * No es conmutativa, ya que:
-    * $\exists a,b \in A : a*b \ne b*a$
-    * $2*0 = 1 \quad 0*2 = 0$
+    * $\exists a,b \in A : a \ast b \ne b \ast a$
+    * $2 \ast 0 = 1 \quad 0 \ast 2 = 0$
 * No es asociativa, ya que:
-    * $(2*2)*0 = 0*0 = 0*0$
+    * $(2 \ast 2) \ast 0 = 0 \ast 0 = 0 \ast 0$
     * $2*(2*0) = 2*1 = 2$
-    * $(a*b)*c \ne a*(b*c) \quad \forall a,b,c \in A$
+    * $(a \ast b) \ast c \ne a \ast (b \ast c) \quad \forall a,b,c \in A$
 * Tiene un elemento neutro, ya que:
-    * $a*e = e*a = a$
-    * $a*1 = a \quad \forall a \in A$
+    * $a \ast e = e \ast a = a$
+    * $a \ast 1 = a \quad \forall a \in A$
 
 # 2. Demostrar que:
 
 ## a. Dado $M=\{ m \in N : n > 0\}, (M,+)$ es un semigrupo pero no es un monoide.
 
 Es un semigrupo ya que:
-* La suma es una operación binaria bien definida para $M$, ya que $a*b=c : a,b,c \in M$
+* La suma es una operación binaria bien definida para $M$, ya que $a \ast b=c : a,b,c \in M$
 * La suma es asociativa en $M$, tal que $(a+b)+ c = a+(b+c) \quad \forall a,b,c \in M$.
 
 Sin embargo, no es un monoide ya que no existe un elemento neutro. El neutro para la suma de números naturales es 0; sin embargo, en la definición de $M$ se excluye dicho valor.
 
-## b. El conjunto de un solo elemento $M = \{ e \}$ con la operación definida por $e*e = e$ es un monoide.
+## b. El conjunto de un solo elemento $M = \{ e \}$ con la operación definida por $e \ast e = e$ es un monoide.
 
 Es un monoide ya que:
-* $*$ es una operación binaria cerrada en $M$, por lo que está bien definida.
+* $ \ast $ es una operación binaria cerrada en $M$, por lo que está bien definida.
 * Es asociativa, ya que:
-    * $e*(e*e) = (e*e)*e$
+    * $e \ast (e \ast e) = (e \ast e) \ast e$
     * $e=e$
 * Existe un elemento neutro en $M$, el cual es el propio $e$:
-    * $e*e = e$
+    * $e \ast e = e$
     
 ## c. Dado un conjunto no vacío $A$, el conjunto de las partes $P(A)$ con la operación $\cap$ de conjuntos es un monoide conmutativo.
 
@@ -105,26 +105,26 @@ Es un monoide ya que:
 
 Por último, la intersección también es conmutativa, por lo que es un monoide conmutativo.
 
-# 3. Demostrar que si para una operación asociativa $*$ en $A$ existe un elemento neutro $e$ y un elemento $a$ tiene inverso, entonces éste es único.
+# 3. Demostrar que si para una operación asociativa $\ast $ en $A$ existe un elemento neutro $e$ y un elemento $a$ tiene inverso, entonces éste es único.
 
-Se sabe que un elemento $e$ es neutro si se cumple $a*e = a$ para todo $a \in A$. Por otro lado, un elemento $a$ tiene un inverso $a'$ si se cumple $a*a' = e$.
+Se sabe que un elemento $e$ es neutro si se cumple $a\ast e = a$ para todo $a \in A$. Por otro lado, un elemento $a$ tiene un inverso $a'$ si se cumple $a\ast a' = e$.
 
 Se quiere demostrar que dicho inverso es único para $a$, es decir, que $a$ sólo puede tener un inverso.
 
 Supongamos que existen dos inversos de $a$, tales que:
 
-$$a*b=e \qquad a*c=e \\ a*b = e = a*c$$
+$$a\ast b=e \qquad a\ast c=e \\ a\ast b = e = a\ast c$$
 
-Como $*$ es asociativa, se puede escribir una operación tal que:
-* $a*b = a*c$
-* $b*(a*b) = b*(a*c)$
-* $(b*a)*b = (b*a)*c$
-* $e*b = e*c$
+Como $\ast $ es asociativa, se puede escribir una operación tal que:
+* $a \ast b = a \ast c$
+* $b \ast (a \ast b) = b \ast (a \ast c)$
+* $(b \ast a) \ast b = (b \ast a) \ast c$
+* $e \ast b = e \ast c$
 * $b = c$
 
 Por lo tanto, el inverso de $a$ es único.
 
-# 4. Sea $R$ una relación de congruencia sobre un semigrupo $(S,*)$, demostrar que $(S/R, \textcircled *)$ (el conjunto cociente y la operación inducida por $*$ sobre las clases de equivalencia) es un semigrupo llamado semigrupo cociente.
+# 4. Sea $R$ una relación de congruencia sobre un semigrupo $(S,\ast)$, demostrar que $(S/R, \textcircled \ast)$ (el conjunto cociente y la operación inducida por $\ast$ sobre las clases de equivalencia) es un semigrupo llamado semigrupo cociente.
 
 *// esto x ahora no lo voy a hacer*
 
@@ -193,79 +193,79 @@ Por lo tanto, $(P(A), \cup)$ no tiene estructura de grupo. Es únicamente un mon
 
 *// idempotencia es que, al realizar una acción N veces, se obtiene el mismo resultado que al realizarla una vez*
 
-Un elemento $e$ es neutro en su grupo $(A,*)$, ya que $a * e = a \quad \forall a \in A$.
+Un elemento $e$ es neutro en su grupo $(A, \ast)$, ya que $a \ast e = a \quad \forall a \in A$.
 
-* Como $(A,*)$ es un grupo, entonces la operación $*$ está bien definida, es cerrada y el resultado de $a*b \in A \quad \forall a,b \in A$
-* Como $e \in A$, se cumple que $e * e = e$
-* Esto quiere decir que $e^n = e*e*...*e \in A : e^n = e$
+* Como $(A,\ast )$ es un grupo, entonces la operación $\ast $ está bien definida, es cerrada y el resultado de $a\ast b \in A \quad \forall a,b \in A$
+* Como $e \in A$, se cumple que $e \ast e = e$
+* Esto quiere decir que $e^n = e\ast e\ast ...\ast e \in A : e^n = e$
 
 Por lo tanto, al operar sobre el elemento neutro $n$ veces el resultado va a seguir siendo el mismo, entonces $e$ es idempotente.
 
 Esto no se cumple para ningún otro elemento de $A$. Se demostrará con un contraejemplo:
-* $a * a = a \quad a \in A$
-* $a' * (a*a) = a'*a$
-* $(a'*a)*a = a'*a$ // Se sabe que $*$ es asociativa, ya que $(A,*)$ es un grupo.
-* $e*a = a'*a$
-* $e*a=e$
-* $e*a = e*e = e$
+* $a \ast a = a \quad a \in A$
+* $a' \ast  (a\ast a) = a'\ast a$
+* $(a'\ast a)\ast a = a'\ast a$ // Se sabe que $\ast $ es asociativa, ya que $(A,\ast )$ es un grupo.
+* $e\ast a = a'\ast a$
+* $e\ast a=e$
+* $e\ast a = e\ast e = e$
 * Por lo tanto, $e=a$
 
 Esto implica que el único caso en el que se cumple la idempotencia es cuando el elemento $a \in A$ es el neutro, el cual es único.
 
 # 7. Mostrar que en todo grupo vale la propiedad cancelativa.
 
-Un grupo $(A,*)$ tiene las siguientes propiedades:
-* $*$ es una operación binaria bien definida sobre $A$.
-* $*$ es asociativa.
-* Existe un elemento neutro $e$ para $*$ en $A$.
+Un grupo $(A,\ast)$ tiene las siguientes propiedades:
+* $\ast$ es una operación binaria bien definida sobre $A$.
+* $\ast$ es asociativa.
+* Existe un elemento neutro $e$ para $\ast$ en $A$.
 * Existe un inverso $a'$ en la operación $*$ para cada elemento en $a \in A$.
 
-Se quiere demostrar que se cumple la propiedad cancelativa, definida como $a*b = a*c \implies b=c$
+Se quiere demostrar que se cumple la propiedad cancelativa, definida como $a\ast b = a\ast c \implies b=c$
 
-* $a*b = a*c$
-* $a'*(a*b) = a'*(a*c)$
-* $(a'*a)*b = (a'*a)*c$
-* $e*b = e*c$
-* $\dfrac {e*b} e = \dfrac {e*c} e$
+* $a\ast b = a\ast c$
+* $a'\ast (a\ast b) = a'\ast (a\ast c)$
+* $(a'\ast a)\ast b = (a'\ast a)\ast c$
+* $e\ast b = e\ast c$
+* $\dfrac {e\ast b} e = \dfrac {e\ast c} e$
 * $b=c$
 
-# 8. Sea $(G,*)$ un grupo tal que todo elemento es su propio inverso, probar que $G$ es abeliano.
+# 8. Sea $(G,\ast)$ un grupo tal que todo elemento es su propio inverso, probar que $G$ es abeliano.
 
-Un grupo tiene un elemento neutro $e$ tal que $a*e = a \quad \forall a \in G$
+Un grupo tiene un elemento neutro $e$ tal que $a\ast e = a \quad \forall a \in G$
 
-Un número tiene un inverso $a'$ tal que $a * a' = e$
+Un número tiene un inverso $a'$ tal que $a \ast  a' = e$
 
-En este caso, se da que $a' = a \quad \forall a \in A$. Se quiere demostrar que, bajo estas condiciones, también se da que $G$ es abeliano, tal que $a*b = b*a \quad \forall a,b \in G$
+En este caso, se da que $a' = a \quad \forall a \in A$. Se quiere demostrar que, bajo estas condiciones, también se da que $G$ es abeliano, tal que $a\ast b = b\ast a \quad \forall a,b \in G$
 
-* $a*a = e$
-* $b*b = e$
-* $(a*b) * (a*b) = e \quad (a*b) \in G, (a*b)' = (a*b)$
-* $a * (b*a) * b = e$
-* $(a* (b*a) * b) *b= e*b$ // Multiplico por $b$ ambos lados
-* $a*(b*a)*(b*b)= b$
-* $a*(b*a)*e = b$
-* $a*(b*a) = b$ // Elimino el neutro ya que no influye en la operación
-* $a*(a*(b*a)) = a*b$ // Multiplico por $a$ ambos lados
-* $(a*a)*(b*a) = a*b$
-* $e*(b*a) = a*b$
-* $b*a = a*b$
+* $a\ast a = e$
+* $b\ast b = e$
+* $(a\ast b) \ast  (a\ast b) = e \quad (a\ast b) \in G, (a\ast b)' = (a\ast b)$
+* $a \ast  (b\ast a) \ast b = e$
+* $(a\ast  (b\ast a) \ast  b) \ast b= e\ast b$ // Multiplico por $b$ ambos lados
+* $a\ast (b\ast a)\ast (b\ast b)= b$
+* $a\ast (b\ast a)\ast e = b$
+* $a\ast (b\ast a) = b$ // Elimino el neutro ya que no influye en la operación
+* $a\ast (a\ast (b\ast a)) = a\ast b$ // Multiplico por $a$ ambos lados
+* $(a\ast a)\ast (b\ast a) = a\ast b$
+* $e\ast (b\ast a) = a\ast b$
+* $b\ast a = a\ast b$
 
-Por lo tanto, se demostró que se cumpla la conmutatividad $a*b = b*a \quad \forall a,b \in G$ bajo la condición de que $a' = a$
+Por lo tanto, se demostró que se cumpla la conmutatividad $a\ast b = b\ast a \quad \forall a,b \in G$ bajo la condición de que $a' = a$
 
-# 9. Dado un grupo $(G,*)$, probar que $G$ es abeliano si y sólo si para cualquier $x,y$ en $G$ vale que $(x*y)^2 = x^2*y^2$
+# 9. Dado un grupo $(G,\ast)$, probar que $G$ es abeliano si y sólo si para cualquier $x,y$ en $G$ vale que $(x\ast y)^2 = x^2\ast y^2$
 
-$(G,*)$ es un grupo, por lo que:
-* $*$ es una operación binaria bien definida sobre $G$.
-* $*$ es asociativa.
-* Existe un elemento neutro $e$ para $*$ en $G$ tal que $a*e = a \quad \forall a \in G$
-* Existe un inverso $a'$ en la operación $*$ para cada elemento en $a \in G$ tal que $a*a'=e$
+$(G,\ast)$ es un grupo, por lo que:
+* $\ast$ es una operación binaria bien definida sobre $G$.
+* $\ast$ es asociativa.
+* Existe un elemento neutro $e$ para $\ast $ en $G$ tal que $a\ast e = a \quad \forall a \in G$
+* Existe un inverso $a'$ en la operación $\ast $ para cada elemento en $a \in G$ tal que $a\ast a'=e$
 
-Se quiere demostrar que, para que $(G,*)$ cumpla con la conmutatividad, necesariamente debe darse $(x*y)^2 = x^2 * y^2 \quad \forall x,y \in G$
+Se quiere demostrar que, para que $(G,\ast)$ cumpla con la conmutatividad, necesariamente debe darse $(x\ast y)^2 = x^2 \ast y^2 \quad \forall x,y \in G$
 
-Asumiendo que $(G,*)$ es abeliano:
-* $(x*y)^2 = (y*x)^2$ // Por conmutatividad
-* $(x*y)*(x*y) = (y*x)*(y*x)$ // Como es abeliano puedo conmutar y asociar como quiera
-* $(x*x)*(y*y) = (x*x)*(y*y)$
-* $x^2*y^2 = x^2*y^2$
+Asumiendo que $(G,\ast)$ es abeliano:
+* $(x\ast y)^2 = (y\ast x)^2$ // Por conmutatividad
+* $(x\ast y)\ast (x\ast y) = (y\ast x)\ast (y\ast x)$ // Como es abeliano puedo conmutar y asociar como quiera
+* $(x\ast x)\ast (y\ast y) = (x\ast x)\ast (y\ast y)$
+* $x^2\ast y^2 = x^2\ast y^2$
 
-Por lo tanto, cuando $*$ es conmutativa se cumple $(x*y)^2 = x^2*y^2$
+Por lo tanto, cuando $\ast $ es conmutativa se cumple $(x\ast y)^2 = x^2\ast y^2$

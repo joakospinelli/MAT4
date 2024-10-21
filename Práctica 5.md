@@ -69,7 +69,7 @@ Está bien definida, ya que todos los resultados posibles están dentro de $A$, 
     * $2 \ast 0 = 1 \quad 0 \ast 2 = 0$
 * No es asociativa, ya que:
     * $(2 \ast 2) \ast 0 = 0 \ast 0 = 0 \ast 0$
-    * $2*(2*0) = 2*1 = 2$
+    * $2\ast (2\ast 0) = 2\ast 1 = 2$
     * $(a \ast b) \ast c \ne a \ast (b \ast c) \quad \forall a,b,c \in A$
 * Tiene un elemento neutro, ya que:
     * $a \ast e = e \ast a = a$
@@ -171,7 +171,7 @@ Por lo tanto, $(R^2, +)$ tiene estructura de grupo conmutativo.
 
 * La suma es una operación válida para $M_{2 \times 2}$, ya que al sumar dos matrices de $2 \times 2$ se obtiene una nueva matriz de $2 \times 2$
 * La suma entre matrices es asociativa.
-* Existe una única matriz neutra $0 = \begin{pmatrix} 0 & 0 \\ 0 & 0\end{pmatrix} \in M_{2 \times 2}$ tal que $A + 0 = A \quad \forall A \in M_{2 \times 2}$
+* Existe una única matriz neutra $0 = \begin{matrix} 0 & 0 \\ 0 & 0\end{matrix} \in M_{2 \times 2}$ tal que $A + 0 = A \quad \forall A \in M_{2 \times 2}$
 * Para cada matriz $A \in M_{2 \times 2}$ existe un inverso $A' \in M_{2 \times 2}$ formada por los mismos elementos de $A$ pero negados, tal que $A + A' = 0$
 * La suma de matrices es conmutativa, tal que $A+B = B+A$
 
@@ -257,8 +257,8 @@ Por lo tanto, se demostró que se cumpla la conmutatividad $a\ast b = b\ast a \q
 $(G,\ast)$ es un grupo, por lo que:
 * $\ast$ es una operación binaria bien definida sobre $G$.
 * $\ast$ es asociativa.
-* Existe un elemento neutro $e$ para $\ast $ en $G$ tal que $a\ast e = a \quad \forall a \in G$
-* Existe un inverso $a'$ en la operación $\ast $ para cada elemento en $a \in G$ tal que $a\ast a'=e$
+* Existe un elemento neutro $e$ para $\ast$ en $G$ tal que $a\ast e = a \quad \forall a \in G$
+* Existe un inverso $a'$ en la operación $\ast$ para cada elemento en $a \in G$ tal que $a\ast a'=e$
 
 Se quiere demostrar que, para que $(G,\ast)$ cumpla con la conmutatividad, necesariamente debe darse $(x\ast y)^2 = x^2 \ast y^2 \quad \forall x,y \in G$
 

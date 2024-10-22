@@ -269,3 +269,91 @@ Asumiendo que $(G,\ast)$ es abeliano:
 * $x^2\ast y^2 = x^2\ast y^2$
 
 Por lo tanto, cuando $\ast $ es conmutativa se cumple $(x\ast y)^2 = x^2\ast y^2$
+
+# 10. Dados los grupos $(G, \ast)$ y $(F, \diamond)$, se define en el conjunto $G \times F$ la ley $\bullet$ tal que $(x,y) \bullet (z,t) = (x \ast z, y \diamond t)$. Probar que $(G \times F, \bullet)$ es un grupo.
+
+*Esta estructura se denomina Grupo Producto*
+
+Como $(G, \ast)$ y $(F, \diamond)$ son grupos, se saben las siguientes propiedades de $\ast, \diamond$:
+* Son operaciones binarias bien definidas sobre sus respectivos conjuntos.
+* Son asociativas.
+* Existe un elemento neutro para la operación en un respectivo conjunto.
+* Cada elemento tiene un inverso.
+
+A partir de esto, se quiere demostrar que la operación $\bullet$ definida sobre $G \times F$ cumple estas mismas propiedades.
+
+$(x,y) \bullet (z,t) = (x \ast z, y\diamond t)$
+
+Operación bien definida:
+* Se sabe que $x,z \in G, y, t \in F$
+* Por lo tanto, $x \ast z$ es una operación cerrada en $G$ y $y \diamond t$ es cerrada en $F$.
+* Por lo tanto, el resultado de operar entre dos pares de $G \times F$ dará otro par del mismo conjunto.
+
+Asociativa:
+* $(a,b) \bullet((x,y) \bullet (z,t)) = ((a,b) \bullet (x,y)) \bullet (z,t)$
+* $(a,b) \bullet (x \ast z, y\diamond t) = (a \ast x, b\diamond y) \bullet (z,t)$
+* $((x \ast z) \ast a, (y\diamond t) * b) = ((a \ast x) \ast z, (b\diamond y) \diamond t)$
+* Ya se sabe que $\ast$ y $\diamond$ son asociativas, por lo que se cumple la asociatividad.
+
+Existencia de neutro:
+* Existe un neutro $e \in G$ tal que $a \ast e = a \quad \forall a \in G$
+* Existe un neutro $d \in F$ tal que $b \diamond f = d \quad \forall b \in F$
+* Por lo tanto, existe un par $(e,d) \in G \times F$ tal que:
+    * $(a,b) \bullet (e,d) = (a \ast e, b \diamond d) = (a,b)$
+    * Por lo que $(e,d)$ es el neutro para la operación $\bullet$
+
+Existencia del inverso:
+* Para todo elemento $a \in G$ existe un inverso tal que $a \ast a' = e$
+* Para todo elemento $b \in F$ existe un inverso tal que $b \ast b' = d$
+* Por lo tanto, existe un par $(a', b') \in G \times F$ tal que:
+    * $(a,b) \bullet (a', b') = (a \ast a', b \diamond b') = (e,d)$
+    * Siendo $(e,d)$ el neutro de $\bullet$, por lo que existe un inverso $(a',b')$ para todo $(a,b) \in G\times F$
+
+# 11. Estudiar si son subgrupos de los grupos indicados:
+
+## a. Los enteros pares de $(Z, +)$
+
+Para que el conjunto de los pares sea un subgrupo de $(Z,+)$ debe cumplirse:
+* $Pares \subset Z$
+* $e \in H : a + e = a \quad \forall a \in Pares$
+* $a,b \in Pares \implies a+b \in Pares$
+* $a \in Pares \implies a' \in Pares : a + a' = e$
+
+Los números pares son un subconjunto de los números enteros, por lo que dicha propiedad se cumple.
+
+Existe el elemento neutro $e = 0$, el cual siempre se debate si es par o no pero definiendo a los pares como $x = 2k$ sí lo es.
+
+La suma de números pares siempre da otro número par. Esto se puede demostrar como:
+* $a = 2k, b = 2m \quad k,m \in Z$
+* $a+b = c$
+* $2k + 2m = c$
+* $c = 2(k+m) \quad (k+m) \in Z$
+
+Sigue existiendo el inverso $a' = -a$ para todos los números enteros pares, tales que $a + a' = a-a = 0 \quad \forall a \in Pares$
+
+Por lo tanto, los enteros pares son un subgrupo de $(Z,+)$.
+
+## b. Las matrices simétricas de $2 \times 2$
+
+*// no entendí el enunciado directamente*
+
+# 12. Demostrar que si $H$ y $K$ son subgrupos de $(G, \ast)$, entonces $H \cap K$ es un subgrupo de $(G, \ast)$.
+
+Se sabe que tanto $(H, \ast)$ como $(K, \ast)$ cumplen con las condiciones para ser subgrupos de $(G, \ast)$. A partir de esto se examinará el comportamiento de su intersección.
+
+Operación cerrada:
+* Sea $a,b \in H \cap K$ se sabe que $a,b \in H \quad a,b \in K$
+* Esto implica que $a*b$ es cerrada tanto en $H$ como en $K$.
+* Su resultado también estará dentro de la intersección, por lo que la operación es cerrada.
+
+Existencia del neutro:
+* Para que $H$ y $K$ sean subgrupos de $(G,\ast)$ debe cumplirse para el elemento neutro, de forma independiente, que $e \in H$ y $e \in K$.
+* Como $e$ se encuentra en ambos conjuntos, necesariamente estará en su intersección.
+* Por lo tanto, el elemento neutro de la operación se encuentra en $H \cap K$.
+
+Existencia de inversos:
+* Sea $a$ un elemento tal que $a \in H$ y $a \in  K$, existe un inverso $a'$ tal que $a \ast a' = e$
+* Como $H$ es un subgrupo de $(G,\ast)$, el inverso $a'$ también se encuentra en el conjunto. Lo mismo ocurre con $K$.
+* Por lo tanto, el inverso también existe dentro de la intersección.
+
+A partir de la premisa de que $(H, \ast)$ y $(K, \ast)$ sean subgrupos de $(G, \ast)$, se demostró que en $H \cap K$ la operación $\ast$ es cerrada, existe el elemento neutro $e$ y cada elemento $a$ tiene su inverso $a'$. Por lo tanto, $H \cap K$ es un subgrupo de $G(\ast)$.

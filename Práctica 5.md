@@ -357,3 +357,44 @@ Existencia de inversos:
 * Por lo tanto, el inverso también existe dentro de la intersección.
 
 A partir de la premisa de que $(H, \ast)$ y $(K, \ast)$ sean subgrupos de $(G, \ast)$, se demostró que en $H \cap K$ la operación $\ast$ es cerrada, existe el elemento neutro $e$ y cada elemento $a$ tiene su inverso $a'$. Por lo tanto, $H \cap K$ es un subgrupo de $G(\ast)$.
+
+# 13. Sea $(G, \ast)$ un grupo, sea $a \in G$ y $H$ un subgrupo de $G$, demostrar que el conjunto $aHa^{+1} = \{ a \ast h \ast a^{-1} : h \in H \}$ es un subgrupo de $G$.
+
+
+# 14. Probar que todo grupo cíclico es abeliano.
+
+Un grupo es cíclico si existe un elemento $a \in G$ tal que para otro elemento $b$ existe un entero $k$ tal que $b = a^k$.
+
+Por definición de la potencia, sabemos que $a^k = a \ast a \ast ... \ast a$ ($k$ veces).
+
+A partir de esto, se quiere demostrar que $a \ast b = b \ast a$:
+* Dado $a,b \in G$, existen dos enteros $k, j$ tales que $a  = g^k, b = g^j$
+* $a \ast b = g^k \ast g^j$
+* $a \ast b = g^{(k + j)}$
+* $a \ast b = g^{(j + k)}$ // Por conmutatividad de la suma de enteros
+* $a \ast b = g^j \ast g^k$
+* $a \ast b = b \ast a$
+
+Por lo tanto, para todo grupo cíclico se cumple la propiedad de conmutatividad.
+
+# 15. Sea $G$ un grupo cíclico de orden $n$, si $m$ es divisor de $n$ entonces el elemento $a^m$ y sus potencias generan un subgrupo.
+
+*// qué este enunciado? una afirmación? lo tengo que demostrar?*
+
+$G = \{ e, a, a^2, ... , a^{n-1} \}$
+
+$G^m = \{ e, a^m, a^{m2}, ... , a^{m(k-1)} \}$
+
+$m|n : n = m \times g$
+
+$G^m$ es de orden $g$, ya que $(a^m)^g = a^n =e$. Como $g = \frac n m$, también puede escribirse el orden de esa forma.
+
+A partir de esto se demostrarán las propiedades de grupo de $G^m$:
+* Es un conjunto no vacío, ya que contiene las potencias de $a$ hasta $a^m(k-1)$
+* Es una operación cerrada, ya que $a^{hm} \ast a^{km} = a^{(h+k)m} \in G^m$
+* Tiene al elemento neutro, ya que como se demostró antes, existe un entero $g : (a^m)^g = a^n = e$, siendo $e$ el neutro para la operación $\ast$.
+* Cada elemento tiene a su inverso, tal que:
+    * $a^{mi} \ast (a^{mi})^{-1} = e$
+    * $a^{mi} \ast a^{-mi} = e, a^{-mi} \in G^m$
+
+# 16. Sea $(G, \ast)$ un grupo, sea $a \in G$ y $H$ un subgrupo de $G$. Si $a,b \in G$, probar que la relación dada por $a \equiv b \pmod H$ si $a \ast b^{-1} \in H$ es una relación de equivalencia.

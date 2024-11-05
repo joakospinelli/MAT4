@@ -197,6 +197,118 @@ El subgrupo $\overline 2$ se compone de todos los múltiplos de 2; escrito de ot
 
 Tal que $<2> = \{ \overline 0, \overline 2, \overline 4, \overline 6 \}$
 
-Con $k = 4$ se da que $2^4 = 8 \mod 8 = \overline 0$. Como el 0 es el elemento neutro, se cumple $O(2) = 4$
+Con $k = 4$ se da que $2^4 = 8 \mod 8 = \overline 0$ (siendo 4 el menor entero en cumplir esa igualdad). Como el 0 es el elemento neutro, se cumple $O(2) = 4$
 
 > *Creo que otra manera de saber el orden es por la cantidad de elementos*
+
+# 6. Encontrar los generadores del grupo cíclico $(Z_6, +)$
+
+$Z_6 = \{ \overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5 \}$
+
+Para que un elemento $a$ sea un generador debe cumplir:
+* $a \in Z_6$
+* $b = a^k \quad \forall b \in Z_6$
+
+Como la operación declarada sobre $Z_6$ es la suma, la potencia se interpreta como $a^k = a \times k$
+
+A continuación se evaluará cada elemento de $Z_6$ para ver si es un posible generador:
+
+**$\overline 0$**
+* No es un generador válido, ya que para cualquier entero se cumple $0 \times k = 0$
+* Por lo tanto, no se pueden obtener los demás elementos de $Z_6$
+
+**$\overline 1$**
+* $b = 1^b = 1 \times b \quad \forall b \in Z_6$
+* $Z_6 = <\overline 1>$ 
+
+**$\overline 2$**
+* No es un generador válido, ya que para cualquier entero se cumple $2 \times k = x$, tal que $x$ es par
+* Por lo tanto, nunca se podrán obtener los elementos impares de $Z_6$
+
+**$\overline 3$**
+* No es un generador válido, ya que 6 es múltiplo de 3
+* $3 \times k$ siempre dará un resultado cuyo módulo 6 será 0 (si también es múltiplo de 6) o 3
+* Por lo tanto, sólo podrán obtenerse esos elementos de $Z_6$
+
+**$\overline 4$**
+* Al igual que con el 2, el producto entre números pares siempre dará como resultado un número par.
+* Por lo tanto, nunca se podrán obtener los elementos impares de $Z_6$
+
+**$\overline 5$**
+* $5 \times 0 = \overline 0$
+* $5 \times 1 = \overline 5$
+* $5 \times 2 = 10 \mod 6 = \overline 4$
+* $5 \times 3 = 15 \mod 6 = \overline 3$
+* $5 \times 4 = 20 \mod 4 = \overline 2$
+* $5 \times 5 = 25 \mod 4 = \overline 1$
+* $Z_6 = < \overline 5 >$
+
+> *No sé si esto estaba en la teoría, pero según el gpt un elemento $x$ sólo puede ser generador de $(Z_n, +)$ si $x$ y $n$ son coprimos*
+
+# 7. Si reparto en partes iguales $m$ caramelos entre 3 personas, me sobran 2, mientas que si los reparto entre 7, me sobran 4. Sabiendo que $m$ está entre 30 y 70, ¿cuántos caramelos tengo para repartir?
+
+$m = [30,70]$
+* $m \mod 3 = 2 : m =3j + 2$
+* $m \mod 7 = 4 : m = 7k + 4$
+
+$m \mod 3 = 7k + 4 \mod 3 = 2$
+
+Como $7 > 4 > 3$, se puede simplificar con los módulos de 3:
+* $7 \mod 3 = 1$
+* $4 \mod 3 = 1$
+* $k + 1 \mod 3 = 2$
+* $k \mod 3 = 1$ // Restando 1 en ambos lados
+* $k = 3g + 1$
+
+$m = 7(3g + 1) + 4$
+
+$m = 21g + 7 + 4 = 21g + 11$
+
+* $30 \le 21g + 11 \le 70$
+* $19 \le 21g \le 59$
+* $\dfrac {19} {21} \le g \le \dfrac {59} {21}$
+
+Como $m \in Z$, se redondea hacia:
+* $1 \le g \le 2$
+
+Los valores posibles de $g$ para que $m$ siga dentro del intervalo son 1 y 2, tales que:
+* $m = 21 \times 1 + 11 = 32$
+* $m = 21 \times 2 + 11 = 53$
+
+Por lo que puede haber 32 o 53 caramelos en total.
+
+# 8. Averiguar qué día de la semana cayó el 05/11/1968, fecha de natalicio de Ricardo Fort.
+
+El día 05/11 fue el día 310 del año 1968 (ya que fue bisiesto). A partir de esto puede usarse el módulo de 7 para saber en qué día de la semana cayó.
+
+Para esto es necesario saber que el 01/01/1968 fue lunes. A partir de esto, se puede asociar un día de la semana a cada elemento de $Z_7$:
+* **Lunes:** $\overline 0$
+* **Martes:** $\overline 1$
+* **Miércoles:** $\overline 2$
+* **Jueves:** $\overline 3$
+* **Viernes:** $\overline 4$
+* **Sábado:** $\overline 5$
+* **Domingo:** $\overline 6$
+
+A 310 se le resta 1, de manera que el primer día del año tome la posición 0.
+
+$309 \mod 7 = 1$
+
+Por lo tanto, Ricardo Fort nació un **martes**.
+
+> Esta es la manera que se me ocurrió para resolverlo sin usar algoritmos, pero necesitás saber qué día cayó el 01/01 de ese año
+
+# 9. Mostrar que $Z_m$ para $m$ natural y las operaciones de suma y producto tienen estructura de anillo.
+
+Se quiere demostrar que la suma modular con un natural $m$ cualquiera tiene estructura de anillo con la terna $(Z_m, +, .)$
+
+Se sabe por definición que la suma modular forma un grupo conmutativo con $Z_m$, y el producto es asociativo, por lo que debe demostrarse la distributividad.
+
+* $\overline a(\overline b + \overline c) = \overline a(\overline {b + c}) = \overline {ab + ac} = \overline {ab} + \overline {ac}$
+* $(\overline b + \overline c)\overline a = (\overline {b+c})\overline a = \overline {ba + ca} = \overline {ba} + \overline {ca}$
+* Por conmutatividad del producto:
+    * $\overline {ba} = \overline {ab}$
+    * $\overline {ca} = \overline {ac}$
+* $\overline {ab} + \overline {ac} = \overline {ba} + \overline {ca}$
+
+La terna $(Z_m, +, .)$ cumple con todas las propiedades para cualquier entero $m$, por lo que tiene estructura de anillo.

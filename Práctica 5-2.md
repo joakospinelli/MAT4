@@ -312,3 +312,88 @@ Se sabe por definición que la suma modular forma un grupo conmutativo con $Z_m$
 * $\overline {ab} + \overline {ac} = \overline {ba} + \overline {ca}$
 
 La terna $(Z_m, +, .)$ cumple con todas las propiedades para cualquier entero $m$, por lo que tiene estructura de anillo.
+
+# 10. Dar todos los elementos invertibles de $Z_6$.
+
+$Z_6 = \{ \overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5 \}$
+
+Un elemento $\overline a$ es invertible si existe otro elemento $\overline c \in Z_6$ tal que $\overline a . \overline c = \overline 1$.
+
+Por definición, también se da que $\overline a$ es invertible cuando se da $(a,m) = 1$ (en este caso, $m = 6$); es decir, si son coprimos con $m$.
+
+* $(0,6) = 6$
+* $(1,6) = 1$
+* $(2,6) = 2$
+* $(3,6) = 3$
+* $(4,6) = 2$
+* $(5,6) = 1$
+
+Por lo tanto, los elementos invertibles de $Z_6$ son $\overline 1$ y $\overline 5$.
+
+El inverso del elemento $a$ es un entero $k$ tal que $a.k = 1$ (ya que 1 es el neutro del producto).
+
+En este caso, el inverso de $\overline 1$ es 1 y el de $\overline 5$ es 5.
+
+# 11. Sea $m$ un entero impar, probar que $m^2 \equiv_4 1$
+
+A partir de un $m$ impar cualquiera, se quiere demostrar $m^2 \equiv_4 1$
+
+Como $m$ es un impar cualquiera, puede escribirse como $(2k+1)$
+
+* $m^2 = (2k+1)^2$
+* $m^2 = 4k^2 + 4k + 1$
+* $m^2 = 4(k^2 + k) + 1 \quad (k^2 + k) \in Z$
+* $m^2 - 1 = 4(k^2 + k)$
+
+Se llegó a la forma $m^2 - 1 = 4 \times n$ (siendo $n$ un número entero), la cual implica $4|m^2 - 1$ y, por lo tanto, $m^2 \equiv_4 1$
+
+> Otra forma sería:
+
+* $m^2 = (2k+1)^2$
+* $m^2 = 4k^2 + 4k + 1$
+* $m^2 = 4(k^2 + k) + 1 \quad (k^2 + k) \in Z$
+
+Se llegó a la forma $m^2 = 4n + 1$ (siendo $n$ un número entero), lo cual implica que al dividir $m^2$ por 4 se obtiene resto 1.
+
+De esto se puede deducir la clase de congruencia de $m^2$ módulo 4, la cual es 1. Por lo tanto, se cumple $m^2 \equiv_4 1$
+
+# 12. Dar todos los elementos invertibles de $Z_6$.
+
+> *es el mismo que el 10. está repetido
+
+# 13. Si $\overline a$ es invertible, entonces no es divisor de 0.
+
+Un número $a$ es invertible si existe un entero $k$ tal que $\overline a \times \overline k = \overline 1$
+
+Por otro lado, $a$ es divisor de $0$ si existe un entero $b \ne 0$ tal que $\overline a \times \overline b = \overline 0$
+ * $\overline a \times \overline b = \overline 0$
+ * $\overline a \times \overline b \times \overline k = \overline 0$
+ * $\overline a \times \overline k \times \overline b = \overline 0$
+ * $\overline 1 \times \overline b = \overline 0$
+ * $\overline b = \overline 0$
+
+ Se llegó a una contradicción, ya que para que $\overline a$ sea divisor de 0 se parte de la suposición $b \ne 0$.
+
+ Por lo tanto, es verdadero que cuando $\overline a$ es invertible en un anillo, entonces no será divisor de 0.
+
+ # 14. Probar que $(t, m) = 1$ si y sólo si $t$ es invertible módulo $m$.
+
+Suponiendo que $t$ es invertible
+* Se cumple $\overline t \times \overline c = \overline 1$
+* Esto implica $tc \equiv_m 1$, tal que $1 - tc = m \times k$
+* Mediante Bézout: $1 = tc - mk$
+* Por lo tanto, $(t,m) = 1$
+
+Suponiendo $(t,m) = 1$
+* Se cumple $1 = tx - my$ (por Bézout)
+* Al trabajar con módulos: $\overline 1 = \overline {tx} - \overline {my}$
+* Como estamos sobre $Z_m$: $\overline 1 = \overline {tx} - \overline {0y}$ (porque $m \mod m = 0 \quad \forall m \in Z$)
+* $\overline 1 = \overline {tx}$
+* Lo cual coincide con la forma $\overline t \times \overline c = \overline 1$
+* Por lo tanto, $\overline t$ es invertible módulo $m$.
+
+Se demostró que $t$ es coprimo con $m$ si y sólo si $t$ es invertible módulo $m$
+
+# 15. Si $p$ es primo, entonces $Z_p$ es un cuerpo.
+
+> *no encontré nada que explique las propiedades de un cuerpo en los apuntes*

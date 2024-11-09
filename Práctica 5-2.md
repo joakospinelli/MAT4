@@ -359,7 +359,7 @@ De esto se puede deducir la clase de congruencia de $m^2$ módulo 4, la cual es 
 
 # 12. Dar todos los elementos invertibles de $Z_6$.
 
-> *es el mismo que el 10. está repetido
+> *es el mismo que el 10. está repetido*
 
 # 13. Si $\overline a$ es invertible, entonces no es divisor de 0.
 
@@ -397,3 +397,19 @@ Se demostró que $t$ es coprimo con $m$ si y sólo si $t$ es invertible módulo 
 # 15. Si $p$ es primo, entonces $Z_p$ es un cuerpo.
 
 > *no encontré nada que explique las propiedades de un cuerpo en los apuntes*
+
+Un cuerpo es un tipo especial de anillo en el que cada elemento tiene un inverso multiplicativo.
+
+Como $p$ es un número primo, se da que cualquier número entero es coprimo con él, tal que $(a,p) = 1 \quad \forall a \in Z$ (esto incluye a los elementos de $Z_p$).
+
+A partir de $(a,p) = 1$ puede expresarse el teorema de Bézout:
+
+$$1 = ax + py$$
+
+Tal que $ax + py \equiv_p 1$ y, por lo tanto, $ax \equiv_p 1$, que coincide con la definición de invertible:
+
+$$\overline a \times \overline x = \overline 1 \quad \overline x \in Z_p$$
+
+La cual se cumple para todo elemento $a \in Z_p$
+
+Cuando $m$ **no** es un número primo, esta propiedad no se cumple para $Z_m$. Por definición, un número no primo puede escribirse como el producto de dos números menores a él, los cuales necesariamente serán elementos de $Z_m$; por lo tanto, habrá al menos un elemento $a \in Z_p$ en el que no se cumpla $(a,m) = 1$, incumpliendo con la propiedad necesaria para ser un cuerpo.

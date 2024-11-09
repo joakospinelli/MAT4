@@ -1,6 +1,6 @@
 # 1. Analizar si las siguientes funciones son homomorfismos entre las estructuras algebraicas indicadas. En caso afirmativo, hallar núcleo e imagen.
 
-> *"Homomorfismo" es lo mismo que morfismo, no especifica nada específico como mono, epi o isomorfismo.*
+> *"Homomorfismo" es lo mismo que morfismo, no especifica nada en particular como mono, epi o isomorfismo.*
 
 ## a. $f: G \to F$ dada por $f(x) = 2^x$, siendo los grupos $G = (R,+)$ y $F = (R_0, .)$
 
@@ -98,9 +98,9 @@ El neutro de la intersección es $e_2 = \{ A \}$, tal que $P(A) \cap A = P(A)$ p
 
 $Nu(f) = \{ X \in P(A) : f(X) = X^C = A \}$
 
-El complemento se define como todos los elementos del universo que no forman parte de $X$. La única parte de $A$ que cumple con esto es el conjunto vacío, tal que $\{ \empty \}^C = A$ (porque no tiene ningun elemento, entonces todo el universo **no** está en $X$).
+El complemento se define como todos los elementos del universo que no forman parte de $X$. La única parte de $A$ que cumple con esto es el conjunto vacío, tal que $\{ \emptyset \}^C = A$ (porque no tiene ningun elemento, entonces todo el universo **no** está en $X$).
 
-Por lo tanto, $Nu(f) = \{ \empty \}$
+Por lo tanto, $Nu(f) = \{ \emptyset \}$
 
 ### Imagen
 

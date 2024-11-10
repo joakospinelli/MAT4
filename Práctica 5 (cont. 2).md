@@ -111,3 +111,172 @@ Como el dominio y el codominio trabajan con los mismos conjuntos, se da el caso 
 Dicho de otra manera, cualquier subconjunto $P \subset A$ puede escribirse como el complemento de otro subconjunto $S \subset A$. Por otro lado, $A$ puede escribirse como el complemento del conjunto vacío (y viceversa).
 
 Por lo tanto, $Im(f) = P(A)$
+
+# 2. Sea $f: G \to H$ un homomorfismo de grupos, demostrar que el núcleo y la imagen son subgrupos de $G$ y $H$ respectivamente.
+
+El conjunto del grupo se define como
+
+$$Nu(f) = \{ a \in G : f(a) = e_2 \}$$
+
+A partir de las propiedades de morfismo se cumplen implícitamente algunas propiedades de los subgrupos:
+* $f(e_1) = e_2$, por lo que el neutro de $G$ se encuentra en el núcleo.
+* $f(a^{-1}) = f(a)^{-1}$, tal que $f(a^{-1}) = e_2^{-1} = e_2 \quad \forall a \in Nu(f)$ y, por lo tanto, $a^{-1} \in Nu(f)$
+
+Por último, se debe probar que la operación es cerrada en $Nu(f)$. Dados $a, b \in Nu(f)$
+* $f(a \ast b) = f(a) \ast f(b)$
+* $f(a) \ast f(b) = e_2 \ast e_2 = e_2 \quad e_2 \in Nu(f)$
+* $f(a \ast b) \in Nu(f) \quad \forall a,b \in Nu(f)$
+
+Por lo tanto, el núcleo de $f: G \to H$ es un subgrupo del grupo $G$.
+
+El conjunto de la imagen se define como
+
+$$Im(f) = \{ h \in H : \exists g \in G, f(g) = h \}$$
+
+A partir de las propiedades de morfismos se cumplen implícitamente algunas propiedades de los subgrupos:
+* $f(e_1) = e_2$, por lo que el neutro se encuentra en la imagen.
+* $f(a^{-1}) = f(a)^{-1}$, tal que $f(a) = h,\  \ f(a)^{-1} = h^{-1} = f(a^{-1})$, por lo que cada elemento $a \in Im(f)$ tiene a su inverso.
+
+Por último, se quiere probar que la operación es cerrada en $Im(f)$. Dados $a,b \in Im(f), x,y \in G : f(x) = a, f(y) = b$
+
+* $f(x \ast y) = f(x) \ast f(y)$
+* $f(x) \ast f(y) = a \ast b$, siendo $a \ast b$ cerrada en $Im(f)$
+
+Por lo tanto, la imagen generada a partir de $f: G \to H$ es un subgrupo de $H$.
+
+# 3. Sea $(G, \ast)$ un grupo, demostrar que la función $f: G \to G$ definida por $f(a) = a^2$ es un homomorfismo si y sólo si $G$ es abeliano.
+
+Un grupo es abeliano si la operación definida sobre él es conmutativa.
+
+## Suponiendo que $G$ es abeliano
+
+Se da que $(a \ast b) = (b \ast a)$ y, por lo tanto, $f(a \ast b) = (a \ast b)^2 = (b \ast a)^2 = f(b \ast a)$.
+
+* $f(a \ast b) = (a \ast b)^2$
+* $(a \ast b)^2 = (a \ast b) \ast (a \ast b)$
+* $(a \ast b) \ast (a \ast b) = a \ast b \ast a \ast b$
+* $a \ast b \ast a \ast b = a \ast a \ast b \ast b$ // Este reordenamiento sólo puede realizarse gracias a la conmutatividad de $G$.
+* $a \ast a \ast b \ast b = (a \ast a) \ast (b \ast b)$
+* $(a \ast a) \ast (b \ast b) = a^2 \ast b^2 = f(a) \ast f(b)$
+
+Por lo tanto, la conmutatividad es necesaria para cumplir la propiedad del morfismo $f(a \ast b) = f(a) \ast f(b)$.
+
+## Suponiendo que $f: G \to G$ es un morfismo
+
+Se da $f(a \ast b) = f(a) \ast f(b)$. Esto implica $(a \ast b)^2 = a^2 \ast b^2$
+
+* $f(a \ast b) = f(a) \ast f(b)$
+* $(a \ast b)^2 = a^2 \ast b^2$
+* $(a \ast b) \ast (a \ast b) = (a \ast a) \ast (b \ast b)$
+* $a \ast b \ast a \ast b = a \ast a \ast b \ast b$
+* $a \ast (b \ast a) \ast b = a \ast (a \ast b) \ast b$
+
+El morfismo sólo es válido cuando $(a \ast b) = (b \ast a)$, por lo que $G$ debe ser un grupo abeliano.
+
+# 4. Si $H_1, H_2$ son dos subgrupos de un grupo conmutativo $G$, probar que la aplicación $f: H_1 \times H_2 \to G$ dada por $f(a,b) = ab$ es un morfismo de grupos.
+
+Como $H_1, H_2$ son subconjuntos de $G$, se sabe que todos los elementos de $H_1$ y $H_2$ también estarán en $G$.
+
+Como $G$ es un grupo conmutativo, se sabe que:
+* La operación entre sus elementos es cerrada.
+* La operación es distributiva.
+* Existe un elemento neutro $e$ tal que $ae = a$
+* Cada elemento tiene un inverso tal que $a(a') = e$
+* $ab = ba$
+
+Por lo que dado el par $(a,b)$ resultante de $H_1 \times H_2$, se da que $a, b \in G,\ ab \in G,\ ab = ba$
+
+Para probar que $f$ es un morfismo se verificará si las operaciones se respetan:
+* $f((a,b) \ast (c,d)) = f(a,b) \ast f(c,d)$
+* $f(ac, bd) = a \ast b \ast c \ast d$
+* $a \ast c \ast b \ast d = a \ast b \ast c \ast d$ // Por conmutatividad
+
+Existe un elemento neutro $(e, e) \in H_1 \times H_2$ tal que:
+* $f((a,b) \ast (e,e)) = f(a,b) \ast f(e,e)$
+* $f(ae, be) = a \ast b \ast e \ast e$
+* $f(a,b) = a \ast b$
+
+Por último, cada elemento $(a,b) \in H_1 \times H_2$ tiene un inverso $(a', b')$ tal que:
+* $f(a,b)^{-1} = f((a,b)^{-1})$
+* $(ab)^{-1} = f(a', b')$
+* $a'b' = a'b'$
+
+Por lo tanto, $f$ es un morfismo de grupos válido.
+
+# 5. Si $f: G_1 \to G_2$ es un morfismo de grupos, entonces es monomorfismo si y sólo si $Nu(f) = \{ e_1 \}$
+
+Un monomorfismo es un tipo de morfismo en el que no existen dos elementos del dominio con la misma imagen; es decir, a cada elemento del dominio le corresponde un único elemento y ese no se repite para ningún otro. Esto puede escribirse como $f(x) = f(y) \iff x = y$
+
+## Suponiendo $Nu(f) = \{ e_1 \}$
+
+Proposiciones:
+1. $f(e_1) = e_2$
+2. $Nu(f) = \{ e_1 \}$
+
+Se partirá de un caso $f(x) = f(y)$; es decir, dos elementos con la misma imagen. Se buscará demostrar que esto sólo es posible si $x = y$ (es decir, $f$ es un monomorfismo) a partir de nuestras proposiciones.
+
+* $f(x) = f(y) \implies f(x') = f(y')$
+
+* $f(x') = f(y') \implies f(x) \ast f(y') = e_2$
+* $f(x) \ast f(y') \implies f(x \ast y') = e_2$
+
+Sabemos por la proposición 2 que $e_1$ es el único elemento de $G_1$ cuya imagen es el neutro de $G_2$. Por lo tanto, debe darse que $(x \ast y') = e_1$, lo cual es posible sólo cuando $y' = x'$, tal que $x = y$.
+
+De esta manera, se demostró que $f$ es una función inyectiva y, por lo tanto, un monomorfismo.
+
+## Suponiendo monomorfismo
+
+Proposiciones:
+1. $\forall x,y \in G_1: f(x) = f(y) \iff x = y$
+2. $f(e_1) = e_2$
+
+Debido a la proposición 1 (definición de monomorfismo), se da que $f(x) = e_2 \iff x = e_1$, por lo que $e_1$ es el único elemento de $G_1$ cuya imagen es el neutro de $G_2$
+
+El núcleo se define como:
+
+$$Nu(f) = \{ a \in G_1 : f(a) = e_2 \}$$
+
+El único elemento que cumple esa condición es $e_1$, por lo que cuando $f$ es un monomorfismo, se da que $Nu(f) = \{ e_1 \}$
+
+# 6. Sea $(G, \ast)$ un grupo, demostrar que la función $f: G \to G$ definida por $f(a) = a^{-1}$ es un isomorfismo si y sólo si $G$ es conmutativo.
+
+## Si $G$ es conmutativo:
+
+Se quiere demostrar que $f$ es un isomorfismo, por lo que debe ser tanto inyectiva como sobreyectiva.
+
+$f$ es un homomorfismo válido, ya que:
+* $f(a \ast b) = f(a) \ast f(b)$
+* $(a \ast b)^{-1} = a^{-1} \ast b^{-1}$
+* $b^{-1} \ast a^{-1} = a^{-1} \ast b^{-1}$ // iguales por conmutatividad de $G$
+
+Existe un elemento neutro $e_1 \in G$ tal que $f(e_1) = e_1^{-1} = e_1$
+
+Para cada elemento $a \in G$ se da que:
+* $f(a^{-1}) = (f(a))^{-1}$
+* $a = (a^{-1})^{-1}$
+* $a = a$
+
+Por lo que se respetan las operaciones.
+
+
+Como $G$ es un grupo, podemos utilizar la propiedad de los inversos:
+$$\forall a \in G \quad \exists a^{-1} : a \ast a^{-1} = e_1$$
+
+Como el inverso es único para cada elemento, se da que $x^{-1} = y^{-1} \iff x = y$, tal que $f(x) = f(y) \iff x = y$, por lo que $f$ es **inyectiva**.
+
+Como $G$ es un grupo, cada elemento tiene su inverso. De esto puede interpretarse al revés, diciendo que para cada inverso $g \in G$ existe otro elemento $a$ tal que $f(a) = g$, siendo $g = a^{-1}$, por lo que $f$ es **sobreyectiva**.
+
+Como $f$ es inyectiva y sobreyectiva, se da que es un isomorfismo.
+
+## Si $G$ es un isomorfismo:
+
+Proposiciones:
+* $\forall x,y \in G: f(x) = f(y) \iff x = y$
+* $\forall g \in G: \exists x \in G: f(x) = g$
+
+La operación puede escribirse como:
+* $f(a \ast b) = f(a) \ast f(b)$
+* $(a \ast b)^{-1} = a^{-1} \ast b^{-1}$
+* $b^{-1} \ast a^{-1}= a^{-1} \ast b^{-1}$
+
+$f$ es un morfismo válido sólo cuando se cumple la igualdad $a^{-1} \ast b^{-1} = b^{-1} \ast a^{-1}$, por lo que $G$ es un grupo conmutativo.

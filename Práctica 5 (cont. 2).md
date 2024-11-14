@@ -280,3 +280,66 @@ La operación puede escribirse como:
 * $b^{-1} \ast a^{-1}= a^{-1} \ast b^{-1}$
 
 $f$ es un morfismo válido sólo cuando se cumple la igualdad $a^{-1} \ast b^{-1} = b^{-1} \ast a^{-1}$, por lo que $G$ es un grupo conmutativo.
+
+# 7. Sea $R$ una relación de congruencia sobre un semigrupo $(S, \ast)$ y $(S/R,)$ el semigrupo cociente correspondiente, demsotrar que la función $f_R: S \to S/R$ definida por $f_R(a) = \overline a$ es un homomorfismo.
+
+> Está incompleto el enunciado y encima dice "congruencia" así que no lo voy a hacer
+
+# 8. Sea $z$ un número complejo, ¿cuándo sería un isomorfismo de grupos la aplicación $f: C \to C$ siendo $C$ el conjunto de los números complejos dada por $f(x) = z.x$?
+
+Producto de complejos: $(a_1.a_2 - b_1.b_2) + i(a_1.b_2 + a_2.b_1)$
+
+Primero se evaluará si $f$ es un homomorfismo válido:
+
+* $f(x+y) = f(x) + f(y)$
+* $z(x+y) = z.x + z.y$
+* $z.x + z.y = z.y + z.y$
+
+Las operaciones se respetan, por lo que $f$ es un homomorfismo de grupos.
+
+Para que $f$ sea un isomorfismo, debe ser tanto inyectiva como biyectiva.
+
+Inyectiva:
+* $\forall x,y \in C : f(x) = f(y) \iff x = y$
+* Esto se cumple, ya que $z.x = z.y \iff x = y$
+
+Sobreyectiva:
+* $\forall y \in C : \exists x \in C : f(x) = y$
+* El único caso en lo que esto se cumple es cuando $z = 1$, tal que $f(x) = x$
+
+Por lo tanto, $f$ es un isomorfismo cuando $z = 1$.
+
+# 9. Probar que hay un isomorfismo entre el grupo de matrices $2 \times 2$ con la suma habitual de matrices y el grupo de cuaternas reales $R^4$ con la suma usual.
+
+Supongamos la función $f(\begin{pmatrix}a & b \\ c & d \end{pmatrix}) = (a,b,c,d)$
+
+Se quiere demostrar que es un isomorfismo.
+
+Primero se comprobará si las operaciones se respetan:
+* $\begin{pmatrix}a & b \\ c & d \end{pmatrix} + \begin{pmatrix}e & f \\ g & h \end{pmatrix} = \begin{pmatrix}a + e & b + f \\ c + g & d + h \end{pmatrix}$
+
+* $f(\begin{pmatrix}a + e & b + f \\ c + g & d + h \end{pmatrix}) = (a+e, b+f, c+g, d+h)$
+
+* $f(\begin{pmatrix}a & b \\ c & d \end{pmatrix}) + f(\begin{pmatrix}e & f \\ g & h \end{pmatrix}) = (a,b,c,d) + (e,f,g,h) = (a+e, b+f, c+g, d+h)$
+
+* $f(\begin{pmatrix}a & b \\ c & d \end{pmatrix} + \begin{pmatrix}e & f \\ g & h \end{pmatrix}) = f(\begin{pmatrix}a & b \\ c & d \end{pmatrix}) + f(\begin{pmatrix}e & f \\ g & h \end{pmatrix})$
+
+Las operaciones se respetan, por lo que $f$ es un homomorfismo de grupos.
+
+Para que $f4 sea un isomorfismo, debe ser inyectiva y sobreyectiva.
+
+Inyectiva:
+* $\forall x,y \in M_{2\times 2} : f(x) = f(y) \iff x = y$
+* Esto implica que $(a,b,c,d) = (e,f,g,h)$. Al ser números reales, esta igualdad sólo es válida si $a = e, b = f, c = g, d = h$.
+* Por lo tanto, $f$ es inyectiva.
+
+Sobreyectiva:
+* $\forall a \in R^4, \exists x \in M_{2 \times 2} : f(x) = a$
+* Dado $(a,b,c,d) \in R^4$, puede armarse una matriz $\begin{pmatrix}a & b \\ c & d \end{pmatrix} \in M_{2\times 2}$ tal que $f(\begin{pmatrix}a & b \\ c & d \end{pmatrix}) = (a,b,c,d)$
+* Por lo tanto, $f$ es sobreyectiva.
+
+Como $f$ es un homomorfismo válido y además es una función inyectiva y sobreyectiva, se dice que $f$ es un **isomorfismo** entre $M_{2\times 2}$ y $R^4$.
+
+# 10. Probar que todo grupo cíclico de orden $m$ es isomorfo a $(Z_m, +)$
+
+> basta de sumas modulares por favor

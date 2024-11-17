@@ -375,3 +375,107 @@ $R^{2 \times 2}$ es un espacio vectorial y $S \subset R^{2 \times 2}$. Se valida
     * $k.s \in S$
 
 Por lo tanto, $S$ es un subespacio vectorial de $R^4$.
+
+# 4. Decidir si los siguientes subconjuntos son generadores de $R^3$:
+
+## a. $S = \{ (1,0,0); (0,1,0); (0,0,1); (1,2,3) \}$
+
+Se quiere demostrar que se puede generar cualquier vector $(x,y,z) \in R^3$ a partir de $S$:
+
+Primero se quiere demostrar que los elementos de $S$ sean linealmente independientes:
+* $(0,0,0) = c_1(1,0,1) + c_2(0,1,0) + c_3(0,0,1) + c_4(1,2,3)$
+* $= (c_1, 0, c_1) + (0, c_2, 0) + (0,0,c_3) + (c_4, 2.c_4, 3.c_4)$
+* $= (c_1 + c_4,\ c_2 + 2.c_4,\ c_3 + 3.c_4)$
+* Para igualar a $(0,0,0)$ debe darse:
+    * $c_1 + c_4 = 0$
+    * $c_2 + 2.c_4 = 0$
+    * $c_3 + 3.c_4 = 0$
+* Sin embargo, eso puede darse aún cuando un coeficiente no es nulo (por ejemplo: $a=1,\ b=2, c=3,\ d=-1$)
+* Por lo tanto, los vectores no son linealmente independientes.
+
+Debido a esto, $S$ no es un generador válido para $R^3$.
+## b. $S = \{ (1,0,1); (1,1,1); (0,0,1) \}$
+
+Se quiere demostrar que se puede generar cualquier vector $(x,y,z) \in R^3$ a partir de $S$.
+
+Primero se quiere demostrar que los elementos de $S$ sean linealmente independientes:
+* $(0,0,0) = c_1(1,0,1) + c_2(1,1,1) + c_3(0,0,1)$
+* $= (c_1,0,c_1) + (c_2, c_2, c_2) + (0,0, c_3)$
+* $= (c_1 + c_2,\ c_2, c_1 + c_2 + c_3)$
+* Para igualar a $(0,0,0)$ debe darse:
+    * $c_2 = 0$
+    * $c_1 + c_2 = 0 \to c_1 = 0$
+    * $c_1 + c_2 + c_3 \to c_3 = 0$
+* Todos los coeficientes son nulos, por lo que $S$ es linealmente independiente.
+
+Como $S$ es un espacio vectorial de dimensión 3 y sus vectores son linealmente independientes, se dice que $gen(S) = < R^3 >$
+
+## c. $S = \{ (1,0,1); (0,1,0) \}$
+
+Se quiere demostrar que se puede generar cualquier vector $(x,y,z) \in R^3$ a partir de $S$.
+
+Primero se quiere demostrar que los elementos de $S$ sean linealmente independientes:
+* $(0,0,0) = c_1(1,0,1) + c_2(0,1,0)$
+* $= (c_1, 0, c_1) + (0, c_2, 0)$
+* $= (c_1, c_2, c_1)$
+* Para igualar a $(0,0,0)$ debe darse:
+    * $c_1 = 0$
+    * $c_2 = 0$
+* Todos los coeficientes son nulos, por lo que $S$ es linealmente independiente.
+
+Sin embargo, se obtuvo la forma $(c_1, c_2, c_1)$, tal que $(x,y,z) = (x,y,x)$. Esto implica que no podemos generar todos los elementos $\in R^3$ a partir de $S$.
+
+# 5. Analizar si el siguiente conjunto puede generar el subespacio de matrices simétricas de $2 \times 2$: $S = \{ \begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix}, \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \begin{pmatrix} 0 & 0 \\ 0 & 1\end{pmatrix} \}$
+
+Se quiere demostrar que se puede generar cualquier matriz simétrica de $2 \times 2$ a partir de $S$.
+
+Primero se quiere demostrar que los elementos de $S$ son linealmente independientes:
+* $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix} = c_1\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} + c_2\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} + c_3\begin{pmatrix} 0 & 0 \\ 0 & 1\end{pmatrix}$
+
+* $= \begin{pmatrix} c_1 & 0 \\ 0 & 0 \end{pmatrix} + \begin{pmatrix} 0 & c_2 \\ c_2 & 0\end{pmatrix} + \begin{pmatrix} 0 & 0 \\ 0 & c_3\end{pmatrix}$
+* $= \begin{pmatrix} c_1 & c_2 \\ c_3 & c_4 \end{pmatrix}$
+
+* Para igualar a $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}$ debe darse:
+    * $c_1 = 0$
+    * $c_2 = 0$
+    * $c_3 = 0$
+    * $c_4 = 0$
+* Todos los coeficientes son nulos, por lo que $S$ es linealmente independiente.
+
+Una matriz simétrica $2 \times 2$ se define como cualquier matriz $\begin{pmatrix} a & b \\ c & d\end{pmatrix}$ tal que $a = d, b = c$; escrito de otra manera: $\begin{pmatrix} a & b \\ c & d \end{pmatrix} = \begin{pmatrix} a & b \\ b & a \end{pmatrix}$
+
+Por lo tanto, cualquier matriz simétrica puede escribirse con los coeficientes:
+* $\begin{pmatrix} a & b \\ b & a\end{pmatrix} = a\begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix} + b\begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix} + c\begin{pmatrix} 0 & 0 \\ 0 & 1\end{pmatrix}$
+
+* $= \begin{pmatrix} a & 0 \\ 0 & 0\end{pmatrix} + \begin{pmatrix} 0 & b \\ b & 0\end{pmatrix} + \begin{pmatrix} 0 & 0 \\ 0 & d \end{pmatrix}$
+
+* $= \begin{pmatrix} a & b \\ b & c\end{pmatrix}$
+
+* Con $a = c$, tal que: $\begin{pmatrix} a & b \\ b & a \end{pmatrix}$
+
+Por lo tanto, $gen(S) = <\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in M_{2\times2} : a = d, b = c \}>$
+
+# 6. Dar el subespacio generado por los vectores $S=\{ (1,0,1); (1,1,0) \}$
+
+Los vectores $v$ generados a partir de $S$ pueden escribirse como:
+* $v = \alpha(1,0,1) + \beta(1,1,0)$
+* $= (\alpha, 0, \alpha) + (\beta, \beta, 0)$
+* $= (\alpha + \beta,\ \beta,\ \alpha + \beta)$
+
+Por lo tanto, $S$ genera a los vectores de $R^3$ pertenecientes al conjunto $\{ (x,y,z) \in R^3 : x = z; x,y,z \in R \}$
+
+# 7. Dar el subespacio generado por los vectores $S=\{ (1,1,1); (1,-1,0) \}$
+
+Los vectores $v$ generador a partir de $S$ pueden escribirse como:
+* $v = \alpha(1,1,1) + \beta(1,-1,0)$
+* $= (\alpha, \alpha, \alpha) + (\beta, -\beta, 0)$
+* $= (\alpha + \beta, \alpha - \beta,\ \alpha)$
+
+Despejando a partir de $v = (x,y,z)$:
+* $x = z + \beta$
+
+* $y = z - \beta$
+
+* $x + y = (z+ \beta) + (z - \beta) = z + z + \beta - \beta = 2z$
+
+Por lo tanto, $S$ describe al conjunto $\{ (x,y,z) \in R^3 : x + y = 2z \}$

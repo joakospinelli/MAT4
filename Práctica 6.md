@@ -668,3 +668,256 @@ Se buscará demostrar que son independientes:
 * Puede obtenerse $(0,0)$ a partir de varios valores no nulos para los coeficientes (por ejemplo, $c_1 = 2,\ c_2 = -1$)
 
 Por lo tanto, $\{(1,2); (2,4) \}$ es linealmente dependiente y no puede ser una base para $R^2$.
+
+# 12. Dar las coordenadas de $v = (1,2)$ en los conjuntos del ejercicio anterior que resultaron ser bases.
+
+## a. $\{ (2,-1); (1,3) \}$
+
+* $v = (1,2) = \alpha(2, -1) + \beta(1,3)$
+* $= (2\alpha, -\alpha) + (\beta, 3\beta)$
+* $= (2\alpha + \beta, -\alpha + 3\beta)$
+* Para llegar a $v = (1,2)$ los coeficientes deben cumplir:
+    * $2\alpha + \beta = 1$
+
+    * $-\alpha + 3\beta = 2$
+
+    * $\beta = 1 - 2\alpha$
+
+    * $-\alpha + 3(1-2\alpha) = 2$
+
+    * $-\alpha + 3 - 6\alpha = 2$
+
+    * $-\alpha - 6\alpha = -1$
+
+    * $-7\alpha = -1$
+
+    * $\alpha = \dfrac 1 7$
+
+    * $\beta = 1 - 2.\dfrac 1 7 = 1 - \dfrac 2 7 = \dfrac 5 7$
+
+Por lo tanto, las coordenadas de $v = (1,2)$ en la base $\{ (2,-1); (1,3) \}$ son $(\dfrac 1 7,\ \dfrac 5 7)$.
+
+## b. $\{ (1,-1); (1,0) \}$
+
+* $v = (1,2) = \alpha(1, -1) + \beta(1,0)$
+* $= (\alpha, -\alpha) + (\beta,0)$
+* $= (\alpha + \beta, -\alpha)$
+* Para llegar a $v = (1,2)$ los coeficientes deben cumplir:
+    * $-\alpha = 2 \implies \alpha = -2$
+    * $\alpha + \beta = -2 + \beta = 1$
+    * $-2-1 = -\beta$
+    * $\beta = 3$
+
+Por lo tanto, las coordenadas de $v=(1,2)$ en la base $\{ (1,-1); (1,0) \}$ son $(-2,\ 3)$.
+
+# 13. Hallar la base para cada conjunto del ejercicio 3 que sea un subespacio.
+
+## a. $S = \{ (x,0): x \in R \}$
+
+Cualquier vector en $S$ puede escribirse como una combinación lineal:
+
+* $(x,0) = x(1,0)$
+
+Por lo que $(1,0)$ es la base de $S$.
+
+## b. $S = \{ (x,y) \in R^2 : x + y = 0 \}$
+
+* $x + y = 0$
+
+* $x = -y \implies y = -x$
+
+Cualquier vector $\in S$ cumple con la forma $(x,-x)$. Esto puede generarse con una combinación lineal:
+* $(x,-x) = x(1,-1)$
+
+Por lo que $(1,-1)$ es la base de $S$.
+
+## c. $\{ (x,y,z) \in R^3 : z = x-y \}$
+
+* $z = x-y$
+
+Se quiere hallar una base $B = \{ v_1, v_2 \}$ a partir de la cual se pueda obtener cualquier vector tal que:
+
+$$\alpha\begin{pmatrix} v_{11} \\ v_{12} \\ v_{13} \end{pmatrix} + \beta\begin{pmatrix} v_{21} \\ v_{22} \\ v_{23} \end{pmatrix} = \begin{pmatrix} \alpha \\ \beta \\ \alpha - \beta \end{pmatrix}$$
+
+> *cuando un subespacio tiene N restricciones, se le quitan N vectores a la base del conjunto (en este caso $R^3$ tiene 3 vectores, se quita 1)*
+
+* $= \alpha(v_{11}, v_{12}, v_{13}) + \beta(v_{21}, v_{22}, v_{23})$
+* $= (\alpha.v_{11} + \beta.v_{21}, \alpha.v_{12} + \beta.v_{22}, \alpha.v_{13} + \beta.v_{13})$
+* $\alpha.v_{13} + \beta.v_{23} = (\alpha.v_{11} + \beta.v_{21}) - (\alpha.v_{12} + \beta.v_{22})$
+* $= \alpha.v_{11} + \beta.v_{21} - \alpha.v_{12} - \beta.v_{12} = \alpha.v_{11} - \alpha.v_{12} + \beta.v_{21} - \beta.v_{22}$
+* $= \alpha(v_{11} - v_{12}) + \beta(v_{21} - v_{22})$
+    * $v_{13} = v_{11} - v_{12}$
+    * $v_{23} = v_{21} - v_{22}$
+
+Algunas posibles bases que cumplan con esta condición son:
+* $(1,0,1); (0,1,-1)$
+    * $(x,y,z) = (1,0,1): x-y = 1-0 = 1$
+    * $(x,y,z) = (0,1,-1): x-y = 0-1 = -1$
+* $(1,0,1); (1,1,0)$
+    * $(x,y,z) = (1,0,1): x-y = 1-0 = 1$
+    * $(x,y,z) = (1,1,0): x-y = 1-1 = 0$
+
+## d. $\{ (x,y,z,w) \in R^4 : x + y - w = 0, z + 3y = 0 \}$
+
+* $x+y-w = 0$
+* $w = x+y$
+* $z+3y = 0$
+* $z = -3y$
+
+Se quiere hallar una base $B = \{ v_1, v_2 \}$ a partir de la cual se pueda obtener cualquier vector tal que:
+
+$$\alpha\begin{pmatrix} v_{11} \\ v_{12} \\ v_{13} \\ v_{14}\end{pmatrix} + \beta\begin{pmatrix} v_{21} \\ v_{22} \\ v_{23} \\ v_{24}\end{pmatrix} = \begin{pmatrix} x \\ y \\ -3y \\ x+y \end{pmatrix}$$
+
+* $\alpha.v_{11} + \beta.v_{21} = x$
+* $\alpha.v_{12} + \beta.v_{22} = y$
+* $\alpha.v_{13} + \beta.v_{13} = -3y = -3(\alpha.v_{12} + \beta.v_{22}) = -3\alpha.v_{12} -3\beta.v_{22}$
+* $\alpha.v_{14} + \beta.v_{24} = z = x+y = (\alpha.v_{11} + \beta.v_{21}) + (\alpha.v_{12} + \beta.v_{12}) = \alpha(v_{11} + v_{12}) + \beta(v_{21} + v_{22})$
+
+Una posible base para $S$ sería:
+* $(1,1, -3, 2); (1,0,0,1)$
+    * $(\alpha, \alpha, -3\alpha, 2\alpha) + (\beta, 0, 0, \beta)$
+    * $(\alpha + \beta, \alpha, -3\alpha, 2\alpha + \beta)$
+    * $x = \alpha + \beta$
+    * $y = \alpha$
+    * $z = -3\alpha = -3y$
+    * $w = 2\alpha + \beta = \alpha + (\alpha + \beta) = x+y$
+
+# 14. Analizar si las siguientes aplicaciones entre espacios vectoriales son transformaciones lineales:
+
+## a. $L: R^2 \to R^3$ definida por $L(x,y) = (x,y,x+y)$
+
+Para que $L$ sea una transformación lineal válida deben cumplirse las propiedades:
+* $L(v_1 + v_2) = L(v_1) + L(v_2) \quad \forall v_1, v_2 \in R^2$
+    * $L((x,y) + (w,z)) = L(x,y) + L(w,z)$
+    * $L(x+w, y+z) = (x,y,x+y) + (w,z, w+z)$
+    * $(x+w, y+z, x+w+y+z) = (x+w, y+z, x+y+w+z)$ // válido por conmutatividad de la suma en $R$
+
+* $L(\alpha.v) = \alpha.L(v) \quad \forall v \in R^2,\ \forall \alpha \in K$
+    * $L(\alpha(x,y)) = \alpha.L(x,y)$
+    * $L(\alpha.x, \alpha.y) = \alpha.(x,y,x+y)$
+    * $(\alpha.x, \alpha.y, \alpha.x + \alpha.y) = \alpha.x, \alpha.y, \alpha(x+y)$
+    * $(\alpha.x, \alpha.y, \alpha.x + \alpha.y) = (\alpha.x, \alpha.y, \alpha.x + \alpha.y)$
+
+$L$ cumple con las dos propiedades, por lo que es una transformación lineal válida de $R^2$ hacia $R^3$.
+
+> también se podría resolver con una sola propiedad $L(\alpha.v_1 + \alpha.v_2) = \alpha.L(v_1) + \alpha.L(v_2)$, pero por separado se entiende más
+
+## b. $L: R^3 \to R^2$ definida por $L(x,y,z) = (x+z, y+z)$
+
+* $L(v_1 + v_2) = L(v_1) + L(v_2) \forall v_1, v_2 \in R^3$
+    * $L((x,y,z) + (a,b,c)) = L(x,y,z) + L(a,b,c)$
+    * $L(x+a,\ y+b,\ z+c) = (x+z,\ y+z) + (a+c,\ b+c)$
+    * $(x+a+z+c, \ y+b+z+c) = (x+z+a+c,\ y+z+b+c)$ // válido por conmutatividad de la suma en $R$
+* $L(\alpha.v) = \alpha.L(v) \quad \forall v \in R^3,\ \alpha \in K$
+    * $L(\alpha(x,y,z)) = \alpha.L(x,y,z)$
+    * $L(\alpha.x,\ \alpha.y,\ \alpha.z) = \alpha(x+z, y+z)$
+    * $(\alpha.x + \alpha.z,\ \alpha.y + \alpha.z) = (\alpha(x+z),\ \alpha(y+z))$
+    * $(\alpha.x + \alpha.z,\ \alpha.y + \alpha.z) = (\alpha.x + \alpha.z,\ \alpha.y + \alpha.z)$
+
+$L$ cumple con las dos propiedades, por lo que es una transformación lineal válida de $R^3$ hacia $R^2$.
+
+## c. $L: R^3 \to R^3$ definida por $L(x,y,z) = (x-2, y+3x, 1)$
+
+* $L(v_1 + v_2) = L(v_1) + L(v_2)$
+    * $L((x,y,z) + (a,b,c)) = L(x,y,z) + L(a,b,c)$
+    * $L(x+a,\ y+b,\ z+c) = (x-2,\ y+3x,\ 1) + (a-2,\ b+3a,\ 1)$
+    * $(x+a-2,\ y+b+3(x+a),\ 1) = (x-2+a-2,\ y+3x+b+3a,\ 1+1)$
+    * $(x+a-2,\ y+b+3x+3a,\ 1) = (x-4+a,\ y+3x+b+3a,\ 2)$ // **NO** se cumple la igualdad
+
+$L$ no cumple con una de las propiedades de las transformaciones lineales, lo cual es evidencia suficiente para asumir que no lo es.
+
+## d. $L: R^{2\times 2} \to R^{2\times 2}$ definida por $L\begin{pmatrix} x & y \\ z & w\end{pmatrix} = \begin{pmatrix} z & -x \\ y & -w \end{pmatrix}$
+
+* $L(v_1 + v_2) = L(v_1) + L(v_1) \quad \forall v_1, v_2 \in R^{2\times2}$
+
+    * $L(\begin{pmatrix} x & y \\ z & w\end{pmatrix} + \begin{pmatrix} a & b \\ c & d \end{pmatrix}) = L\begin{pmatrix} x & y \\ z & w\end{pmatrix} + L\begin{pmatrix} a & b \\ c & d\end{pmatrix}$
+
+    * $L\begin{pmatrix} x+a & y+b \\ z+c & w+d\end{pmatrix} = \begin{pmatrix} z & -x \\ y & -w\end{pmatrix} + \begin{pmatrix} c & -a \\ b & -d\end{pmatrix}$
+
+    * $\begin{pmatrix} z+c & -(x+a) \\ y+b & -(w+d) \end{pmatrix} = \begin{pmatrix} z+c & -x-a \\ y+b & -w-d \end{pmatrix}$
+
+    * $\begin{pmatrix} z+c & -x-a \\ y+b & -w-d \end{pmatrix} = \begin{pmatrix} z+c & -x-a \\ y+b & -w-d \end{pmatrix}$
+
+* $L(\alpha.v) = \alpha.L(v) \quad \forall v \in R^{2\times2},\ \forall \alpha \in K$
+
+    * $L(\alpha\begin{pmatrix} x & y \\ z & w \end{pmatrix}) = \alpha.L\begin{pmatrix} x & y \\ z & w\end{pmatrix}$
+
+    * $L\begin{pmatrix} \alpha.x & \alpha.y \\ \alpha.z & \alpha.w\end{pmatrix} = \alpha\begin{pmatrix} z & -x \\ y & -w\end{pmatrix}$
+
+    * $\begin{pmatrix} \alpha.z  & -(\alpha.x) \\ (\alpha.y) & -(\alpha.w) \end{pmatrix} = \begin{pmatrix} \alpha.z & -x.\alpha \\ (\alpha.y) & -w.\alpha \end{pmatrix}$
+
+$L$ cumple con las dos propiedades, por lo que es una transformación lineal válida en $R^{2\times2}$.
+
+## e. $L: R^{2\times 2} \to R^{2\times 2}$ definida por $L\begin{pmatrix} x & y \\ z & w\end{pmatrix} = \begin{pmatrix} x & -x \\ y & 1\end{pmatrix}$
+
+> *BASTA DE MATRICES NO VOY A HACER MÁS ODIO ESCRIBIR MATRICES*
+
+## f. $L: R^{2\times 2} \to R^2$ definida por $L\begin{pmatrix} x & y \\ z & w\end{pmatrix} = (x+z, y+w)$
+
+☝
+
+## g. $L: R^3 \to R^2$ definida por $L(x,y,z) = (0,0)$
+
+> *la transformación nula ya está definida dentro de los mismos conjuntos, no sé qué pasa cuando pasás de uno a otro así que lo tengo que demostrar igual 😴*
+
+* $L(v_1 + v_2) = L(v_1) + L(v_2) \quad \forall v_1, v_2 \in R^3$
+    * $L((x,y,z) + (a,b,c)) = L(x,y,z) + L(a,b,c)$
+    * $L(x+a,\ y+b,\ z+c) = (0,0) + (0,0)$
+    * $(0,0) = (0,0)$
+* $L(\alpha.v) = \alpha.L(v) \quad \forall v \in R^3,\ \forall \alpha \in K$
+    * $L(\alpha(x,y,z)) = \alpha.L(x,y,z)$
+    * $L(\alpha.x,\ \alpha.y,\ \alpha.z) = \alpha(0,0)$
+    * $(0,0) = (0,0)$
+
+$L$ cumple con las dos propiedades, por lo que es una transformación lineal válida de $R^3$ hacia $R^2$.
+
+# 15. Hallar el núcleo e imagen de cada una de las transformaciones lineales del punto anterior y las dimensiones de cada uno de esos subespacios.
+
+## a. $L: R^2 \to R^3$ definida por $L(x,y) = (x,y,x+y)$
+
+El núcleo de $L$ está formado por todos aquellos elementos de $R^2$ que al ser transformados por $L$ dan como resultado el vector nulo de $R^3: (0,0,0)$.
+
+$L$ está definida como $L(x,y) = (x,y,x+y)$, tal que la única forma de obtener el vector nulo es:
+* $x = 0$
+* $y = 0$
+* $x+y = 0$
+* $(x,y,x+y) = \alpha(0,0) = (0,0)$
+
+Por lo cual, el núcleo está formado únicamente por el vector nulo de $R^2: (0,0)$. La base para este conjunto contiene únicamente al vector nulo, por lo que tiene dimensión 0.
+
+> *🤓 aunque la base tenga un elemento, si justo es un valor nulo se dice que tiene dimensión 0*
+
+La imagen de $L$ está formada por los elementos de $R^3$ que tienen una preimagen en $R^2$. A partir de la definición de $L$, la imagen contendrá a los vectores de $(x,y,z) \in R^3 : z = x+y$.
+
+* $Im(L) = \{ (x,y,z) \in R^3 : z = x+y \}$
+* $(x,y,x+y) = x(1,0,1) + y(0,1,1) = (x,0,x) + (0,y,y) = (x,y,x+y)$
+
+La base para $Im(L)$ está dada por $\{ (1,0,1); (0,1,1) \}$, por lo que la imagen tiene dimensión 2.
+
+## b. $L: R^3 \to R^2$ definida por $L(x,y,z) = (x+z, y+z)$
+
+Para obtener el vector nulo a partir de $L$ debe darse:
+* $x+z = 0$
+* $y+z = 0$
+* $x = y = -z$
+* $(x,y,z) \in Nu(f) \iff (x,x, -x)$
+* $(x,x,-x) = x(-1, -1, 1) = (-x, -x, x) \to (-x + x, -x + x) = (0,0)$
+
+La base para el núcleo está dada por $\{ (-1, -1, 1) \}$, por lo que tiene dimensión 1.
+
+La imagen de $L$ contiene a los elementos tales que:
+* $Im(L) = \{ (x+y,y+z) \in R^2 : (x,y,z) \in R^3 \}$
+* $(x+z, y+z) = x(1,0) + y(0,1) + z(1,1) = (x,0) + (0,y) + (z,z) = (x+z, y+z)$
+
+$\{ (1,1) \}$ es redundante en la base, por lo que puede eliminarse.
+
+La base de la imagen está dada por $\{ (1,0); (0,1) \}$, por lo que tiene dimensión 2.
+
+## c. $L: R^3 \to R^2$ definida por $L(x,y,z) = (0,0)$
+
+Como $L$ es una transformación nula (que da como resultado al vector nulo), el núcleo contendrá a todos los elementos de $R^3$, ya que serán convertidos a $(0,0)$ independientemente de su valor.
+
+Como la base de $R^3$ es de dimensión 3, el núcleo también lo será.
+
+La imagen, por otro lado, contendrá únicamente a $(0,0)$, ya que es el único elemento $\in R^2$ con preimagen en $R^3$. Por lo tanto, la base de la imagen será $\{(0,0)\}$ y tendrá dimensión 0.
+

@@ -479,3 +479,192 @@ Despejando a partir de $v = (x,y,z)$:
 * $x + y = (z+ \beta) + (z - \beta) = z + z + \beta - \beta = 2z$
 
 Por lo tanto, $S$ describe al conjunto $\{ (x,y,z) \in R^3 : x + y = 2z \}$
+
+# 8. Decidir si los vectores de los siguientes conjuntos son linealmente independientes:
+
+## a. $S = \{ (1,0,0); (0,1,0); (0,0,1); (1,2,3)\}$
+
+> *Este ya lo resolví en el 4.a, pero en realidad en ese querían que lo resolvamos sin independencia jej*
+
+## b. $S = \{ (1,0,0); (0,1,0); (0,0,1) \}$
+
+* $(0,0,0) = c_1(1,0,0) + c_2(0,1,0) + c_3(0,0,1)$
+* $= (c_1,0,0) + (0,c_2,0) + (0,0,c_3)$
+* $= (c_1, c_2, c_3)$
+* Para igualar a $(0,0,0)$ debe cumplirse:
+    * $c_1 = 0$
+    * $c_2 = 0$
+    * $c_3 = 0$
+* Todos los coeficientes son nulos, por lo que $S$ es linealmente independiente.
+
+## c. $S = \{ (1,0); (0,1); (2,3) \}$
+
+* $(0,0) = c_1(1,0) + c_2(0,1) + c_3(2,3)$
+* $= (c_1,0) + (0,c_2) + (c_3.2, c_3.3)$
+* $= (c_1 + c_3.2, c_2 + c_3.3)$
+* Para igualar a $(0,0)$ debe cumplirse:
+    * $c_1 = -(c_3.2)$
+    * $c_2 = -(c_3.3)$
+* $c_3$ puede tomar cualquier valor, por lo que no todos los coeficientes son necesariamente nulos para cumplir $(0,0)$.
+* Por lo tanto, $S$ no es linealmente independiente.
+
+## d. $S = \{ (1, -3); (1,-1) \}$
+
+* $(0,0) = c_1(1, -3) + c_2(1, -1)$
+* $= (c_1, -3.c_1) + (c_2, -c_2)$
+* $= (c_1 + c_2, -3.c_1 - c_2)$
+* Para igualar a $(0,0)$ debe cumplirse:
+    * $c_1 + c_2 = 0$
+    * $-3.c_1 = c_2$
+    * $c_1 -3.c_1 = 0$
+    * $c_1 = 3.c_1 \implies c_1 = 0 :\ 0 = 0.3$
+    * $0 + c_2 = 0 \implies c_2 = 0$
+* Para obtener el vector nulo todos los coeficientes deben ser nulos, por lo que $S$ es linealmente independiente.
+
+## e. $S = \{ (0,2,-1); (1,7,1); (1,3,-1); (0,0,0) \}$
+
+* $(0,0,0) = c_1(0,2,-1) + c_2(1,7,1) + c_3(1,3,-1) + c_4(0,0,0)$
+* $= (0,2.c_1,\ -c_1) + (c_2,\ 7.c_2,\ c_2) + (c_3,\ 3.c_3,\ -c_3) + (0,0,0)$
+* $= (c_2 + c_3,\ 2.c_1 + 7.c_2 + 3.c_3,\ -c_1 + c_2 - c_3)$
+* Para igualar a $(0,0,0)$ debe cumplirse:
+    * $c_2 + c_3 = 0$
+    * $c_2 = -c_3$
+    * $-c_1 + c_2 - c_3 = 0$
+    * $c_1 - c_2 = c_3$
+    * $c_2 + (c_1 - c_2) = c_2 - c_2 + c_1 = c_1 = 0$
+    * $2.c_1 + 7.c_2 + 3.c_3 = 0$
+    * $2.0 + 7(-c_3) + 3.c_3 = c_3(-7 + 3) = c_3(-4) = 0 \iff c_3 = 0$
+    * $c_2 = -c_3 = -0 = 0$
+* Sin embargo, esto es válido para cualquier valor de $c_4$, por lo que no todos los coeficientes deben ser nulos para igualar a $(0,0,0)$.
+* Por lo tanto, $S$ no es linealmente independiente.
+
+## f. $S = \{ (4,1,0,0); (-3,0,1,0); (1,0,0,1) \}$
+
+* $(0,0,0,0) = c_1(4,1,0,0) + c_2(-3,0,1,0) + c_3(1,0,0,1)$
+* $= (4.c_1, c_1, 0, 0) + (-3.c_2, 0, c_2, 0) + (c_3, 0, 0, c_3)$
+* $= (4.c_1 -3.c_2 + c_3,\ c_1,\ 4.c_1 + c_3)$
+* Para igualar a $(0,0,0,0)$ debe darse:
+    * $c_1 = 0$
+    * $4.0 + c_3 = 0 + c_3 = 0 \implies c_3 = 0$
+    * $4.0 - 3.c_2 + 0 = -3.c_2 = 0 \implies c_2 = 0$
+* Todos los coeficientes son nulos, por lo tanto $S$ es linealmente independiente.
+
+## g. $S = \{\begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix}; \begin{pmatrix} 0 & 2 \\ 0 & 1 \end{pmatrix} \}$
+
+* $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix} = c_1\begin{pmatrix} 1 & 0 \\ 1 & 1\end{pmatrix} + c_2\begin{pmatrix} 0 & 2 \\ 0 & 1\end{pmatrix}$
+
+* $= \begin{pmatrix} c_1 & 0 \\ c_1 & c_1 \end{pmatrix} + \begin{pmatrix} 0 & 2.c_2 \\ 0 & c_2\end{pmatrix}$
+
+* $= \begin{pmatrix} c_1 & 2.c_2 \\ c_1 & c_1 + c_2\end{pmatrix}$
+
+* Para igualar a $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}$ debe cumplirse:
+    * $c_1 = 0$
+    * $c_1 + c_2 = 0 + c_2 = 0 \implies c_2 = 0$
+    * $2.c_2 = 2.0 = 0$
+* Todos los coeficientes son nulos, por lo tanto $S$ es linealmente independiente.
+
+## h. $S = \{ \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}; \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}; \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix} \}$
+
+* $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix} = c_1\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix} + c_2\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} + c_3\begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}$
+
+* $= \begin{pmatrix} c_1 & c_1 \\ c_1 & c_1 \end{pmatrix} + \begin{pmatrix} 0 & c_2 \\ c_2 & 0 \end{pmatrix} + \begin{pmatrix} 0 & 0 \\ 0 & c_3 \end{pmatrix}$
+
+* $= \begin{pmatrix} c_1 & c_1 + c_2 \\ c_1+c_2 & c_1 + c_3 \end{pmatrix}$
+
+* Para igualar a $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}$ debe cumplirse:
+
+    * $c_1 = 0$
+    * $c_1 + c_2 = 0 + c_2 \implies c_2 = 0$
+    * $c_1 + c_3 = 0 + c_3 \implies c_3 = 0$
+
+* Todos los coeficientes son nulos, por lo que $S$ es linealmente independiente.
+
+# 9. Analizar si un conjunto de vectores que contiene al vector nulo puede ser linealmente independiente. Justificar.
+
+Un vector nulo $0_V \in R^n$ puede escribirse como el producto por escalar de cualquier número real $k: k.0_V$, y su resultado seguirá siendo el vector nulo debido a la propiedad del producto de reales con el elemento nulo.
+
+Por lo tanto, al describir la combinación lineal del vector nulo en un conjunto de vectores que lo incluya se llega a la forma:
+
+$$0_V = c_1v_1 + c_2v_2 + ... + c_n0_V$$
+
+En este caso, el valor de $c_n$ puede ser cualquier número real, ya que su producto por escalar siempre dará como resultado el vector nulo. Esto implica que, en un conjunto de vectores que incluya a $0_V$, siempre habrá un coeficiente que podría no ser nulo y aún así obtener una combinación lineal válida para el vector nulo.
+
+# 10. Si el conjunto de vectores $M = \{ u, v, w \}$ de $V$ es linealmente independiente, mostrar que el conjunto $\{ u, u+2v, u+2v+3w \}$ es linealmente independiente.
+
+Se sabe que $M$ es linealmente independiente, tal que existe una combinación lineal para $0_V$ en la cual:
+* $c_1u + c_2v + c_3w = (0,0,0)$
+* $c_1, c_2, c_3 = 0$
+
+El nuevo conjunto puede expresarse a partir de los elementos de $M$. Quiere demostrarse que, si $M$ es independiente, este nuevo conjunto también lo es:
+
+* $(0,0,0) = c_1.u + c_2(u+2v) + c_3(2v+3w)$
+
+* $= (c_1.u) + (c_2.u + c_2.2v) + (c_3.u + c_3.2v + c_3.3w)$
+
+* Esto puede reescribirse como una combinación lineal para $M$:
+
+* $= u(c_1 + c_2 + c_3) + v(2.c_2 + 2.c_3) + w(3.c_3)$
+
+* Como $M$ es linealmente independiente, sus coeficientes deben ser nulos:
+    * $3.c_3 = 0 \implies c_3 = 0$
+    * $2.c_2 + 2.c_3 = 2.c_2 + 0 \implies c_2 = 0$
+    * $c_1 + c_2 + c_3 = c_1 + 0 + 0 \implies c_1 = 0$
+
+* Por lo tanto, si $M$ es linealmente independiente, entonces $\{ u, u+2v, u+2v+3w \}$ también.
+
+# 11. Analizar si los siguientes conjuntos de vectores pueden ser base de $R^2$
+
+## a. $\{ (2,-1); (1,3) \}$
+
+Se buscará demostrar que los vectores son independientes:
+* $(0,0) = c_1(2,-1) + c_2(1,3)$
+* $= (2.c_1, -c_1) + (c_2, 3.c_2)$
+* $= (2.c_1 + c_2,\ -c_1 + 3.c_2)$
+* Para igualar a $(0,0)$ debe cumplirse:
+    * $2.c_1 + c_2 = 0$
+    * $-c1 + 3.c_2 = 0$
+    * $3.c_2 = c_1$
+    * $2.3.c_2 + c_2 = 6.c_2 + c_2 = 7.c_2 = 0 \implies c_2 = 0$
+    * $c_1 = 3.0 \implies c_1 = 0$
+* Los coeficientes son nulos, por lo que el conjunto es linealmente independiente.
+
+Siendo $R^2$ un espacio vectorial de 2 dimensiones, se da que $\{ (2,-1); (1,3) \}$ son 2 vectores linealmente independientes, por lo tanto el conjunto genera $R^2$.
+
+Como $\{ (2,-1); (1,3) \}$ es linealmente independiente y genera a $R^2$, se dice que es una base.
+
+## b. $\{ (2,1); (1,1); (3,2) \}$
+
+La dimensión de $\{ (2,1); (1,1); (3,2) \}$ es mayor a la de $R^2$, por lo que es linealmente dependiente.
+
+Por lo tanto, no puede ser una base para $R^2$.
+
+## c. $\{ (1, -1); (1,0) \}$
+
+Se buscará demostrar que son independientes:
+* $(0,0) = c_1(1, -1) + c_2(1,0)$
+* $= (c_1, -c_1) + (c_2, 0)$
+* $= (c_1 + c_2, -c_1)$
+* Para igualar a $(0,0)$ debe cumplirse:
+    * $-c_1 = 0 \implies c_1 = 0$
+    * $c_1 + c_2 = 0 + c_2 \implies c_2 = 0$
+* Los coeficientes son nulos, por lo que el conjunto es linealmente independiente.
+
+Siendo $R^2$ un espacio vectorial de 2 dimensiones, se da que $\{ (1,-1); (1,0) \}$ son 2 vectores linealmente independientes, por lo tanto el conjunto genera $R^2$.
+
+Como $\{ (1,-1); (1,0) \}$ es linealmente independiente y genera a $R^2$, se dice que es una base.
+
+## d. $\{ (1,2); (2,4) \}$
+
+> *con verlo ya te das cuenta que no son independiente porque $2(1,2) = (2,4)$ pero no creo que les guste esa respuesta en un parcial*
+
+Se buscará demostrar que son independientes:
+* $(0,0) = c_1(1,2) + c_2(2,4)$
+* $= (c_1,\ 2.c_1) + (2.c_2,\ 4.c_2)$
+* $= (c_1 + 2.c_2,\ 2.c_1 + 4.c_2)$
+* Para igualar a $(0,0)$ debe cumplirse:
+    * $c_1 + 2.c_2 = 0$
+    * $2.c_1 + 4.c_2 = 0$
+    * $2(c_1 + 2.c_2) = 2.c_1 + 4.c_2 = 0$
+* Puede obtenerse $(0,0)$ a partir de varios valores no nulos para los coeficientes (por ejemplo, $c_1 = 2,\ c_2 = -1$)
+
+Por lo tanto, $\{(1,2); (2,4) \}$ es linealmente dependiente y no puede ser una base para $R^2$.

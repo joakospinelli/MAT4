@@ -921,3 +921,159 @@ Como la base de $R^3$ es de dimensión 3, el núcleo también lo será.
 
 La imagen, por otro lado, contendrá únicamente a $(0,0)$, ya que es el único elemento $\in R^2$ con preimagen en $R^3$. Por lo tanto, la base de la imagen será $\{(0,0)\}$ y tendrá dimensión 0.
 
+# 16. Mostrar que la composición de transformaciones lineales es una transformación lineal
+
+?
+
+# 17.
+
+## a. ¿Es la aplicación identidad una transformación lineal? En caso de serlo, hallar núcleo e imagen.
+
+> *sí porque lo dice el apunte de la teoría*
+
+La aplicación identidad es una transformación lineal $L: V \to V$ definida por $L(v) = v$.
+
+Se demostrará que cumple con las propiedades de transformaciones lineales:
+* $L(v_1 + v_2) = L(v_1) + L(v_2) \quad \forall v_1,v_2 \in V$
+    * $v_1 + v_2 = v_1 + v_2$
+
+* $L(\alpha.v) = \alpha.L(v) \quad \forall v \in V,\ \alpha \in K$
+    * $\alpha.v = \alpha.v$
+
+$L$ cumple con ambas propiedades, por lo que es una transformación lineal.
+
+El núcleo de $L$ contiene sólo al vector nulo, ya que es el único caso en el que $L(0_V) = 0_V$, por lo que tiene dimensión 0.
+
+La imagen contiene a todos los elementos de $V$, ya que cualquier elemento $\in V$ es su "propia" preimagen. Debido a esto, la imagen tendrá la misma dimensión que $V$.
+## b. ¿Es la aplicación nula una transformación lineal? En caso de serlo, hallar núcleo e imagen.
+
+> *sí porque lo dice el apunte de la teoría*
+
+La aplicación nula es una transformación lineal $L: V \to V$ definida por $L(v) = 0_V$
+
+Se demostrará que cumple con las propiedades de transformaciones lineales:
+* $L(v_1 + v_2) = L(v_1) + L(v_2) \quad \forall v_1, v_2 \in V$
+    * $0_V = 0_V + 0_V = 0_V$
+
+* $L(\alpha.v) = \alpha.L(v) \quad \forall v \in V,\ \alpha \in K$
+    * $0_V = \alpha.0_V = 0_V$
+
+$L$ cumple con ambas propiedades, por lo que es una transformación lineal.
+
+El núcleo de $L$ contiene a todos los elementos de $V$, ya que todos se transforman en $0_V$ al aplicar $L$. Debido a esto, su dimensión será la misma que la de $V$.
+
+La imagen sólo contiene a $0_V$, ya que es el único elemento de $V$ con preimagen (en este caso, todos los elementos de $V$ serían preimágenes de $0_V$). Debido a esto, la imagen tiene dimensión 0.
+
+# 18. Sean $C = C[a,b]$  el espacio vectorial de las funciones de $[a,b] $ en $R$ y $L:C \to R$ definida por $L(f) = \int_{a}^b f(x)dx$. Mostrar que $L$ es una transformación lineal.
+
+Para que $L$ sea una transformación lineal debe cumplir las propiedades:
+* $L(f_1 + f_2) = L(f_1) + L(f_2) \quad \forall f_1, f_2 \in C$
+
+    * $\int_{a}^b ((f_1(x) + f_2(x)) dx) = \int_{a}^b f_1(x)dx + \int_{a}^b f_2(x)dx$
+
+    * $\int_{a}^b ((f_1(x) + f_2(x)) dx) = \int_{a}^b ((f_1(x) + f_2(x)) dx)$
+
+* $L(\alpha.f) = \alpha.L(f) \quad \forall f \in C,\ \forall \alpha \in K$
+
+    * $\int_{a}^b \alpha.f(x)dx = \alpha\int_a^b f(x)dx$
+
+    * $\alpha\int_a^b f(x)dx = \alpha\int_a^b f(x)dx = \alpha.L(f)$
+
+$L$ cumple ambas propiedades, por lo que es una transformación lineal válida de $C$ a $R$.
+
+# 19. Sean $C = C[a,b] $ el espacio vectorial de funciones definidas en $R$ y sea $D: C \to C$ dado por $D(f) = f'$ (esto es, para cada función $f \in C$ el operador Derivación, D, devuelve la derivada $f'$ de $f$ ). Mostrar que $D$ es una transformación lineal.
+
+?????????????????
+
+Para que $D$ sea una transformación lineal debe cumplir las propiedades:
+* $D(f_1 + f_2) = D(f_1) + D(f_2) \quad \forall f_1, f_2 \in C$
+    * $D(f_1 + f_2) = (f_1 + f_2)'$
+    * $= f_1' + f_2' = D(f_1) + D(f_2)$ // por propiedades de derivadas con la suma
+
+* $D(\alpha.f) = \alpha.D(f) \quad \forall f \in C,\ \alpha \in K$
+    * $D(\alpha.f) = (\alpha.f)'$
+    * $= \alpha(f') = \alpha.D(f)$ // por propiedades de derivadas con el producto por constantes
+
+$D$ cumple con ambas propiedades, por lo que es una transformación lineal válida en $C$.
+
+# 20. Demostrar que dada cualquier transformación lineal $L: V \to W$ (con $V,W$ espacios vectoriales) el núcleo y la imagen de $L$ forman un subespacio $V$ y $W$ respectivamente.
+
+## Demostración del núcleo
+
+$Nu(f)$ está formado por todos los elementos $v \in V$ tales que $L(v) = 0_W$.
+
+Por definición de transformaciones lineales se sabe que $L(0_V) = 0_W$, por lo que se cumple la primera propiedad de un subespacio: $Nu(L) \subset V: (0_V) \in Nu(L) \implies Nu(L) \ne \emptyset$.
+
+Sean dos elementos $v_1, v_2 \in Nu(L)$, se sabe que $L(v_1) = L(v_2) = 0_V$. A partir de esto se quiere demostrar que $L(v_1 + v_2) = 0$ y, por lo tanto, la suma pertenece al núcleo:
+* $L(v_1 + v_2) = L(v_1) + L(v_2)$
+* $= 0_V + 0_V = 0_v \implies L(v_1 + v_2) \in Nu(f)$
+
+Por último, se debe probar que el producto por escalar también pertenece al núcleo.
+* $L(\alpha.v) = \alpha.L(v)$
+* $=\alpha.0_V = 0_V \implies L(\alpha.v) \in Nu(L)$ // por definición del valor nulo
+
+Entonces, el núcleo de $L: V \to W$ cumple todas las propiedades necesarias para considerarse un subespacio de $V$.
+
+## Demostración de la imagen
+
+$Im(f)$ está formado por todos los elementos $w \in W$ tales que $\exists v \in V : L(v) = w$
+
+Nuevamente, se sabe que $L(0_V) = 0_W$, por lo tanto existe una preimagen para el vector nulo de $W$. Esto implica que $Im(L) \ne \emptyset$.
+
+Sean dos elementos $w_1, w_2 \in Im(L)$, se sabe que existen dos elementos $v_1, v_2 \in V : L(v_1) = w_1, L(v_2) = w_2$. A partir de esto se quiere demostrar que la suma de $w_1 + w_2$ también pertenece a la imagen:
+* $w_1 + w_2 = L(v_1 + v_2)$
+* $= L(v_1) + L(v_2)$
+* $= w_1 + w_2 \implies (w_1 + w_2) \in Im(L)$
+
+Por último, se debe probar que el producto por escalar de cualquier elemento $w \in Im(L)$ también pertenece a la imagen:
+* $w = L(v)
+* $\alpha.w = \alpha.L(v)$
+* $= L(\alpha.v) \implies (\alpha.v) \in Im(L)$
+
+Entonces, la imagen de $L: V \to W$ cumple todas las propiedades necesarias para considerarse un subespacio de $W$.
+
+# 21.
+
+## a. Hallar $L: R^2 \to R^2$ sabiendo $L(1,0) = (1,-2),\ L(0,1) = (1,-1)$
+
+Como sabemos los valores de $L$ en la base canónica de $R^2$, podemos describir cualquier $(x,y)$ resultante como:
+
+$$(x,y) = x(1,0) + y (0,1)$$
+
+Podemos aplica la transformación lineal en ese vector para obtener el vlaor de $L$:
+
+* $L(x,y) = L(x(1,0) + y(0,1))$
+
+* $= L(x(1,0)) + L(y(0,1))$
+
+* $= x.L(1,0) + y.L(0,1)$
+
+* $= x(1,-2) + y(1,-1)$
+
+* $= (x,\ -2x) + (y,\ -y)$
+
+* $= (x+y, -2x-y)$
+
+Por lo tanto, la transformación $L: R^2 \to R^2$ se define como $L(x,y) = (x+y,\ -2x-y)$
+
+## b. Hallar $L: R^3 \to R^2$ sabiendo que $L(1,0,0) = (1,0);\ L(0,1,0) = (-1,-6);\ L(0,0,1) = (0,4)$
+
+Como sabemos los valores de $L$ en los vectores de la base de $R^3$, podemos describir cualquier $(x,y,z)$ resultante como:
+
+$$(x,y,z) = x(1,0,0) + y(0,1,0) + z(0,0,1)$$
+
+Podemos aplicar la transformación lineal en ese vector para obtener el valor de $L$:
+
+* $L(x,y,z) = L(x(1,0,0) + y(0,1,0) + z(0,0,1))$
+
+* $= L(x(1,0,0)) + L(y(0,1,0)) + L(z(0,0,1))$
+
+* $= x.L(1,0,0) + y.L(0,1,0) + z.L(0,0,1)$
+
+* $= x(1,\ 0) + y(-1,\ -6) + z(0,\ 4)$
+
+* $= (x,\ 0) + (-y,\  -6y) + (0,\ 4z)$
+
+* $= (x-y, -6y + 4z)$
+
+Por lo tanto, la transformación $L: R^3 \to R^2$ se define como $L(x,y,z) = (x-y, -6y + 4z)$

@@ -1034,7 +1034,7 @@ Entonces, la imagen de $L: V \to W$ cumple todas las propiedades necesarias para
 
 # 21.
 
-## a. Hallar $L: R^2 \to R^2$ sabiendo $L(1,0) = (1,-2),\ L(0,1) = (1,-1)$
+## a. Hallar $L: R^2 \to R^2$ sabiendo $L(1,0) = (1,-2); \ L(0,1) = (1,-1)$
 
 Como sabemos los valores de $L$ en la base canónica de $R^2$, podemos describir cualquier $(x,y)$ resultante como:
 
@@ -1077,3 +1077,160 @@ Podemos aplicar la transformación lineal en ese vector para obtener el valor de
 * $= (x-y, -6y + 4z)$
 
 Por lo tanto, la transformación $L: R^3 \to R^2$ se define como $L(x,y,z) = (x-y, -6y + 4z)$
+
+## c. Hallar $L: R^2 \to R^2$ sabiendo que $L(1,1) = (4,2);\ L(0,3) = (1,0)$
+
+Cualquier vector $(z,w) \in R^2$ puede escribirse como una combinación lineal tal que:
+
+* $(w,z) = (a_{11}.x + a_{12}.y,\ a_{21}x + a_{22}.y)$
+
+Sabiendo $L(1,1) = (4,2)$ se puede despejar:
+* $(4,2) = (a_{11} + a_{12},\ a_{21} + a_{22})$
+
+Por otro lado, sabeindo $L(0,3) = (1,0)$ se obtiene:
+* $(1,0) = (a_{11}.0 + a_{12}.3,\ a_{21}.0 + a_{22}.3)$
+* $= (a_{12}.3, a_{22}.3)$
+
+De los cuales se obtienen las ecuaciones:
+* $4 = a_{11} + a_{12}$
+* $2 = a_{21} + a_{22}$
+* $1 = a_{12}.3$
+* $0 = a_{22}.3$
+
+A partir de lo que se pueden obtener los valores:
+* $0 = a_{22}.3 \implies a_{22} = 0$
+
+* $1 = a_{12}.3 \implies a_{12} = \dfrac 1 3$
+
+* $2 = a_{21} + a_{22} = a_{21} + 0 \implies a_{21} = 2$
+
+* $4 = a_{11} + \dfrac 1 3 = 4 - \dfrac 1 3 = a_{11} \implies a_{11} = \dfrac {11} 3$
+
+Por lo que la transformación lineal se define como:
+
+$$L(x,y) = (\dfrac {11} 3x + \dfrac 1 3 y,\ 2x)$$
+
+## d. Hallar $L: R^3 \to R^3$ sabiendo que $L(1,1,1) = (1,2,3);\ L(0,1,0) = (1,-1,0);\ L = (-1,1,1) = (5,4,3)$
+
+Un vector $(a,b,c) \in R^3$ puede escribirse como una combinación lineal tal que:
+
+* $(a,b,c) = (a_{11}.x + a_{12}.y + a_{13}.z,\ a_{21}.x + a_{22}.y + a_{23}.z, a_{31}.x + a_{32}.y + a_{33}.z)$
+
+Sabiendo $L(1,1,1) = (1,2,3)$ se puede despejar:
+
+* $(1,2,3) = (a_{11} + a_{12} + a_{13}, \ a_{21} + a_{22} + a_{23},\ a_{31} + a_{32} + a_{33})$
+
+Sabiendo $L(0,1,0) = (1,-1,0)$:
+
+* $(1,-1,0) = (a_{12},\ a_{22}, a_{32})$
+
+Sabiendo $L(-1,1,1) = (5,4,3)$:
+
+* $(5,4,3) = (-a_{11} + a_{12} + a_{13}, -a_{21} + a_{22} + a_{23}, -a_{31} + a_{32} + a_{33})$
+
+A partir de lo que se pueden obtener los valores:
+
+* $a_{12} = 1$
+* $a_{22} = -1$
+* $a_{32} = 0$
+* $a_{11} + a_{12} + a_{13} = a_{11} + 1 + a_{13} = 1 \implies a_{11} = -a_{13}$
+* $-a_{11} + a_{12} + a_{13} = a_{13} + 1 + a_{13} = 2.a_{13} + 1 = 5 \implies a_{13} = 2,\ a_{11} = -2$
+* $a_{21} + a_{22} + a_{23} = a_{21} -1 + a_{23} = 2 \implies a_{21} + a_{23} = 3$
+* $-a_{21} + a_{22} + a_{23} = -a_{21} -1 + a_{23} = 4 \implies -a_{21} + a_{23} = 5$
+* $a_{23} = 3-a_{21}$
+* $-a_{21} + 3 - a_{21} = 5$
+    * $-2a_{21} = 2$
+    * $a_{21} = -1$
+* $a_{21} + a_{23} = -1 + a_{23} = 3 \implies a_{23} = 4$
+* $a_{31} + a_{32} + a_{33} = a_{31} + 0 + a_{33} = 3 \implies a_{31} + a_{33} = 3$
+* $-a_{31} + a_{32} + a_{33} = -a_{31} + 0 + a_{33} = 3 \implies -a_{31} + a_{33} = 3$
+* $a_{31} = -a_{31} \implies a_{31} = 0$
+* $a_{31} + a_{33} = 0 + a_{33} = 3 \implies a_{33} = 3$
+
+Por lo que la transformación lineal $L: R^3 \to R^3$ se define como:
+
+$$L(x,y,z) = (-2x + y + 2z,\ -x -y + 4z,\ 3z)$$
+
+Esto se puede comprobar a partir de los casos conocidos:
+* $L(1,1,1) = (1,2,3)$
+    * $-2x + y + 2z = -2 + 1 + 2 = 1$
+    * $-x -y + 4z = -1-1+4 = 2$
+    * $3z = 3.1 = 3$
+* $L(0,1,0) = (1,-1,0)$
+    * $-2x + y + 2z = 0 + 1 + 0 = 1$
+    * $-x-y + 4z = 0 -1 - 4.0 = -1$
+    * $3z = 3.0 = 0$
+* $L(-1,1,1) = (5,4,3)$
+    * $-2x+y+2z = -2(-1) + 1 + 2.1 = 2 + 1 + 2 = 5$
+    * $-x-y+4z = -(-1) -1 + 4 =0+4 = 4$
+    * $3z = 3.1 = 3$
+
+# 22. Hallar las matrices asociadas a las siguientes transformaciones lineales en las bases indicadas
+
+## a. $L: R^3 \to R^2$ definida como $L(x,y,z) = (z-y, z-x)$ con las bases canónicas de $R^3$ y $R^2$
+
+$B_{R^3} = B_1 = \{ (1,0,0); (0,1,0); (0,0,1) \}$
+
+$B_{R^2} = B_2 = \{ (1,0); (0,1) \}$
+
+Primero se aplica $L$ sobre los vectores de la base de $R^3$:
+* $L(1,0,0) = (0-0, 0-1) = (0,-1)$
+* $L(0,1,0) = (0-1, 0-0) = (-1,0)$
+* $L(0,0,1) = (1-0, 1-0) = (1,1)$
+
+> *🤓 en este caso no es necesario convertir las coordenadas a otra base porque son las 2 canónicas*
+
+Por lo tanto, la matriz asociada a $L$ en las bases $B_1$ y $B_2$ es:
+
+$$[L]_{B_1,\ B_2} = \begin{pmatrix} 0 & -1 & 1 \\ -1 & 0 & 1 \end{pmatrix}$$
+
+## b. $L: R^3 \to R^3$ definida como $L(x,y,z) = (3x+z, y-x, 2z+2y)$ con la base canónica de $R^3$.
+
+$B_{R^3} = B = \{ (1,0,0);\ (0,1,0);\ (0,0,1) \}$
+
+Primero se aplica $L$ sobre los vectores de la base:
+* $L(1,\ 0,\ 0) = (3.1+0,\ 0-1,\ 0) = (3,\ -1,\ 0)$
+* $L(0,\ 1,\ 0) = (0,\ 1-0,\ 0 + 2.1) = (0,\ 1,\ 2)$
+* $L(0,\ 0,\ 1) = (3.0 + 1,\ 0,\ 2.1 + 2.0) = (1,\ 0,\ 2)$
+
+Por lo tanto, la matriz asociada $L$ en la base canónica de $R^3$ es:
+
+$$[L]_B = \begin{pmatrix} 3 & 0 & 1 \\ -1 & 1 & 0 \\ 0 & 2 & 2\end{pmatrix}$$
+
+## c. $L: R^{2\times2} \to R^2$ definida como $L\begin{pmatrix} x & y \\ z & w\end{pmatrix} = (x+y, z+w)$ con $B$ siendo la base canónica de $R^{2\times2}$ y $B_1 = \{ (1,1); (-1,5) \}$ una base de $R^3$.
+
+$B_{R^2} = B_1 = \{ (1,0);\ (0,1) \}$
+
+$B_{R^{2\times2}} = B_2 = \{ \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix};\ \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix};\ \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix};\ \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix} \}$
+
+
+Primero se aplica $L$ sobre los vectores de la base de $R^{2\times2}$:
+
+* $L\begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix} = (1+0, 0+0) = (1,0)$
+
+* $L\begin{pmatrix} 0 & 1 \\ 0 & 0\end{pmatrix} = (0+1, 0+0) = (1,0)$
+
+* $L\begin{pmatrix} 0 & 0 \\ 1 & 0\end{pmatrix} = (0+0, 1+0) = (0,1)$
+
+* $L\begin{pmatrix} 0 & 0 \\ 0 & 1\end{pmatrix} = (0+0, 0+1) = (0,1)$
+
+Al estar trabajando sobre la base $B_1$, que no es canónica, deben convertirse las coordenadas:
+* $(1,0) = \alpha(1,1) + \beta(-1,5)$
+    * $=(\alpha, \alpha) + (-\beta, 5\beta)$
+    * $= (\alpha - \beta,\ \alpha + 5\beta)$
+    * $\alpha - \beta = 1$
+    * $\alpha + 5\beta = 0 \implies \alpha = -5\beta$
+    * $-5\beta - \beta = 1$
+    * $-6\beta = 1 \implies \beta = -\dfrac 1 6$
+    * $\alpha - \beta = \alpha + \dfrac 1 6 = 1 \implies \alpha = \dfrac 5 6$
+* $(0,1) = \alpha(1,1) + \beta(-1,5)$
+    * $=(\alpha, \alpha) + (-\beta, 5\beta)$
+    * $= (\alpha - \beta,\ \alpha + 5\beta)$
+    * $\alpha - \beta = 0$
+    * $\alpha + 5\beta = 1$
+    * $\alpha = \beta$
+    * $\alpha + 5\alpha = 6\alpha = 1 \implies \alpha = \dfrac 1 6,\ b = \dfrac 1 6$
+
+Por lo tanto, la matriz asociada para las bases $B_1, B_2$ será:
+
+$$[L]_{B_1, B_2} = \begin{pmatrix} \dfrac 5 6 & \dfrac 5 6 & \dfrac 1 6 & \dfrac 1 6 \\\\ -\dfrac 1 6 & - \dfrac 1 6 & \dfrac 1 6 & \dfrac 1 6 \end{pmatrix}$$

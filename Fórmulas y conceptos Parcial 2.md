@@ -81,6 +81,8 @@ Dados los grupos $(G_1, \ast_1), (G_2, \ast_2), ... , (G_n, \ast_n)$, entonces e
 
 $$(a_1, ..., a_m) \ast (b_1, ..., b_m) = (a_1 \ast_1 b_1, ..., a_m \ast_m b_m)$$
 
+Una potencia $a^k$ (siendo $k$ un entero) definida sobre un elemento $a \in G$ implica realizar la operación $\ast$ $k$ veces sobre $a$. La operación **no siempre** es la multiplicación, así que se tiene que hacer la cuenta "a mano".
+
 ## Grupos cíclicos
 
 Un grupo es cíclico si tiene un elemento $a \in G$ tal que para todo otro elemento $b \in G$ existe un número $k \in Z: b = a^k$
@@ -88,6 +90,27 @@ Un grupo es cíclico si tiene un elemento $a \in G$ tal que para todo otro eleme
 $a$ es un generador de $G$ y se escribe $G = <a>$
 
 > esto de generadores se usa mas en aritmética modular, así que lo voy a explicar después
+
+Todo grupo cíclico es abeliano. se puede desmostrar a partir del generador $a$:
+* $x = a^k,\ y = a^j$
+* $x \ast y = a^k \ast a^j$
+* $= a^{k+j}$ // por propiedades de la potencia
+* $= a^{j+k}$ // por conmutatividad en la suma de enteros
+* $= a^j \ast a^k$
+* $= y \ast x = x \ast y$
+
+### Orden finito
+
+A partir del generador $a \in G$, se dice que $a$ es de orden finito $m$ cuando $a^m = e$.
+
+Si $G$ es un grupo cíclico de orden $m$, entonces se da que $G = \{ e, a, a^2, ..., a^{m-1} \}$
+
+Un buen ejemplo de un orden finito es la hora del reloj (o los enteros módulo 12 con la suma):
+* $Z_{12} = \{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\}$
+* $1  \in Z_{12} : b = 1^k \quad \forall b \in Z_{12}$
+* $Z_{12} = <1>$
+* $1^{12} = 12 \implies 12 \mod 12 = 0 = e$
+* $1^{m-1} = 1^{11} = 11$ // siendo 11 el último elemento de $Z_{12}$
 
 ## Subgrupos
 

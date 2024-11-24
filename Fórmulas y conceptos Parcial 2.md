@@ -129,6 +129,8 @@ El subgrupo hereda todas las propiedades del grupo original, por lo que se le co
 * $a \in H \implies a^{-1} \in H$ (existencia del inverso en $H$)
     * $e \in H, a \ast b \in H \implies a \ast a^{-1} = e \in H$
 
+Si demostrás que $(a \ast b^{-1})$ es cerrada, demostrás que la operación es cerrada y que existe el inverso a la vez.
+
 > si $G$ es cíclico, $H$ también
 
 # Aritmética modular
@@ -246,9 +248,13 @@ Sea $(V,+,.)$ un espacio vectorial, $(S,+,.)$ es un subespacio si $S \subset V$ 
 
 Como $S \subset V$, casi todos los axiomas se cumplen automáticamente. Sólo hay que demostrar:
 
-* $0_V \in S$ // EN EL APUNTE PRIMERO DICE QUE NO TIENE QUE SER VACÍO PERO DESPUÉS DICE QUE TIENE QUE TENER SÍ O SÍ A $0_V$, ADEMÁS SI TIENE A $0_V$ YA SE CUMPLE QUE NO SEA VACÍO
+* $S \ne \emptyset$
 * $\forall s_1, s_2 \in S: s_1 + s_2 \in S$ // cerrado respecto a la suma
 * $\forall s \in S: k.s \in S, k \in K$ // cerrado respecto al producto por escalar
+
+EN EL APUNTE PRIMERO DICE QUE NO TIENE QUE SER VACÍO PERO DESPUÉS DICE QUE TIENE QUE TENER SÍ O SÍ A $0_V$, ADEMÁS SI TIENE A $0_V$ YA SE CUMPLE QUE NO SEA VACÍO. Igual es mejor resolverlo a partir de $S \ne \emptyset$ (generalizando o c/un ejemplo) y después si no tiene al $0_V$ misteriosamente se va a dar que no es subespacio.
+
+Algo que yo hice mal es que cuando tenés un conjunto definido con una restricción como $S = \{ (x,0) \in R^2 : x \in R \}$ probé las propiedades sumando y multiplicando los valores de $x$. En realidad tenés que probar la suma de $(x,0) + (y,0)$ y lo mismo con el producto.
 
 ## Combinaciones lineales
 
